@@ -1,0 +1,38 @@
+{
+  "name": "texnaz-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www --exec babel-node --presets babel-preset-env",
+    "update": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all --debug"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.5.0",
+    "morgan": "~1.9.0",
+    "mysql2": "^1.6.5",
+    "pug": "^2.0.3",
+    "sequelize": "^4.43.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "acorn": "^6.1.1",
+    "acorn-jsx": "^5.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "nodemon": "^1.18.10"
+  }
+}
