@@ -1,7 +1,9 @@
-import { Router } from 'express';
-import auth from '../controllers/auth';
+import auth from './auth';
+import users from './users';
+import roles from './roles';
 
-const router = Router();
-router.post('/login', auth.login);
-
-export default router;
+export default (app) => {
+  app.use('/api/auth', auth);
+  app.use('/api/users', users);
+  app.use('/api/roles', roles);
+};

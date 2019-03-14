@@ -1,5 +1,5 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('UserRole', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('UserRoles', {
     userId: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -17,5 +17,5 @@ module.exports = {
       },
     },
   }),
-  down: queryInterface => queryInterface.dropTable('UserRole'),
+  down: queryInterface => queryInterface.dropTable('UserRoles'),
 };

@@ -5,6 +5,8 @@ export default (sequelize, DataTypes) => {
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
   }, {});
-  User.associate = () => {};
+  User.associate = (models) => {
+    User.belongsToMany(models.Role, { as: 'roles', through: 'UserRoles', foreignKey: 'userId' });
+  };
   return User;
 };
