@@ -9,6 +9,10 @@ function constructSelector(attributes) {
     include: [{
       model: models.Role,
       as: 'roles',
+      include: [{
+        model: models.Permission,
+        as: 'permissions',
+      }],
     }],
   };
   return selector;
@@ -38,8 +42,10 @@ export default {
     findUser({ id: req.userId }, res, (user) => {
       const normalizedUser = user.toJSON();
       delete normalizedUser.password;
-      // eslint-disable-next-line no-param-reassign
-      normalizedUser.roles.forEach(element => delete element.UserRoles);
+      normalizedUser.roles.forEach((role) => {
+        role.permissions.forEach(permission => delete permission.RolePermissions);
+        delete role.UserRoles;
+      });
       res.status(200).json(normalizedUser);
     });
   },

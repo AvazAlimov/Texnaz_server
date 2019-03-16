@@ -1,5 +1,5 @@
 module.exports = {
-  up: queryInterface => queryInterface.bulkInsert('RolePermission', [{
+  up: queryInterface => queryInterface.bulkInsert('RolePermissions', [{
     roleId: 1,
     permissionId: 1,
   },
@@ -17,5 +17,5 @@ module.exports = {
   },
   ], {}),
 
-  down: queryInterface => queryInterface.bulkDelete('RolePermission', null, {}),
+  down: queryInterface => queryInterface.bulkDelete('RolePermissions', null, {}),
 };
