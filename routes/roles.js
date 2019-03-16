@@ -3,6 +3,6 @@ import role from '../controllers/role';
 import authMiddleware from '../middlewares/auth';
 
 const router = Router();
-router.get('/', authMiddleware.verifyUser, role.getAll);
+router.get('/', authMiddleware, role.getAll);
 
 export default router;

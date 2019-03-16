@@ -15,6 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     tax: DataTypes.DOUBLE,
     excise: DataTypes.DOUBLE,
   }, {});
-  Product.associate = () => {};
+  Product.associate = (models) => {
+    Product.hasOne(models.Unit, { foreignKey: 'id' });
+    Product.hasOne(models.Type, { foreignKey: 'id' });
+    Product.hasOne(models.Purpose, { foreignKey: 'id' });
+    Product.hasOne(models.Tag, { foreignKey: 'id' });
+  };
   return Product;
 };
