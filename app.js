@@ -4,6 +4,7 @@ import { join } from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import indexRouter from './routes/index';
 
 dotenv.config();
@@ -18,12 +19,13 @@ app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 // app.use(static(join(__dirname, 'public')));
 
 indexRouter(app);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
+app.use((_, __, next) => {
   next(createError(404));
 });
 
