@@ -17,5 +17,10 @@ module.exports = {
   },
   ], {}),
 
+  // Завсклад
+  // Управляющий
+  // Продавец
+  // Оператор
+
   down: queryInterface => queryInterface.bulkDelete('Roles', null, {}),
 };
