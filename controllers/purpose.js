@@ -23,24 +23,24 @@ export default {
   },
 
   create(req, res) {
-    // models.Purpose.create(req.product)
-    //   .then(() => res.sendStatus(201))
-    //   .catch(error => res.status(502).json(error));
+    models.Purpose.create(req.purpose)
+      .then(() => res.sendStatus(201))
+      .catch(error => res.status(502).json(error));
   },
 
   update(req, res) {
-    // models.Product.update(req.product, { where: { id: req.params.id } })
-    //   .then(() => res.sendStatus(200))
-    //   .catch(error => res.status(502).json(error));
+    models.Purpose.update(req.purpose, { where: { id: req.params.id } })
+      .then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
   },
 
   delete(req, res) {
-    // models.Product.destroy({
-    //   where: {
-    //     id: req.params.id,
-    //   },
-    // })
-    //   .then(() => res.sendStatus(200))
-    //   .catch(error => res.status(502).json(error));
+    models.Purpose.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
   },
 };
