@@ -125,13 +125,15 @@ export default {
 
   async delete(req, res) {
     try {
-      await models.User.destroy({
-        where: {
-          id: req.params.id,
-        },
-        raw: true,
+      unbindUserRole(req.params.id, res, async () => {
+        await models.User.destroy({
+          where: {
+            id: req.params.id,
+          },
+          raw: true,
+        });
+        res.sendStatus(200);
       });
-      res.sendStatus(200);
     } catch (error) {
       res.status(502).json(error);
     }
