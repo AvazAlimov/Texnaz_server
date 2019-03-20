@@ -73,9 +73,9 @@ export function validate(req, res, next) {
         vat: req.body.vat,
         tax: req.body.tax,
         excise: req.body.excise,
-        ratio: req.body.ratio,
-        purpose: req.body.purpose,
-        tag: req.body.tag,
+        ratio: req.body.ratio || null,
+        purpose: req.body.purpose || null,
+        tag: req.body.tag || null,
       };
       next();
     });
