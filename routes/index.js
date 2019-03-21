@@ -1,6 +1,7 @@
 import auth from './auth';
 import users from './users';
 import roles from './roles';
+import supplies from './supplies';
 import products from './products';
 import purposes from './purposes';
 import units from './units';
@@ -16,4 +17,5 @@ export default (app) => {
   app.use('/api/units', units);
   app.use('/api/tags', tags);
   app.use('/api/types', types);
+  app.use('/api/supplies', supplies);
 };
