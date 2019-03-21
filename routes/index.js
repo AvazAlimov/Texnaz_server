@@ -7,6 +7,7 @@ import purposes from './purposes';
 import units from './units';
 import tags from './tags';
 import types from './types';
+import warehouses from './warehouses';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -18,4 +19,5 @@ export default (app) => {
   app.use('/api/tags', tags);
   app.use('/api/types', types);
   app.use('/api/supplies', supplies);
+  app.use('/api/warehouses', warehouses);
 };
