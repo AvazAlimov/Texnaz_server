@@ -47,7 +47,6 @@ export function validate(req, res, next) {
   } else {
     checkRules(req, res, () => {
       req.configuration = {
-        name: req.body.name,
         value: req.body.value,
       };
       next();
@@ -56,9 +55,6 @@ export function validate(req, res, next) {
 }
 
 export const check = checkSchema({
-  name: {
-    isString: true,
-  },
   value: {
     isString: true,
   },
