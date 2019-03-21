@@ -23,7 +23,7 @@ export default {
   },
 
   update(req, res) {
-    models.Configuration.upsert(req.configuration, { where: { id: req.params.id } })
+    models.Configuration.update(req.configuration, { where: { id: req.params.id } })
       .then(() => res.sendStatus(200))
       .catch(error => res.status(502).json(error));
   },
