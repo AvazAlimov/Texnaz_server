@@ -11,6 +11,7 @@ import warehouses from './warehouses';
 import configurations from './configurations';
 import suppliers from './suppliers';
 import expanses from './expanses';
+import batches from './batches';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -26,4 +27,5 @@ export default (app) => {
   app.use('/api/configurations', configurations);
   app.use('/api/suppliers', suppliers);
   app.use('/api/expanses', expanses);
+  app.use('/api/batches', batches);
 };

@@ -6,11 +6,19 @@ function findProducts(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+function search(query, res) {
+  res.status(200).json(query);
+}
+
 export default {
-  getAll(_, res) {
-    findProducts(null, res, (products) => {
-      res.status(200).json(products);
-    });
+  getAll(req, res) {
+    const query = req.query.q;
+    if (query) search(query, res);
+    else {
+      findProducts(null, res, (products) => {
+        res.status(200).json(products);
+      });
+    }
   },
 
   get(req, res) {
