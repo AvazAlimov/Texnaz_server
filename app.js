@@ -19,7 +19,7 @@ app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(static(join(__dirname + '../Texnaz_client/', 'public')));
+app.use(express.static(join(__dirname, '../Texnaz_client/dist')));
 app.use(cors());
 indexRouter(app);
 
