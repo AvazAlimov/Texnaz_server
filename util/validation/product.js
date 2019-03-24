@@ -1,10 +1,6 @@
 import { validationResult, checkSchema } from 'express-validator/check';
 import models from '../../models';
-
-async function exists(model, value) {
-  const units = (await model.findAll({ attributes: ['id'], raw: true })).map(id => id.id);
-  return units.includes(value);
-}
+import exists from '../check';
 
 export const check = checkSchema({
   name: {

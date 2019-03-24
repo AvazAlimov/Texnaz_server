@@ -1,7 +1,13 @@
-import {
-  validationResult,
-  checkSchema,
-} from 'express-validator/check';
+import { validationResult, checkSchema } from 'express-validator/check';
+
+export const check = checkSchema({
+  number: {
+    isInt: true,
+  },
+  description: {
+    isString: true,
+  },
+});
 
 export function validate(req, res, next) {
   const errors = validationResult(req);
@@ -17,12 +23,3 @@ export function validate(req, res, next) {
     next();
   }
 }
-
-export const check = checkSchema({
-  number: {
-    isInt: true,
-  },
-  description: {
-    isString: true,
-  },
-});
