@@ -86,11 +86,8 @@ export const check = checkSchema({
   name: {
     isString: true,
   },
-  code: {
-    isString: true,
-  },
   packing: {
-    isInt: true,
+    isFloat: true,
   },
   color: {
     isString: true,
@@ -100,9 +97,6 @@ export const check = checkSchema({
   },
   type: {
     isInt: true,
-  },
-  profit: {
-    isFloat: true,
   },
   cleaning: {
     isFloat: true,
@@ -116,7 +110,7 @@ export const check = checkSchema({
   excise: {
     isFloat: true,
   },
-  ratio: {
+  code: {
     optional: true,
     isString: true,
   },

@@ -12,20 +12,16 @@ module.exports = {
     },
     code: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     packing: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.DOUBLE,
       allowNull: false,
     },
     color: {
       type: Sequelize.STRING,
       allowNull: false,
-    },
-    ratio: {
-      type: Sequelize.STRING,
-      allowNull: true,
     },
     unit: {
       type: Sequelize.INTEGER,
@@ -59,10 +55,6 @@ module.exports = {
         key: 'id',
       },
     },
-    profit: {
-      type: Sequelize.DOUBLE,
-      allowNull: false,
-    },
     cleaning: {
       type: Sequelize.DOUBLE,
       allowNull: false,
@@ -78,16 +70,6 @@ module.exports = {
     excise: {
       type: Sequelize.DOUBLE,
       allowNull: false,
-    },
-    createdAt: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
-    },
-    updatedAt: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
     },
   }),
 

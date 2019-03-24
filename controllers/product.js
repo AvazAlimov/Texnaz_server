@@ -1,3 +1,4 @@
+import { Op } from 'sequelize';
 import models from '../models';
 
 function findProducts(where, res, next) {
@@ -6,19 +7,19 @@ function findProducts(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
-function search(query, res) {
-  res.status(200).json(query);
+function getSelector(query) {
+  return {
+    [Op.or]: [
+      { name: { [Op.like]: `%${query}%` } },
+    ],
+  };
 }
 
 export default {
   getAll(req, res) {
-    const query = req.query.q;
-    if (query) search(query, res);
-    else {
-      findProducts(null, res, (products) => {
-        res.status(200).json(products);
-      });
-    }
+    findProducts(req.query.q ? getSelector(req.query.q) : null, res, (products) => {
+      res.status(200).json(products);
+    });
   },
 
   get(req, res) {
