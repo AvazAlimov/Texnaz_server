@@ -1,22 +1,9 @@
-import {
-  validationResult,
-  checkSchema,
-} from 'express-validator/check';
+import { validationResult, checkSchema } from 'express-validator/check';
 import models from '../../models';
+import checkRules from './rule';
 
-async function exists({
-  id,
-  model,
-}) {
-  if (id) {
-    const instance = await model.findByPk(id);
-    if (!instance) return false;
-  }
-  return true;
-}
-
-async function checkRules(req, res, next) {
-  const fields = [{
+function getRuleFields(req) {
+  return [{
     id: req.body.unit,
     model: models.Unit,
     name: 'Unit',
@@ -37,20 +24,6 @@ async function checkRules(req, res, next) {
     name: 'Tag',
   },
   ];
-  const error = [];
-  const promises = [];
-
-  for (let index = 0; index < fields.length; index += 1) {
-    promises.push(exists(fields[index]));
-  }
-  const results = await Promise.all(promises);
-
-  results.forEach((result, index) => {
-    if (!result) error.push(`${fields[index].name} not found`);
-  });
-
-  if (error.length) res.status(403).json(error);
-  else next();
 }
 
 export function validate(req, res, next) {
@@ -60,20 +33,18 @@ export function validate(req, res, next) {
       errors: errors.array(),
     });
   } else {
-    checkRules(req, res, () => {
+    checkRules(getRuleFields(req), res, () => {
       req.product = {
         name: req.body.name,
-        code: req.body.code,
         packing: req.body.packing,
         color: req.body.color,
         unit: req.body.unit,
         type: req.body.type,
-        profit: req.body.profit,
         cleaning: req.body.cleaning,
         vat: req.body.vat,
         tax: req.body.tax,
         excise: req.body.excise,
-        ratio: req.body.ratio || null,
+        code: req.body.ratio || null,
         purpose: req.body.purpose || null,
         tag: req.body.tag || null,
       };

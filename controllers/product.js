@@ -11,6 +11,9 @@ function getSelector(query) {
   return {
     [Op.or]: [
       { name: { [Op.like]: `%${query}%` } },
+      { code: { [Op.like]: `%${query}%` } },
+      { packing: { [Op.like]: `%${query}%` } },
+      { color: { [Op.like]: `%${query}%` } },
     ],
   };
 }
