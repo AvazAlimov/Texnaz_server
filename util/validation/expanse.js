@@ -4,6 +4,9 @@ export const check = checkSchema({
   name: {
     isString: true,
   },
+  value: {
+    isFloat: true,
+  },
   is_transport: {
     isBoolean: true,
   },

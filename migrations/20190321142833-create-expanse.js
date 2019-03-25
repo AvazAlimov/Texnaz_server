@@ -9,6 +9,9 @@ module.exports = {
     name: {
       type: Sequelize.STRING,
     },
+    value: {
+      type: Sequelize.DOUBLE,
+    },
     is_transport: {
       type: Sequelize.BOOLEAN,
     },
