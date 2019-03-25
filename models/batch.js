@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Batch = sequelize.define('Batch', {
+    name: DataTypes.STRING,
     number: DataTypes.INTEGER,
     weight: DataTypes.DOUBLE,
     date: DataTypes.DATE,

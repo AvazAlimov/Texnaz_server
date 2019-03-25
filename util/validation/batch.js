@@ -3,6 +3,9 @@ import models from '../../models';
 import exists from '../check';
 
 export const check = checkSchema({
+  name: {
+    isString: true,
+  },
   number: {
     isInt: true,
   },
@@ -17,11 +20,15 @@ export const check = checkSchema({
   },
   warehouse: {
     isInt: true,
-    custom: value => exists(models.Warehouse, value),
+    custom: {
+      options: value => exists(models.Warehouse, value),
+    },
   },
   supply: {
     isInt: true,
-    custom: value => exists(models.Supply, value),
+    custom: {
+      options: value => exists(models.Supply, value),
+    },
   },
 });
 

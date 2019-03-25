@@ -24,7 +24,7 @@ export default {
 
   create(req, res) {
     models.Batch.create(req.batch)
-      .then(() => res.sendStatus(201))
+      .then(batch => res.status(201).json(batch))
       .catch(error => res.status(502).json(error));
   },
 
