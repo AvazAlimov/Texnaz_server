@@ -35,7 +35,7 @@ export const check = checkSchema({
   },
   supply: {
     isInt: true,
-    custome: {
+    custom: {
       options: value => exists(models.Supply, value),
     },
   },

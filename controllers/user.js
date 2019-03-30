@@ -1,141 +1,92 @@
+/* eslint-disable no-param-reassign */
 import models from '../models';
 
-function constructSelector(attributes) {
-  const selector = {
-    where: attributes,
-    attributes: ['id', 'username'],
+// Function to find users by passing WHERE selector
+function find(where, res, next) {
+  models.User.findAll({
+    where,
+    attributes: ['id', 'name', 'username'],
     include: [{
       model: models.Role,
       as: 'roles',
     }],
-  };
-  return selector;
+  })
+    // Succeeded: passes result to NEXT function
+    .then((items) => {
+      items.forEach(element => element.roles.forEach(role => delete role.dataValues.UserRoles));
+      next(items);
+    })
+    // Failed: responses error message with status 502
+    .catch(error => res.status(502).json(error));
 }
 
-async function findUser(attributes, res, next) {
-  try {
-    const users = await models.User.findAll(constructSelector(attributes));
-    if (users && users[0]) next(users[0]);
-    else res.sendStatus(404);
-  } catch (error) {
-    res.status(502).json(error);
-  }
-}
-
-async function createUser(attributes, res, next) {
-  try {
-    const user = await models.User.create(attributes);
-    next(user);
-  } catch (error) {
-    res.status(502).json(error);
-  }
-}
-
-async function bindUserRole({
-  userId,
-  roleIds,
-}, res, next) {
-  try {
-    const attributes = [];
-    roleIds.forEach(roleId => attributes.push({
-      userId,
-      roleId,
-    }));
-    const result = await models.UserRole.bulkCreate(attributes);
-    next(result);
-  } catch (error) {
-    res.status(502).json(error);
-  }
-}
-
-async function unbindUserRole(userId, res, next) {
-  try {
-    await models.UserRole.destroy({
-      where: {
-        userId,
-      },
-      raw: true,
-    });
-    next();
-  } catch (error) {
-    res.status(502).json(error);
-  }
+// Function to bind user with roles
+async function bindUserRole(roles, userId) {
+  // User and Role bindigs
+  const userRoles = roles.map(roleId => ({ roleId, userId }));
+  // Bind a new created user with specified roles
+  await models.sequelize.getQueryInterface().bulkInsert('UserRoles', userRoles);
 }
 
 export default {
-  async getAll(_, res) {
-    try {
-      const users = await models.User.findAll(constructSelector());
-      users.forEach(element => element.roles.forEach(role => delete role.dataValues.UserRoles));
-      res.status(200).json(users);
-    } catch (error) {
-      res.status(502).json(error);
-    }
+  // Function to response all users
+  getAll(_, res) {
+    find(null, res, (items) => {
+      res.status(200).json(items);
+    });
   },
 
+  // Function to response a user with given id
   get(req, res) {
-    findUser({
-      id: req.params.id,
-    }, res, (user) => {
-      const normalizedUser = user.toJSON();
-      delete normalizedUser.password;
-      normalizedUser.roles.forEach(element => delete element.UserRoles);
-      res.status(200).json(normalizedUser);
+    find({ id: req.params.id }, res, ([item]) => {
+      if (item) res.status(200).json(item);
+      else res.sendStatus(404);
     });
   },
 
+  // Function to add a new user
   create(req, res) {
-    createUser({
-      username: req.body.username,
-      password: req.body.password,
-    }, res, (user) => {
-      const roleIds = req.body.roles || [];
-      bindUserRole({
-        userId: user.id,
-        roleIds,
-      }, res, () => {
+    // New user insertion
+    models.User.create(req.user)
+      // Succeeded
+      .then(async (user) => {
+        // Binding user with roles
+        await bindUserRole(req.user.roles, user.id);
+        // Respond a successful creation
         res.sendStatus(201);
-      });
-    });
+      })
+      // Failed
+      .catch(error => res.status(502).json(error));
   },
 
-  async update(req, res) {
-    findUser({
-      id: req.params.id,
-    }, res, async (user) => {
-      try {
-        await user.update({
-          username: req.body.username,
-          password: req.body.password,
-        });
-        unbindUserRole(user.id, res, () => {
-          const roleIds = req.body.roles || [];
-          bindUserRole({
-            userId: user.id,
-            roleIds,
-          }, res, () => {
-            res.sendStatus(200);
-          });
-        });
-      } catch (error) {
-        res.status(502).json(error);
-      }
-    });
-  },
-
-  async delete(req, res) {
-    try {
-      unbindUserRole(req.params.id, res, async () => {
-        await models.User.destroy({
-          where: {
-            id: req.params.id,
-          },
-          raw: true,
-        });
+  // Function to update a specified user
+  update(req, res) {
+    // User modification
+    models.User.update(req.user, { where: { id: req.params.id } })
+      // Succeeded
+      .then(async () => {
+        // Deletion of all user and role bindings
+        await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
+        // Binding user with roles
+        await bindUserRole(req.user.roles, req.params.id);
+        // Respond a successful modification
         res.sendStatus(200);
-      });
-    } catch (error) {
-      res.status(502).json(error);
-    }
+      })
+      // Failed
+      .catch(error => res.status(502).json(error));
+  },
+
+  // Function to delete a specified user
+  delete(req, res) {
+    // Deletion of a user
+    models.User.destroy({ where: { id: req.params.id } })
+      // Succeeded
+      .then(async () => {
+        // Deletion of all user and role bindings
+        await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
+        res.sendStatus(200);
+      })
+      // Failed
+      .catch(error => res.status(502).json(error));
   },
 };
