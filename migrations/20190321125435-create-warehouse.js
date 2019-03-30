@@ -13,7 +13,7 @@ module.exports = {
     company: {
       type: Sequelize.STRING,
     },
-    owner: {
+    ownerId: {
       type: Sequelize.INTEGER,
       allowNull: false,
       references: {

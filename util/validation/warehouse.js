@@ -11,10 +11,9 @@ export function validate(req, res, next) {
   } else {
     req.warehouse = {
       name: req.body.name,
-      owner: req.body.owner,
-      address: req.body.address,
       company: req.body.company,
-      supply: req.body.supply,
+      ownerId: req.body.ownerId,
+      type: req.body.type,
     };
     next();
   }
@@ -24,19 +23,19 @@ export const check = checkSchema({
   name: {
     isString: true,
   },
-  owner: {
-    isString: true,
-  },
-  address: {
-    isString: true,
-  },
   company: {
     isString: true,
   },
-  supply: {
+  ownerId: {
     isInt: true,
     custom: {
-      options: value => exists(models.Supply, value),
+      options: value => exists(models.User, value),
+    },
+  },
+  type: {
+    isInt: true,
+    custom: {
+      options: value => exists(models.WarehouseType, value),
     },
   },
 });

@@ -1,20 +1,27 @@
 import models from '../models';
 
-function findWarehouses(where, res, next) {
-  models.Warehouse.findAll({ where })
+function find(where, res, next) {
+  models.Warehouse.findAll({
+    where,
+    include: [{
+      model: models.User,
+      as: 'owner',
+      attributes: ['id', 'name'],
+    }],
+  })
     .then(warehouses => next(warehouses))
     .catch(error => res.status(502).json(error));
 }
 
 export default {
   getAll(_, res) {
-    findWarehouses(null, res, (warehouses) => {
+    find(null, res, (warehouses) => {
       res.status(200).json(warehouses);
     });
   },
 
   get(req, res) {
-    findWarehouses({
+    find({
       id: req.params.id,
     }, res, ([warehouse]) => {
       if (warehouse) res.status(200).json(warehouse);
