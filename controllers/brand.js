@@ -1,7 +1,12 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Brand.findAll({ where })
+  models.Brand.findAll({
+    where,
+    order: [
+      ['name', 'ASC'],
+    ],
+  })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
 }

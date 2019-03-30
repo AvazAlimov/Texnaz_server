@@ -4,7 +4,7 @@ module.exports = {
       name: 'Product 1',
       code: null,
       packing: 50,
-      color: 'Red',
+      color: 'Yellow',
       unit: 1,
       brand: 1,
       type: 1,

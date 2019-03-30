@@ -24,6 +24,7 @@ export function validate(req, res, next) {
   } else {
     req.expanse = {
       name: req.body.name,
+      value: req.body.value,
       is_transport: req.body.is_transport,
       is_cash: req.body.is_cash,
     };

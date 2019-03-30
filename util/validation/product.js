@@ -42,28 +42,24 @@ export const check = checkSchema({
   type: {
     isInt: true,
     custom: {
-      options: value => exists(models.ProductType, value),
+      options: (value) => {
+        if (!value) return false;
+        return exists(models.ProductType, value);
+      },
     },
   },
   purpose: {
     optional: true,
-    isInt: true,
     custom: {
-      options: value => exists(models.Purpose, value),
+      options: (value) => {
+        if (!value) return true;
+        return exists(models.Purpose, value);
+      },
     },
   },
   tags: {
     optional: true,
     isArray: true,
-    custom: {
-      options: async (tags) => {
-        if (!tags.length) return false;
-        const promises = [];
-        tags.forEach((tagId) => { promises.push(models.Tag.findByPk(tagId)); });
-        const results = await Promise.all(promises);
-        return !results.includes(null);
-      },
-    },
   },
 });
 
@@ -85,7 +81,7 @@ export function validate(req, res, next) {
       vat: req.body.vat,
       tax: req.body.tax,
       excise: req.body.excise,
-      code: req.body.ratio || null,
+      code: req.body.code || null,
       purpose: req.body.purpose || null,
       tags: req.body.tags || [],
     };
