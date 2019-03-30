@@ -16,7 +16,7 @@ export function validate(req, res, next) {
       errors: errors.array(),
     });
   } else {
-    req.supplier = {
+    req.brand = {
       name: req.body.name,
       country: req.body.country,
     };

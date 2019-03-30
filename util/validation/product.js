@@ -27,6 +27,12 @@ export const check = checkSchema({
   code: {
     optional: true,
   },
+  brand: {
+    isInt: true,
+    custom: {
+      options: value => exists(models.Brand, value),
+    },
+  },
   unit: {
     isInt: true,
     custom: {
@@ -36,7 +42,7 @@ export const check = checkSchema({
   type: {
     isInt: true,
     custom: {
-      options: value => exists(models.Type, value),
+      options: value => exists(models.ProductType, value),
     },
   },
   purpose: {
@@ -46,11 +52,17 @@ export const check = checkSchema({
       options: value => exists(models.Purpose, value),
     },
   },
-  tag: {
+  tags: {
     optional: true,
-    isInt: true,
+    isArray: true,
     custom: {
-      options: value => exists(models.Tag, value),
+      options: async (tags) => {
+        if (!tags.length) return false;
+        const promises = [];
+        tags.forEach((tagId) => { promises.push(models.Tag.findByPk(tagId)); });
+        const results = await Promise.all(promises);
+        return !results.includes(null);
+      },
     },
   },
 });
@@ -66,6 +78,7 @@ export function validate(req, res, next) {
       name: req.body.name,
       packing: req.body.packing,
       color: req.body.color,
+      brand: req.body.brand,
       unit: req.body.unit,
       type: req.body.type,
       cleaning: req.body.cleaning,
@@ -74,7 +87,7 @@ export function validate(req, res, next) {
       excise: req.body.excise,
       code: req.body.ratio || null,
       purpose: req.body.purpose || null,
-      tag: req.body.tag || null,
+      tags: req.body.tags || [],
     };
     next();
   }

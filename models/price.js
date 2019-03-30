@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const Price = sequelize.define('Price', {
     product: DataTypes.DOUBLE,
     non_cash: DataTypes.DOUBLE,

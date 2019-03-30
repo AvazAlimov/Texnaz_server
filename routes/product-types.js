@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import type from '../controllers/type';
+import type from '../controllers/product-type';
 import authMiddleware from '../middlewares/auth';
-import { check, validate } from '../util/validation/type';
+import { check, validate } from '../util/validation/product-type';
 
 const router = Router();
 router.get('/', authMiddleware, type.getAll);

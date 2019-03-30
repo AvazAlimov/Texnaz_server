@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const Batch = sequelize.define('Batch', {
     name: DataTypes.STRING,
     number: DataTypes.INTEGER,

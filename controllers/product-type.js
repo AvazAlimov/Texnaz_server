@@ -1,7 +1,7 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Type.findAll({ where })
+  models.ProductType.findAll({ where })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
 }
@@ -23,19 +23,19 @@ export default {
   },
 
   create(req, res) {
-    models.Type.create(req.type)
+    models.ProductType.create(req.type)
       .then(() => res.sendStatus(201))
       .catch(error => res.status(502).json(error));
   },
 
   update(req, res) {
-    models.Type.update(req.type, { where: { id: req.params.id } })
+    models.ProductType.update(req.type, { where: { id: req.params.id } })
       .then(() => res.sendStatus(200))
       .catch(error => res.status(502).json(error));
   },
 
   delete(req, res) {
-    models.Type.destroy({
+    models.ProductType.destroy({
       where: {
         id: req.params.id,
       },
