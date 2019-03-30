@@ -5,7 +5,7 @@ import models from '../models';
 function constructSelector(attributes) {
   const selector = {
     where: attributes,
-    attributes: ['id', 'username', 'password'],
+    attributes: ['id', 'name', 'username', 'password'],
     include: [{
       model: models.Role,
       as: 'roles',

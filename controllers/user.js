@@ -77,15 +77,13 @@ export default {
   },
 
   // Function to delete a specified user
-  delete(req, res) {
+  async delete(req, res) {
+    // Deletion of all user and role bindings
+    await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
     // Deletion of a user
     models.User.destroy({ where: { id: req.params.id } })
       // Succeeded
-      .then(async () => {
-        // Deletion of all user and role bindings
-        await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
-        res.sendStatus(200);
-      })
+      .then(() => { res.sendStatus(200); })
       // Failed
       .catch(error => res.status(502).json(error));
   },
