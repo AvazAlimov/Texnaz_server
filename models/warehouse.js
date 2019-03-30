@@ -1,10 +1,9 @@
 export default (sequelize, DataTypes) => {
   const Warehouse = sequelize.define('Warehouse', {
     name: DataTypes.STRING,
-    owner: DataTypes.STRING,
-    address: DataTypes.STRING,
     company: DataTypes.STRING,
-    supply: DataTypes.INTEGER,
+    owner: DataTypes.INTEGER,
+    type: DataTypes.INTEGER,
   }, {});
   Warehouse.associate = () => {};
   return Warehouse;

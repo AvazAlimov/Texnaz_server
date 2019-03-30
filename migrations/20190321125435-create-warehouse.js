@@ -8,32 +8,26 @@ module.exports = {
     },
     name: {
       type: Sequelize.STRING,
-    },
-    owner: {
-      type: Sequelize.STRING,
-    },
-    address: {
-      type: Sequelize.STRING,
+      allowNull: false,
     },
     company: {
       type: Sequelize.STRING,
     },
-    supply: {
+    owner: {
       type: Sequelize.INTEGER,
+      allowNull: false,
       references: {
-        model: 'Supplies',
+        model: 'Users',
         key: 'id',
       },
     },
-    createdAt: {
+    type: {
+      type: Sequelize.INTEGER,
       allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
-    },
-    updatedAt: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
+      references: {
+        model: 'WarehouseTypes',
+        key: 'id',
+      },
     },
   }),
   down: queryInterface => queryInterface.dropTable('Warehouses'),

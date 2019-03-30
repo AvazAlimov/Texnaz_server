@@ -7,7 +7,7 @@ module.exports = {
     transport_cash: 10,
     transport_non_cash: 20,
     warehouse: 1,
-    supply: 1,
+    local: 1,
   }], {}),
 
   down: queryInterface => queryInterface.bulkDelete('Batches', null, {}),

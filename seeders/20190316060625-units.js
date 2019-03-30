@@ -1,12 +1,12 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Units', [{
-    name: 'Kilogramms',
+    name: 'Шт',
   },
   {
-    name: 'Meters',
+    name: 'Кг',
   },
   {
-    name: 'Liters',
+    name: 'Л',
   },
   ], {}),
 

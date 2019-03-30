@@ -1,8 +1,8 @@
 export default (sequelize, DataTypes) => {
-  const Supplier = sequelize.define('Supplier', {
+  const Brand = sequelize.define('Brand', {
     name: DataTypes.STRING,
     country: DataTypes.STRING,
   }, {});
-  Supplier.associate = () => {};
-  return Supplier;
+  Brand.associate = () => {};
+  return Brand;
 };

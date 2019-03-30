@@ -13,16 +13,6 @@ module.exports = {
     description: {
       type: Sequelize.STRING,
     },
-    createdAt: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
-    },
-    updatedAt: {
-      allowNull: false,
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.fn('now'),
-    },
   }),
   down: queryInterface => queryInterface.dropTable('Purposes'),
 };

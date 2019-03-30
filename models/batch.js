@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     transport_cash: DataTypes.DOUBLE,
     transport_non_cash: DataTypes.DOUBLE,
     warehouse: DataTypes.INTEGER,
-    supply: DataTypes.INTEGER,
+    local: DataTypes.BOOLEAN,
   }, {});
   Batch.associate = () => {};
   return Batch;

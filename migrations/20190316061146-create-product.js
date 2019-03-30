@@ -23,6 +23,14 @@ module.exports = {
       type: Sequelize.STRING,
       allowNull: false,
     },
+    brand: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'Brands',
+        key: 'id',
+      },
+    },
     unit: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -35,7 +43,7 @@ module.exports = {
       type: Sequelize.INTEGER,
       allowNull: false,
       references: {
-        model: 'Types',
+        model: 'ProductTypes',
         key: 'id',
       },
     },
@@ -44,14 +52,6 @@ module.exports = {
       allowNull: true,
       references: {
         model: 'Purposes',
-        key: 'id',
-      },
-    },
-    tag: {
-      type: Sequelize.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'Tags',
         key: 'id',
       },
     },

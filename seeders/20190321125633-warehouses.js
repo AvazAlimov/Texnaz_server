@@ -1,17 +1,15 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Warehouses', [{
     name: 'Warehouse 1',
-    owner: 'John Nash',
-    address: 'Palo Alto',
+    owner: 3,
     company: 'Facebook',
-    supply: 1,
+    type: 1,
   },
   {
     name: 'Warehouse 2',
-    owner: 'Michael Corleone',
-    address: 'Nevada',
+    owner: 4,
     company: 'Genco',
-    supply: 2,
+    type: 2,
   },
   ], {}),
 

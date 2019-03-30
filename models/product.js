@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     packing: DataTypes.DOUBLE,
     color: DataTypes.STRING,
     unit: DataTypes.INTEGER,
+    brand: DataTypes.INTEGER,
     type: DataTypes.INTEGER,
     purpose: DataTypes.INTEGER,
     tag: DataTypes.INTEGER,
@@ -17,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     Product.hasOne(models.Unit, { foreignKey: 'id' });
     Product.hasOne(models.Type, { foreignKey: 'id' });
     Product.hasOne(models.Purpose, { foreignKey: 'id' });
-    Product.hasOne(models.Tag, { foreignKey: 'id' });
   };
   return Product;
 };
