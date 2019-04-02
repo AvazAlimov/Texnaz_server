@@ -12,6 +12,7 @@ import configurations from './configurations';
 import expanses from './expanses';
 import batches from './batches';
 import info from './info';
+import stock from './stocks';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -28,4 +29,5 @@ export default (app) => {
   app.use('/api/expanses', expanses);
   app.use('/api/batches', batches);
   app.use('/api/info', info);
+  app.use('/api/stocks', stock);
 };

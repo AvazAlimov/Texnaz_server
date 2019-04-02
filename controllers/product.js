@@ -16,14 +16,18 @@ function findProducts(where, res, next) {
 }
 
 function getSelector(query) {
-  return {
+  console.log(query);
+  const where = query.q ? {
     [Op.or]: [
-      { name: { [Op.like]: `%${query}%` } },
-      { code: { [Op.like]: `%${query}%` } },
-      { packing: { [Op.like]: `%${query}%` } },
-      { color: { [Op.like]: `%${query}%` } },
+      { name: { [Op.like]: `%${query.q}%` } },
+      { code: { [Op.like]: `%${query.q}%` } },
+      { packing: { [Op.like]: `%${query.q}%` } },
+      { color: { [Op.like]: `%${query.q}%` } },
     ],
-  };
+  } : {};
+  if (query.b !== 'null') where.brand = query.b;
+  if (query.t !== 'null') where.type = query.t;
+  return where;
 }
 
 function bindProductTag(tags, product) {
@@ -36,7 +40,10 @@ function bindProductTag(tags, product) {
 
 export default {
   getAll(req, res) {
-    findProducts(req.query.q ? getSelector(req.query.q) : null, res, (products) => {
+    let where = null;
+    if (req.query) where = getSelector(req.query);
+
+    findProducts(where, res, (products) => {
       res.status(200).json(products);
     });
   },
