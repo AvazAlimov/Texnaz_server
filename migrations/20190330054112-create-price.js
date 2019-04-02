@@ -6,10 +6,14 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    product: {
+    productId: {
       allowNull: false,
       type: Sequelize.INTEGER,
       unique: true,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
     },
     non_cash: {
       allowNull: false,

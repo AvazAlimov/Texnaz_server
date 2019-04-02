@@ -9,6 +9,10 @@ module.exports = {
     productId: {
       type: Sequelize.INTEGER,
       allowNull: false,
+      references: {
+        model: 'Products',
+        key: 'id',
+      },
     },
     quantity: {
       type: Sequelize.DOUBLE,
@@ -29,6 +33,10 @@ module.exports = {
     warehouseId: {
       type: Sequelize.INTEGER,
       allowNull: false,
+      references: {
+        model: 'Warehouses',
+        key: 'id',
+      },
     },
   }),
   down: queryInterface => queryInterface.dropTable('Stocks'),
