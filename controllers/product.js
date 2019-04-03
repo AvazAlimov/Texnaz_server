@@ -15,6 +15,7 @@ function findProducts(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+// TODO: make and selector
 function getSelector(query) {
   const where = query.q ? {
     [Op.or]: [

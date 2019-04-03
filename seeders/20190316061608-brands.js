@@ -37,7 +37,7 @@ module.exports = {
   },
   {
     name: 'Polchem',
-    country: 'Russia',
+    country: 'Turkey',
   },
   ], {}),
 
