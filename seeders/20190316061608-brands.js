@@ -1,14 +1,45 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Brands', [{
-    id: 1,
-    name: 'John Doe',
-    country: 'USA',
+    name: 'Master',
+    country: 'Russia',
   },
   {
-    id: 2,
-    name: 'Avaz Alimov',
-    country: 'Uzbekisan',
-  }], {}),
+    name: 'Roshal',
+    country: 'Russia',
+  },
+  {
+    name: 'Казань',
+    country: 'Russia',
+  },
+  {
+    name: 'Экодом',
+    country: 'Russia',
+  },
+  {
+    name: 'Любимая дача',
+    country: 'Russia',
+  },
+  {
+    name: 'Акватекс',
+    country: 'Russia',
+  },
+  {
+    name: 'Woodmaster professional',
+    country: 'Russia',
+  },
+  {
+    name: 'Eurotex',
+    country: 'Russia',
+  },
+  {
+    name: 'Dali',
+    country: 'Russia',
+  },
+  {
+    name: 'Polchem',
+    country: 'Russia',
+  },
+  ], {}),
 
   down: queryInterface => queryInterface.bulkDelete('Brands', null, {}),
 };

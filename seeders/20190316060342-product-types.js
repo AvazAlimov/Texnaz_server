@@ -1,9 +1,36 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('ProductTypes', [{
-    name: 'Type 1',
+    name: 'Растворитель',
   },
   {
-    name: 'Type 2',
+    name: 'Защитные материалы',
+  },
+  {
+    name: 'Очиститель',
+  },
+  {
+    name: 'Пропитка',
+  },
+  {
+    name: 'Герметик',
+  },
+  {
+    name: 'Краски',
+  },
+  {
+    name: 'Грунтовка',
+  },
+  {
+    name: 'Шпатлевка',
+  },
+  {
+    name: 'Эмаль НЦ',
+  },
+  {
+    name: 'Эмаль',
+  },
+  {
+    name: 'Лак',
   },
   ], {}),
 

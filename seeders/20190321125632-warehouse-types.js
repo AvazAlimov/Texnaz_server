@@ -1,9 +1,18 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('WarehouseTypes', [{
-    name: 'Warehouse Type 1',
+    name: 'Импортные товары',
   },
   {
-    name: 'Warehouse Type 2',
+    name: 'Местные товары',
+  },
+  {
+    name: 'Общие',
+  },
+  {
+    name: 'Другой',
+  },
+  {
+    name: 'Склад клиента',
   },
   ], {}),
 

@@ -8,7 +8,16 @@ export default (sequelize, DataTypes) => {
     transport_non_cash: DataTypes.DOUBLE,
     warehouse: DataTypes.INTEGER,
     local: DataTypes.BOOLEAN,
+
+    total: DataTypes.DOUBLE,
+    conversion: DataTypes.DOUBLE,
+    bank_transfer: DataTypes.DOUBLE,
+    market_rate: DataTypes.DOUBLE,
+    official_rate: DataTypes.DOUBLE,
+    exchange_rate: DataTypes.DOUBLE,
   }, {});
-  Batch.associate = () => {};
+  Batch.associate = (models) => {
+    Batch.hasMany(models.BatchExpanses, { as: 'expanses', onDelete: 'CASCADE' });
+  };
   return Batch;
 };

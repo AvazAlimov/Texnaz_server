@@ -1,19 +1,23 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Roles', [{
     id: 1,
-    name: 'ceo',
+    name: 'Управление',
   },
   {
     id: 2,
-    name: 'manager',
+    name: 'Менеджер',
   },
   {
     id: 3,
-    name: 'accountant',
+    name: 'Оператор',
   },
   {
     id: 4,
-    name: 'seller',
+    name: 'Завскладом',
+  },
+  {
+    id: 5,
+    name: 'Финансовый менеджер',
   },
   ], {}),
 

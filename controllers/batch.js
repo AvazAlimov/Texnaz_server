@@ -1,7 +1,13 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Batch.findAll({ where })
+  models.Batch.findAll({
+    where,
+    include: [{
+      model: models.BatchExpanses,
+      as: 'expanses',
+    }],
+  })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
 }
@@ -22,9 +28,29 @@ export default {
     });
   },
 
-  create(req, res) {
-    models.Batch.create(req.batch)
-      .then(batch => res.status(201).json(batch))
+  async create(_, res) {
+    models.Batch.create({
+      total: (await models.Configuration.findByPk(1)).value,
+      conversion: (await models.Configuration.findByPk(2)).value,
+      bank_transfer: (await models.Configuration.findByPk(3)).value,
+      market_rate: (await models.Configuration.findByPk(4)).value,
+      official_rate: (await models.Configuration.findByPk(5)).value,
+      exchange_rate: (await models.Configuration.findByPk(6)).value,
+      transport_cash: (await models.Configuration.findByPk(7)).value,
+      transport_non_cash: (await models.Configuration.findByPk(8)).value,
+    })
+      .then(async (batch) => {
+        const expanses = await models.Expanse.findAll({ raw: true });
+        const batchExpanses = expanses.map(expanse => ({
+          name: expanse.name,
+          value: expanse.value,
+          is_transport: expanse.is_transport,
+          is_cash: expanse.is_cash,
+          batchId: batch.id,
+        }));
+        await models.sequelize.getQueryInterface().bulkInsert('BatchExpanses', batchExpanses);
+        find({ id: batch.id }, res, ([item]) => { res.status(200).json(item); });
+      })
       .catch(error => res.status(502).json(error));
   },
 

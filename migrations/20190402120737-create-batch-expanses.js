@@ -26,6 +26,7 @@ module.exports = {
       references: {
         model: 'Batches',
         key: 'id',
+        onDelete: 'CASCADE',
       },
     },
   }),
