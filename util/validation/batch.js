@@ -59,6 +59,7 @@ export function validate(req, res, next) {
     });
   } else {
     req.batch = {
+      name: req.body.name,
       number: req.body.number,
       weight: req.body.weight || 0,
       date: req.body.date,

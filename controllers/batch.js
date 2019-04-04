@@ -3,10 +3,16 @@ import models from '../models';
 function find(where, res, next) {
   models.Batch.findAll({
     where,
-    include: [{
-      model: models.BatchExpanses,
-      as: 'expanses',
-    }],
+    include: [
+      {
+        model: models.BatchExpanses,
+        as: 'expanses',
+      },
+      {
+        model: models.Warehouse,
+        as: 'Warehouse',
+      },
+    ],
   })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
@@ -60,7 +66,8 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 
-  delete(req, res) {
+  async delete(req, res) {
+    await models.BatchExpanses.destroy({ where: { batchId: req.params.id }, raw: true });
     models.Batch.destroy({
       where: {
         id: req.params.id,

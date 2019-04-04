@@ -17,7 +17,8 @@ export default (sequelize, DataTypes) => {
     exchange_rate: DataTypes.DOUBLE,
   }, {});
   Batch.associate = (models) => {
-    Batch.hasMany(models.BatchExpanses, { as: 'expanses', onDelete: 'CASCADE' });
+    Batch.hasMany(models.BatchExpanses, { as: 'expanses' });
+    Batch.belongsTo(models.Warehouse, { as: 'Warehouse', foreignKey: 'warehouse' });
   };
   return Batch;
 };
