@@ -12,6 +12,10 @@ function find(where, res, next) {
         model: models.Warehouse,
         as: 'Warehouse',
       },
+      {
+        model: models.Item,
+        as: 'items',
+      },
     ],
   })
     .then(items => next(items))

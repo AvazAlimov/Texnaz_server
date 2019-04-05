@@ -18,6 +18,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Batch.associate = (models) => {
     Batch.hasMany(models.BatchExpanses, { as: 'expanses' });
+    Batch.hasMany(models.Item, { as: 'items' });
     Batch.belongsTo(models.Warehouse, { as: 'Warehouse', foreignKey: 'warehouse' });
   };
   return Batch;
