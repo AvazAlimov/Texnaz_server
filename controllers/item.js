@@ -1,7 +1,15 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Item.findAll({ where })
+  models.Item.findAll({
+    where,
+    include: [
+      {
+        model: models.Product,
+        as: 'product',
+      },
+    ],
+  })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
 }
