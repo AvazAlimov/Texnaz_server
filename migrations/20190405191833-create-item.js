@@ -50,6 +50,14 @@ module.exports = {
       type: Sequelize.DOUBLE,
       allowNull: false,
     },
+    cash_profitability: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
+    income_tax: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('Items'),
 };

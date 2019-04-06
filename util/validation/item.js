@@ -24,6 +24,12 @@ export const check = checkSchema({
   cleaning: {
     isFloat: true,
   },
+  cash_profitability: {
+    isFloat: true,
+  },
+  income_tax: {
+    isFloat: true,
+  },
   productId: {
     isInt: true,
     custom: {
@@ -46,15 +52,17 @@ export function validate(req, res, next) {
     });
   } else {
     req.item = {
-      productId: req.body.productId,
-      batchId: req.body.batchId,
-      quantity: req.body.quantity,
-      contract_price: req.body.contract_price,
-      customs_price: req.body.customs_price,
-      excise: req.body.excise,
       tax: req.body.tax,
       vat: req.body.vat,
+      excise: req.body.excise,
+      batchId: req.body.batchId,
+      quantity: req.body.quantity,
       cleaning: req.body.cleaning,
+      productId: req.body.productId,
+      income_tax: req.body.income_tax,
+      customs_price: req.body.customs_price,
+      contract_price: req.body.contract_price,
+      cash_profitability: req.body.cash_profitability,
     };
     next();
   }

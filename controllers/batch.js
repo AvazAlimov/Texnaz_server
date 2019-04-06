@@ -78,6 +78,7 @@ export default {
 
   async delete(req, res) {
     await models.BatchExpanses.destroy({ where: { batchId: req.params.id }, raw: true });
+    await models.Item.destroy({ where: { batchId: req.params.id }, raw: true });
     models.Batch.destroy({
       where: {
         id: req.params.id,
