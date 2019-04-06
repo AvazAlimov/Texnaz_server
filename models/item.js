@@ -5,6 +5,10 @@ export default (sequelize, DataTypes) => {
     quantity: DataTypes.DOUBLE,
     contract_price: DataTypes.DOUBLE,
     customs_price: DataTypes.DOUBLE,
+    excise: DataTypes.DOUBLE,
+    tax: DataTypes.DOUBLE,
+    vat: DataTypes.DOUBLE,
+    cleaning: DataTypes.DOUBLE,
   }, {});
   Item.associate = (models) => {
     Item.belongsTo(models.Product, { as: 'product', foreignKey: 'productId' });

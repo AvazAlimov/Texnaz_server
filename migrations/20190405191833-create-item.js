@@ -34,6 +34,22 @@ module.exports = {
       type: Sequelize.DOUBLE,
       allowNull: false,
     },
+    excise: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
+    tax: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
+    vat: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
+    cleaning: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('Items'),
 };

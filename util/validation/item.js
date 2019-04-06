@@ -12,6 +12,18 @@ export const check = checkSchema({
   customs_price: {
     isFloat: true,
   },
+  excise: {
+    isFloat: true,
+  },
+  tax: {
+    isFloat: true,
+  },
+  vat: {
+    isFloat: true,
+  },
+  cleaning: {
+    isFloat: true,
+  },
   productId: {
     isInt: true,
     custom: {
@@ -39,6 +51,10 @@ export function validate(req, res, next) {
       quantity: req.body.quantity,
       contract_price: req.body.contract_price,
       customs_price: req.body.customs_price,
+      excise: req.body.excise,
+      tax: req.body.tax,
+      vat: req.body.vat,
+      cleaning: req.body.cleaning,
     };
     next();
   }
