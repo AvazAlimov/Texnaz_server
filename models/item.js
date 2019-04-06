@@ -10,6 +10,7 @@ export default (sequelize, DataTypes) => {
     vat: DataTypes.DOUBLE,
     cleaning: DataTypes.DOUBLE,
     cash_profitability: DataTypes.DOUBLE,
+    non_cash_profitability: DataTypes.DOUBLE,
     income_tax: DataTypes.DOUBLE,
   }, {});
   Item.associate = (models) => {

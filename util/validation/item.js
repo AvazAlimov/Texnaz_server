@@ -63,6 +63,7 @@ export function validate(req, res, next) {
       customs_price: req.body.customs_price,
       contract_price: req.body.contract_price,
       cash_profitability: req.body.cash_profitability,
+      non_cash_profitability: req.body.non_cash_profitability,
     };
     next();
   }

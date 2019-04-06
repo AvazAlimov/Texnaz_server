@@ -54,6 +54,10 @@ module.exports = {
       type: Sequelize.DOUBLE,
       allowNull: false,
     },
+    non_cash_profitability: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+    },
     income_tax: {
       type: Sequelize.DOUBLE,
       allowNull: false,
