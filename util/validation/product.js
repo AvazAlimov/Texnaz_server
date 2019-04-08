@@ -10,7 +10,8 @@ export const check = checkSchema({
     isFloat: true,
   },
   color: {
-    isString: true,
+    // isString: true,
+    optional: true,
   },
   cleaning: {
     isFloat: true,
@@ -40,10 +41,10 @@ export const check = checkSchema({
     },
   },
   type: {
-    isInt: true,
+    optional: true,
     custom: {
       options: (value) => {
-        if (!value) return false;
+        if (!value) return true;
         return exists(models.ProductType, value);
       },
     },
