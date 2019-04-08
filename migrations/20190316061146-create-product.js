@@ -21,7 +21,7 @@ module.exports = {
     },
     color: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     brand: {
       type: Sequelize.INTEGER,
@@ -41,7 +41,7 @@ module.exports = {
     },
     type: {
       type: Sequelize.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'ProductTypes',
         key: 'id',
