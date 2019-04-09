@@ -8,46 +8,46 @@ module.exports = {
       is_cash: false,
     },
     {
-      name: 'Затраты на банк',
-      value: 3253826,
-      is_transport: false,
-      is_cash: false,
-    },
-
-    {
       name: 'Налог на землю',
       value: 4970000,
       is_transport: false,
-      is_cash: true,
+      is_cash: false,
     },
     {
       name: 'Налог на имущество',
       value: 23550000,
       is_transport: false,
-      is_cash: true,
+      is_cash: false,
     },
     {
       name: 'Налог на воду',
       value: 460000,
       is_transport: false,
-      is_cash: true,
+      is_cash: false,
     },
     {
       name: 'Расходы периода',
       value: 763298540,
       is_transport: false,
-      is_cash: true,
-    },
-    // Perido Expanses Cash
-    {
-      name: 'Заработная плата Н',
-      value: 123456,
-      is_transport: false,
-      is_cash: true,
+      is_cash: false,
     },
     {
       name: 'Конвертация',
       value: 1487842.95,
+      is_transport: false,
+      is_cash: false,
+    },
+
+    // Perido Expanses Cash
+    {
+      name: 'Заработная плата Н',
+      value: 577624800,
+      is_transport: false,
+      is_cash: true,
+    },
+    {
+      name: 'Затраты на банк',
+      value: 3253826,
       is_transport: false,
       is_cash: true,
     },
