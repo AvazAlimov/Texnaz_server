@@ -3,7 +3,7 @@ module.exports = {
     {
       id: 1,
       name: 'Общий оборот',
-      value: 33000000,
+      value: 33000000000,
     },
     {
       id: 2,
@@ -18,27 +18,27 @@ module.exports = {
     {
       id: 4,
       name: 'Курс доллара (рыночный)',
-      value: 8500,
+      value: 8450,
     },
     {
       id: 5,
       name: 'Курс доллара (официальный)',
-      value: 8400,
+      value: 8368,
     },
     {
       id: 6,
       name: 'Курс доллара (обмен)',
-      value: 8600,
+      value: 8368,
     },
     {
       id: 7,
       name: 'Транспорт Н',
-      value: 100,
+      value: 5800,
     },
     {
       id: 8,
       name: 'Транспорт БН',
-      value: 100,
+      value: 0,
     }], {}),
 
   down: queryInterface => queryInterface.bulkDelete('Configurations', null, {}),
