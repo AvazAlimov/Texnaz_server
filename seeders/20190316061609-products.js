@@ -303,7 +303,7 @@ module.exports = {
     {
       brand: 10,
       name: 'POLY HIZL',
-      packing: 250,
+      packing: 0.250,
       unit: 6,
       excise: 0,
       tax: 0,
@@ -313,7 +313,7 @@ module.exports = {
     {
       brand: 10,
       name: 'POLY SERT',
-      packing: 250,
+      packing: 0.250,
       unit: 6,
       excise: 0,
       tax: 0,
