@@ -12,8 +12,9 @@ dotenv.config();
 const app = express();
 app.use(cors({
   origin: '*',
+  allowedHeaders: 'Content-Type, Authorization',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  preflightContinue: true,
+  preflightContinue: false,
   optionsSuccessStatus: 204,
 }));
 
