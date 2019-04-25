@@ -4,16 +4,16 @@ import { join } from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import dotenv from 'dotenv';
-import cors from 'cors';
 import indexRouter from './routes/index';
 
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: '*',
-  optionsSuccessStatus: 200,
-}));
+app.use((_, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use(logger('dev'));
 app.use(json());
