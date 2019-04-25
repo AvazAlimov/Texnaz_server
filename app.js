@@ -10,7 +10,10 @@ import indexRouter from './routes/index';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  optionsSuccessStatus: 200,
+}));
 
 app.use(logger('dev'));
 app.use(json());
