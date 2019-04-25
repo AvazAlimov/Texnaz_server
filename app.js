@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: false,
+  origin: true,
   allowedHeaders: 'Content-Type, Authorization',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   preflightContinue: false,
