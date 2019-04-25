@@ -10,19 +10,17 @@ import indexRouter from './routes/index';
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: true,
-  allowedHeaders: 'Content-Type, Authorization',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-}));
+
+// view engine setup
+app.set('views', join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(join(__dirname, '../Texnaz_client/dist')));
+app.use(cors());
 indexRouter(app);
 
 // catch 404 and forward to error handler
