@@ -5,6 +5,7 @@ function find(where, res, next) {
     where,
     include: [{
       model: models.Product,
+      include: [{ model: models.Brand }],
       as: 'product',
     }],
   })
