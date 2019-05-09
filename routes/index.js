@@ -16,6 +16,7 @@ import stock from './stocks';
 import batchexpanses from './batchexpanses';
 import items from './items';
 import regions from './regions';
+import provinces from './provinces';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -36,4 +37,5 @@ export default (app) => {
   app.use('/api/batch_expanses', batchexpanses);
   app.use('/api/items', items);
   app.use('/api/regions', regions);
+  app.use('/api/provinces', provinces);
 };
