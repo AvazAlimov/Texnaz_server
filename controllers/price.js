@@ -1,7 +1,7 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Prices.findAll({
+  models.Price.findAll({
     where,
     include: [{
       model: models.Product,

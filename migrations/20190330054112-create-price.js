@@ -15,19 +15,19 @@ module.exports = {
         key: 'id',
       },
     },
-    non_cash: {
+    firstPrice: {
       allowNull: false,
       type: Sequelize.DOUBLE,
     },
-    mix_non_cash: {
+    mixPriceNonCash: {
       allowNull: false,
       type: Sequelize.DOUBLE,
     },
-    mix_cash: {
+    mixPriceCash: {
       allowNull: false,
       type: Sequelize.DOUBLE,
     },
-    cash: {
+    secondPrice: {
       allowNull: false,
       type: Sequelize.DOUBLE,
     },
