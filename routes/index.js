@@ -17,6 +17,7 @@ import batchexpanses from './batchexpanses';
 import items from './items';
 import regions from './regions';
 import provinces from './provinces';
+import prestocks from './prestocks';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -38,4 +39,5 @@ export default (app) => {
   app.use('/api/items', items);
   app.use('/api/regions', regions);
   app.use('/api/provinces', provinces);
+  app.use('/api/prestocks', prestocks);
 };

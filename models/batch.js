@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
     transport_non_cash: DataTypes.DOUBLE,
     warehouse: DataTypes.INTEGER,
     local: DataTypes.BOOLEAN,
+    approved: DataTypes.BOOLEAN,
 
     total: DataTypes.DOUBLE,
     conversion: DataTypes.DOUBLE,

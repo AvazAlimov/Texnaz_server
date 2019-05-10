@@ -73,6 +73,11 @@ module.exports = {
       allowNull: false,
       defaultValue: false,
     },
+    approved: {
+      type: Sequelize.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('Batches'),
 };

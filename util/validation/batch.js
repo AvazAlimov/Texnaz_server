@@ -1,16 +1,6 @@
 import { validationResult, checkSchema } from 'express-validator/check';
-import models from '../../models';
-import exists from '../check';
 
 export const check = checkSchema({
-  // name: {
-  //   optional: true,
-  //   isString: true,
-  // },
-  // number: {
-  //   optional: true,
-  //   isInt: true,
-  // },
   date: {
     optional: true,
     isString: true,
@@ -42,13 +32,10 @@ export const check = checkSchema({
   local: {
     isBoolean: true,
   },
-  // warehouse: {
-  //   optional: true,
-  //   isInt: true,
-  //   custom: {
-  //     options: value => exists(models.Warehouse, value),
-  //   },
-  // },
+  approved: {
+    optional: true,
+    isBoolean: true,
+  },
 });
 
 export function validate(req, res, next) {
@@ -73,6 +60,7 @@ export function validate(req, res, next) {
       market_rate: req.body.market_rate,
       official_rate: req.body.official_rate,
       exchange_rate: req.body.exchange_rate,
+      approved: req.body.approved,
     };
     next();
   }
