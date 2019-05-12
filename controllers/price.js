@@ -3,11 +3,13 @@ import models from '../models';
 function find(where, res, next) {
   models.Price.findAll({
     where,
-    include: [{
-      model: models.Product,
-      include: [{ model: models.Brand }],
-      as: 'product',
-    }],
+    include: [
+      {
+        model: models.Product,
+        include: [{ model: models.Brand }],
+        as: 'product',
+      },
+    ],
   })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));
@@ -18,6 +20,18 @@ export default {
     find(null, res, (items) => {
       res.status(200).json(items);
     });
+  },
+
+  async getUnpricedProducts(_, res) {
+    const priced = await models.Price.findAll({
+      attributes: ['productId'],
+      raw: true,
+    });
+    const unpriced = await models.Product.findAll({
+      where: { id: { [models.Sequelize.Op.notIn]: priced.map(item => item.productId) } },
+      include: [{ model: models.Brand }],
+    });
+    res.status(200).json(unpriced);
   },
 
   createMultiple(req, res) {
