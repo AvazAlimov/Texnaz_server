@@ -7,6 +7,8 @@ function findProducts(where, res, next) {
     include: [{
       model: models.Tag,
       as: 'tags',
+    }, {
+      model: models.Brand,
     }],
   })
     .then((products) => {
