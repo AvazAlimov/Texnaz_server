@@ -15,19 +15,24 @@ module.exports = {
     itn: {
       type: Sequelize.STRING,
     },
-    contact_person: {
+    contactPerson: {
       type: Sequelize.STRING,
     },
     phone: {
       type: Sequelize.STRING,
     },
-    region: {
+    regionId: {
       type: Sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'Regions',
+        key: 'id',
+      },
     },
     sphere: {
       type: Sequelize.STRING,
     },
-    manager: {
+    managerId: {
       type: Sequelize.INTEGER,
       allowNull: false,
       references: {

@@ -3,12 +3,15 @@ export default (sequelize, DataTypes) => {
     icc: DataTypes.STRING,
     name: DataTypes.STRING,
     itn: DataTypes.STRING,
-    contact_person: DataTypes.STRING,
+    contactPerson: DataTypes.STRING,
     phone: DataTypes.STRING,
-    region: DataTypes.INTEGER,
+    regionId: DataTypes.INTEGER,
     sphere: DataTypes.STRING,
-    manager: DataTypes.INTEGER,
+    managerId: DataTypes.INTEGER,
   }, {});
-  Client.associate = () => {};
+  Client.associate = (models) => {
+    Client.belongsTo(models.Region, { as: 'region' });
+    Client.belongsTo(models.User, { as: 'manager' });
+  };
   return Client;
 };
