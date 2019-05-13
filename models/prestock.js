@@ -4,6 +4,9 @@ export default (sequelize, DataTypes) => {
     warehouseId: DataTypes.INTEGER,
     quantity: DataTypes.DOUBLE,
   }, {});
-  PreStock.associate = () => {};
+  PreStock.associate = (models) => {
+    PreStock.belongsTo(models.Product, { as: 'product' });
+    PreStock.belongsTo(models.Warehouse, { as: 'warehouse' });
+  };
   return PreStock;
 };
