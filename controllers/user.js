@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+import { hashSync } from 'bcrypt';
 import models from '../models';
 
 // Function to find users by passing WHERE selector
@@ -46,6 +47,7 @@ export default {
 
   // Function to add a new user
   create(req, res) {
+    req.user.password = hashSync(req.user.password, 10);
     // New user insertion
     models.User.create(req.user)
       // Succeeded
@@ -61,6 +63,7 @@ export default {
 
   // Function to update a specified user
   update(req, res) {
+    req.user.password = hashSync(req.user.password, 10);
     // User modification
     models.User.update(req.user, { where: { id: req.params.id } })
       // Succeeded
