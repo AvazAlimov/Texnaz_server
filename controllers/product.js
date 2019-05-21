@@ -19,7 +19,6 @@ function findProducts(where, res, next) {
 
 // TODO: make and selector
 function getSelector(query) {
-  console.log(query);
   const where = query.q ? {
     [Op.or]: [
       { name: { [Op.like]: `%${query.q}%` } },
@@ -29,7 +28,8 @@ function getSelector(query) {
     ],
   } : {};
   if (query.b) where.brand = query.b;
-  if (query.t) where.brand = query.t;
+  if (query.t) where.type = query.t;
+  if (query.c) where.code = query.c;
   return where;
 }
 
