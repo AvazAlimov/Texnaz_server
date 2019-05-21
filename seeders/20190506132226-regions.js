@@ -1,30 +1,32 @@
 function getRegions(provinceId, names) {
   return names.map(name => ({ provinceId, name }));
 }
-module.exports = {
-  up: queryInterface => queryInterface.bulkInsert(
-    'Regions',
-    getRegions(1, [
-      'Buloqboshi tuman',
-      'Asaka tuman',
-      'Baliqchi tuman',
-      'Izbosgan tuman',
-      'Andijon shahar',
-      'Paxtaobod tuman',
-      'Andijon tuman',
-      'Jalaquduq tuman',
-      'Marhamat tuman',
-      'Qo`rg`ontepa tuman',
-      'Shaxrixon tuman',
-      'Viloyat tassarrufidagi muassasalar',
-      'Xo`jaobod tumani',
-      'Bo`z tumani',
-      'Xonabod shahar',
-      'Oltinko`l tuman',
-      'Ulug`nor tuman',
-      'Qorasuv shahar',
-    ])
-      .concat(getRegions(2, [
+
+const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
+  // Андижанская область
+  getRegions(1, [
+    'Buloqboshi tuman',
+    'Asaka tuman',
+    'Baliqchi tuman',
+    'Izbosgan tuman',
+    'Andijon shahar',
+    'Paxtaobod tuman',
+    'Andijon tuman',
+    'Jalaquduq tuman',
+    'Marhamat tuman',
+    'Qo`rg`ontepa tuman',
+    'Shaxrixon tuman',
+    'Viloyat tassarrufidagi muassasalar',
+    'Xo`jaobod tumani',
+    'Bo`z tumani',
+    'Xonabod shahar',
+    'Oltinko`l tuman',
+    'Ulug`nor tuman',
+    'Qorasuv shahar',
+  ])
+  // Бухарская область
+    .concat(
+      getRegions(2, [
         'Kogon tumani',
         'Buxoro tumani',
         'Olot tumani',
@@ -38,8 +40,11 @@ module.exports = {
         'Vobkent tumani',
         'Jondor tumani',
         'Qorako`l tumani',
-      ]))
-      .concat(getRegions(3, [
+      ]),
+    )
+  // Ферганская область
+    .concat(
+      getRegions(3, [
         'Yozyovon tuman',
         'Rishton tuman',
         'Quva tuman',
@@ -60,8 +65,11 @@ module.exports = {
         'Qo`qon shahar',
         'Beshariq tuman',
         'Viloyat tassarrufidagi muassasalar',
-      ]))
-      .concat(getRegions(4, [
+      ]),
+    )
+  // Джиззахская область
+    .concat(
+      getRegions(4, [
         'Baxmal tuman',
         'Zafarobod tuman',
         'Sh.Rashidov tuman',
@@ -75,8 +83,11 @@ module.exports = {
         'G`allaorol tuman',
         'Mirzacho`l tuman',
         'Yangiobod tuman',
-      ]))
-      .concat(getRegions(5, [
+      ]),
+    )
+  // Наманганская область
+    .concat(
+      getRegions(5, [
         'Norin tuman',
         'Uychi tuman',
         'Namangan tuman',
@@ -90,8 +101,11 @@ module.exports = {
         'Yangiqo`rg`on tuman',
         'Kosonsoy tuman',
         'Viloyat tassarrufidagi muassasalar',
-      ]))
-      .concat(getRegions(6, [
+      ]),
+    )
+  // Навоийская область
+    .concat(
+      getRegions(6, [
         'Karmana tuman',
         'Navoiy shahar',
         'Tomdi tuman',
@@ -102,8 +116,11 @@ module.exports = {
         'Xatirchi tuman',
         'Konimex tuman',
         'Nurota tuman',
-      ]))
-      .concat(getRegions(7, [
+      ]),
+    )
+  // Кашкадарьинская область
+    .concat(
+      getRegions(7, [
         'Dehqonobod tuman',
         'Mirishkor tuman',
         'G`uzor tuman',
@@ -119,8 +136,11 @@ module.exports = {
         'Muborak tuman',
         'Qarshi shahri',
         'Shahrisabz shahri',
-      ]))
-      .concat(getRegions(8, [
+      ]),
+    )
+  // Каракалпакстан
+    .concat(
+      getRegions(8, [
         'Chimboy tumani',
         'Xo`jayli tumani',
         'Qanliko`l tumani',
@@ -137,8 +157,11 @@ module.exports = {
         'Shumanoy tumani',
         'Taxtakupir tumani',
         'Taxiatosh shahri',
-      ]))
-      .concat(getRegions(9, [
+      ]),
+    )
+  // Самаркандская область
+    .concat(
+      getRegions(9, [
         'Paxtachi tuman',
         'Pastdarg`om tuman',
         'Ishtixon tuman',
@@ -155,8 +178,11 @@ module.exports = {
         'Jomboy tuman',
         'Samarqand tuman',
         'Nurobod tuman',
-      ]))
-      .concat(getRegions(10, [
+      ]),
+    )
+  // Сырдарьинская область
+    .concat(
+      getRegions(10, [
         'Boyovut tuman',
         'Xovos tuman',
         'Sayxunobod tumani',
@@ -167,8 +193,11 @@ module.exports = {
         'Mirzaobod tuman',
         'Guliston tumani',
         'Sardoba tuman',
-      ]))
-      .concat(getRegions(11, [
+      ]),
+    )
+  // Сурхандарьинская область
+    .concat(
+      getRegions(11, [
         'Angor tuman',
         'Uzun tuman',
         'Termiz tuman',
@@ -183,8 +212,11 @@ module.exports = {
         'Boysun tuman',
         'Qiziriq tuman',
         'Muzrabot tuman',
-      ]))
-      .concat(getRegions(12, [
+      ]),
+    )
+  // г. Ташкент
+    .concat(
+      getRegions(12, [
         'Uchtepa tuman',
         'Yashnobod tuman',
         'Olmazor tuman',
@@ -196,8 +228,11 @@ module.exports = {
         'Bektemir tumani',
         'Mirzo-Ulug`bek tumani',
         'Sergeli tuman',
-      ]))
-      .concat(getRegions(13, [
+      ]),
+    )
+  // Ташкентская область
+    .concat(
+      getRegions(13, [
         'Parkent tuman',
         'Yuqorichirchiq tuman',
         'Oqqo`rg`on tuman',
@@ -220,8 +255,11 @@ module.exports = {
         'Chirchiq shahar',
         'Ohangaron shahar',
         'Bo`stonliq tuman',
-      ]))
-      .concat(getRegions(14, [
+      ]),
+    )
+  // Хорезмская область
+    .concat(
+      getRegions(14, [
         'Xiva tuman',
         'Shovot tuman',
         'Urganch shaxar',
@@ -234,9 +272,14 @@ module.exports = {
         'Xiva shahri',
         'Gurlan tuman',
         'Hozarasp tuman',
-      ])),
-    {},
-  ),
+      ]),
+    ),
+);
+
+module.exports = {
+  up: queryInterface => queryInterface.bulkInsert('Regions', regions, {}),
 
   down: queryInterface => queryInterface.bulkDelete('Regions', null, {}),
+
+  getRegions: () => regions,
 };
