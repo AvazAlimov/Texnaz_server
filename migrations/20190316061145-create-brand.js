@@ -12,6 +12,9 @@ module.exports = {
     country: {
       type: Sequelize.STRING,
     },
+    manufacturer: {
+      type: Sequelize.STRING,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('Brands'),
 };

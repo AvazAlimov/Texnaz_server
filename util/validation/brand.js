@@ -7,6 +7,9 @@ export const check = checkSchema({
   country: {
     isString: true,
   },
+  manufacturer: {
+    isString: true,
+  },
 });
 
 export function validate(req, res, next) {
@@ -19,6 +22,7 @@ export function validate(req, res, next) {
     req.brand = {
       name: req.body.name,
       country: req.body.country,
+      manufacturer: req.body.manufacturer,
     };
     next();
   }
