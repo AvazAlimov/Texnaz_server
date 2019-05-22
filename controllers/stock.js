@@ -1,3 +1,4 @@
+import { Op } from 'sequelize';
 import models from '../models';
 
 function find(where, res, next) {
@@ -13,15 +14,28 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+function getSelector(query) {
+  const where = query.warehouse ? {
+    warehouseId: query.warehouse,
+  } : {
+    [Op.and]: [],
+  };
+  if (query.arrival_date) {
+    where[[Op.and]].push({ arrival_date: query.arrival_date });
+  }
+  if (query.expiry_date) {
+    where[[Op.and]].push({ expiry_date: query.expiry_date });
+  }
+  if (query.defected) {
+    where[[Op.and]].push({ defected: query.defected });
+  }
+  return where;
+}
+
 export default {
   getAll(req, res) {
     let where = null;
-    if (req.query.warehouse) {
-      where = {
-        warehouseId: req.query.warehouse,
-      };
-    }
-
+    if (Object.keys(req.query).length) where = getSelector(req.query);
     find(where, res, (stocks) => {
       res.status(200).json(stocks);
     });
