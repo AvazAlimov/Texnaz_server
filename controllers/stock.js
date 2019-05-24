@@ -17,8 +17,14 @@ function find(where, res, next) {
 function getSelector(query) {
   const where = query.warehouse ? {
     warehouseId: query.warehouse,
+    quantity: {
+      [Op.gt]: 0,
+    },
   } : {
     [Op.and]: [],
+    quantity: {
+      [Op.gt]: 0,
+    },
   };
   if (query.arrival_date) {
     where[[Op.and]].push({ arrival_date: query.arrival_date });

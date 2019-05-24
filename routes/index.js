@@ -20,6 +20,7 @@ import provinces from './provinces';
 import prestocks from './prestocks';
 import prices from './prices';
 import clients from './clients';
+import moves from './moves';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -44,4 +45,5 @@ export default (app) => {
   app.use('/api/prestocks', prestocks);
   app.use('/api/prices', prices);
   app.use('/api/clients', clients);
+  app.use('/api/moves', moves);
 };
