@@ -37,9 +37,65 @@ function getSelector(query) {
   return where;
 }
 
+function acceptAll(move) {
+  return new Promise((resolve, reject) => {
+    models.Stock.create({
+      productId: move.stock.productId,
+      quantity: move.quantity,
+      arrival_date: move.stock.arrival_date,
+      expiry_date: move.stock.expiry_date,
+      defected: move.stock.defected,
+      warehouseId: move.to,
+    }).then((stock) => {
+      const updatedMove = move;
+      updatedMove.newStockId = stock.id;
+      models.Move.update(updatedMove, { where: { id: updatedMove.id } })
+        .then(() => resolve())
+        .catch(error => reject(error));
+    }).catch(error => reject(error));
+  });
+}
+
+function acceptPartial(move) {
+  return new Promise((resolve, reject) => {
+    const updatedMove = move;
+    const { stock } = move;
+    stock.quantity += (move.quantity - move.arrived);
+    updatedMove.quantity -= move.arrived;
+    models.Stock.update(stock, { where: { id: stock.id } })
+      .then(() => {
+        acceptAll(updatedMove)
+          .then(() => resolve())
+          .catch((error) => {
+            reject(error);
+          });
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+function rejectAll(move) {
+  return new Promise((resolve, reject) => {
+    const { stock } = move;
+    stock.quantity += move.quantity;
+    models.Stock.update(stock, { where: { id: stock.id } })
+      .then(() => {
+        models.Move.destroy({ where: { id: move.id } })
+          .then(() => resolve())
+          .catch((error) => {
+            reject(error);
+          });
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
 export default {
   getAll(req, res) {
-    console.log('ALL');
     let where = null;
     if (Object.keys(req.query).length) where = getSelector(req.query);
     find(where, res, (items) => {
@@ -48,7 +104,6 @@ export default {
   },
 
   getAllPending(req, res) {
-    console.log('PENDING');
     const where = {
       to: req.params.warehouseId,
       newStockId: {
@@ -90,24 +145,16 @@ export default {
     const tasks = [];
     if (req.moves.length) {
       req.moves.forEach((move) => {
-        tasks.push(new Promise((resolve, reject) => {
-          models.Stock.create({
-            productId: move.stock.productId,
-            quantity: move.quantity,
-            arrival_date: move.stock.arrival_date,
-            expiry_date: move.stock.expiry_date,
-            defected: move.stock.defected,
-            warehouseId: move.to,
-          }).then((stock) => {
-            const updatedMove = move;
-            updatedMove.newStockId = stock.id;
-            models.Move.update(updatedMove, { where: { id: updatedMove.id } })
-              .then(() => resolve())
-              .catch(error => reject(error));
-          }).catch((error) => {
-            reject(error);
-          });
-        }));
+        if (move.quantity === move.arrived) {
+          console.log('ACCEPT');
+          tasks.push(acceptAll(move));
+        } else if (move.arrived > 0) {
+          console.log('PARTIAL');
+          tasks.push(acceptPartial(move));
+        } else if (move.arrived === 0) {
+          console.log('REJECT');
+          tasks.push(rejectAll(move));
+        }
       });
     }
     Promise.all(tasks).then(() => {
