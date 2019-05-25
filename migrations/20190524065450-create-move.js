@@ -30,6 +30,14 @@ module.exports = {
         key: 'id',
       },
     },
+    newStockId: {
+      type: Sequelize.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'Stocks',
+        key: 'id',
+      },
+    },
     quantity: {
       type: Sequelize.DOUBLE,
       allowNull: false,
