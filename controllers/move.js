@@ -58,29 +58,48 @@ function acceptAll(move) {
 
 function acceptPartial(move) {
   return new Promise((resolve, reject) => {
-    const updatedMove = move;
-    const { stock } = move;
-    stock.quantity += (move.quantity - move.arrived);
-    updatedMove.quantity -= move.arrived;
-    models.Stock.update(stock, { where: { id: stock.id } })
+    const updatedMove = JSON.parse(JSON.stringify(move));
+    updatedMove.quantity = move.arrived;
+    acceptAll(updatedMove)
       .then(() => {
-        acceptAll(updatedMove)
+        models.Return.create({
+          stockId: move.stockId,
+          from: move.to,
+          to: move.from,
+          quantity: move.quantity - move.arrived,
+        })
           .then(() => resolve())
-          .catch((error) => {
-            reject(error);
-          });
+          .catch(error => reject(error));
       })
-      .catch((error) => {
-        reject(error);
-      });
+      .catch(error => reject(error));
+
+    // const updatedMove = move;
+    // const { stock } = move;
+    // stock.quantity += (move.quantity - move.arrived);
+    // updatedMove.quantity -= move.arrived;
+    // models.Stock.update(stock, { where: { id: stock.id } })
+    //   .then(() => {
+    //     // TODO: add notification for warehouse
+    //     acceptAll(updatedMove)
+    //       .then(() => resolve())
+    //       .catch((error) => {
+    //         reject(error);
+    //       });
+    //   })
+    //   .catch((error) => {
+    //     reject(error);
+    //   });
   });
 }
 
 function rejectAll(move) {
   return new Promise((resolve, reject) => {
-    const { stock } = move;
-    stock.quantity += move.quantity;
-    models.Stock.update(stock, { where: { id: stock.id } })
+    models.Return.create({
+      stockId: move.stockId,
+      from: move.to,
+      to: move.from,
+      quantity: move.quantity,
+    })
       .then(() => {
         models.Move.destroy({ where: { id: move.id } })
           .then(() => resolve())
@@ -91,6 +110,20 @@ function rejectAll(move) {
       .catch((error) => {
         reject(error);
       });
+    // const { stock } = move;
+    // stock.quantity += move.quantity;
+    // models.Stock.update(stock, { where: { id: stock.id } })
+    //   .then(() => {
+    //     models.Move.destroy({ where: { id: move.id } })
+    //     // TODO: add notification for warehouse
+    //       .then(() => resolve())
+    //       .catch((error) => {
+    //         reject(error);
+    //       });
+    //   })
+    //   .catch((error) => {
+    //     reject(error);
+    //   });
   });
 }
 

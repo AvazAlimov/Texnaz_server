@@ -21,6 +21,7 @@ import prestocks from './prestocks';
 import prices from './prices';
 import clients from './clients';
 import moves from './moves';
+import returns from './returns';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -46,4 +47,5 @@ export default (app) => {
   app.use('/api/prices', prices);
   app.use('/api/clients', clients);
   app.use('/api/moves', moves);
+  app.use('/api/returns', returns);
 };
