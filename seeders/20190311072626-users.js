@@ -22,8 +22,8 @@ module.exports = {
   {
     id: 4,
     name: 'John Sculley',
-    username: 'seller',
-    password: bcrypt.hashSync('seller', 10),
+    username: 'owner',
+    password: bcrypt.hashSync('owner', 10),
   },
 
   {

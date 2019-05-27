@@ -38,6 +38,12 @@ module.exports = {
     ])
     // MANAGER
       .concat(getBindings(2, [
+        Permissions.SHOW_PRICES,
+        Permissions.SHOW_PRICES_PRICED,
+        Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_MANAGERS,
+        Permissions.SHOW_CLIENTS,
+        Permissions.SHOW_SETTINGS,
         Permissions.CAN_BOOK,
       ]))
     // OPERATOR
@@ -61,6 +67,18 @@ module.exports = {
         Permissions.SHOW_SETTINGS_TAGS,
         Permissions.SHOW_SETTINGS_USERS,
         Permissions.SHOW_SETTINGS_REGIONS,
+      ]))
+    // WAREHOUSE OWNER
+      .concat(getBindings(4, [
+        Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_SETTINGS,
+      ]))
+    // ACCOUNTANT
+      .concat(getBindings(5, [
+        Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_PAYMENTS,
+        Permissions.SHOW_CLIENTS,
+        Permissions.SHOW_SETTINGS,
       ])),
     {}),
 
