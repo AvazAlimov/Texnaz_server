@@ -3,7 +3,7 @@ export default (sequelize, DataTypes) => {
     stockId: DataTypes.INTEGER,
     from: DataTypes.INTEGER,
     to: DataTypes.INTEGER,
-    quantity: DataTypes.INTEGER,
+    quantity: DataTypes.DOUBLE,
   }, {});
   Return.associate = (models) => {
     Return.belongsTo(models.Stock, { as: 'stock' });

@@ -34,34 +34,43 @@ export default {
     });
   },
 
-  //   get(req, res) {
-  //     find({
-  //       id: req.params.id,
-  //     }, res, ([item]) => {
-  //       if (item) res.status(200).json(item);
-  //       else res.sendStatus(404);
-  //     });
-  //   },
+  async acceptMultiple(req, res) {
+    if (req.returns.length) {
+      const returns = [];
+      const losses = [];
 
-  //   create(req, res) {
-  //     models.Region.create(req.region)
-  //       .then(() => res.sendStatus(201))
-  //       .catch(error => res.status(502).json(error));
-  //   },
+      const stocks = await models.Stock.findAll({
+        where: {
+          id: { [models.Sequelize.Op.in]: req.returns.map(item => item.stockId) },
+        },
+        raw: true,
+      });
 
-  //   update(req, res) {
-  //     models.Region.update(req.region, { where: { id: req.params.id } })
-  //       .then(() => res.sendStatus(200))
-  //       .catch(error => res.status(502).json(error));
-  //   },
-
-//   delete(req, res) {
-//     models.Region.destroy({
-//       where: {
-//         id: req.params.id,
-//       },
-//     })
-//       .then(() => res.sendStatus(200))
-//       .catch(error => res.status(502).json(error));
-//   },
+      req.returns.forEach((ret) => {
+        const stock = stocks.find(item => item.id === ret.stockId);
+        if (stock) {
+          stock.quantity += parseFloat(ret.arrived);
+          stocks.push(stock);
+          returns.push(ret);
+          if (ret.quantity > ret.arrived) {
+            losses.push({
+              stockId: stock.id,
+              quantity: ret.quantity - ret.arrived,
+              warehouseId: ret.to,
+            });
+          }
+        }
+      });
+      Promise.all([
+        models.Stock.bulkCreate(stocks, { updateOnDuplicate: true }),
+        models.Return.destroy({
+          where: { id: { [models.Sequelize.Op.in]: returns.map(ret => ret.id) } },
+        }),
+        models.sequelize.getQueryInterface().bulkInsert('Losts', losses),
+      ])
+        .then(() => res.sendStatus(201))
+        .catch(error => res.status(502).json(error));
+    }
+    res.sendStatus(200);
+  },
 };

@@ -22,6 +22,7 @@ import prices from './prices';
 import clients from './clients';
 import moves from './moves';
 import returns from './returns';
+import losts from './losts';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -48,4 +49,5 @@ export default (app) => {
   app.use('/api/clients', clients);
   app.use('/api/moves', moves);
   app.use('/api/returns', returns);
+  app.use('/api/losts', losts);
 };

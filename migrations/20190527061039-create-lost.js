@@ -1,29 +1,22 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('Returns', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('Losts', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
+    warehouseId: {
+      type: Sequelize.INTEGER,
+      references: {
+        model: 'Warehouses',
+        key: 'id',
+      },
+    },
     stockId: {
       type: Sequelize.INTEGER,
       references: {
         model: 'Stocks',
-        key: 'id',
-      },
-    },
-    from: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'Warehouses',
-        key: 'id',
-      },
-    },
-    to: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'Warehouses',
         key: 'id',
       },
     },
@@ -36,5 +29,5 @@ module.exports = {
       defaultValue: Sequelize.fn('now'),
     },
   }),
-  down: queryInterface => queryInterface.dropTable('Returns'),
+  down: queryInterface => queryInterface.dropTable('Losts'),
 };
