@@ -12,7 +12,16 @@ function find(where, res, next) {
         include: [{
           model: models.Brand,
         }],
+      }, {
+        model: models.Warehouse,
+        as: 'warehouse',
       }],
+    }, {
+      model: models.Client,
+      as: 'client',
+    }, {
+      model: models.User,
+      as: 'user',
     }],
   })
     .then(items => next(items))
@@ -21,7 +30,11 @@ function find(where, res, next) {
 
 export default {
   getAll(req, res) {
-    find(null, res, (items) => {
+    const where = {};
+    if (req.query.userId) {
+      where.userId = req.query.userId;
+    }
+    find(where, res, (items) => {
       res.status(200).json(items);
     });
   },
@@ -38,7 +51,13 @@ export default {
     }
   },
 
-  deleteMultiple(req, res) {
-
+  delete(req, res) {
+    models.Booking.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
   },
 };
