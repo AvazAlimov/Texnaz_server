@@ -23,6 +23,7 @@ import clients from './clients';
 import moves from './moves';
 import returns from './returns';
 import losts from './losts';
+import bookings from './bookings';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -50,4 +51,5 @@ export default (app) => {
   app.use('/api/moves', moves);
   app.use('/api/returns', returns);
   app.use('/api/losts', losts);
+  app.use('/api/bookings', bookings);
 };
