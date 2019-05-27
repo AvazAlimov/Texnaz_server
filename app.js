@@ -7,6 +7,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import indexRouter from './routes/index';
 
+require('./tasks/index');
+
 dotenv.config();
 
 const app = express();
