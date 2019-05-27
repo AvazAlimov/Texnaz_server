@@ -10,6 +10,7 @@ export default (sequelize, DataTypes) => {
   Stock.associate = (models) => {
     Stock.belongsTo(models.Warehouse, { as: 'warehouse', foreignKey: 'warehouseId' });
     Stock.belongsTo(models.Product, { as: 'product', foreignKey: 'productId' });
+    Stock.hasMany(models.Booking, { as: 'bookings', foreignKey: 'stockId' });
   };
   return Stock;
 };

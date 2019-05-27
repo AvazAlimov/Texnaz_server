@@ -8,6 +8,9 @@ function find(where, res, next) {
       model: models.Product,
       include: [{ model: models.Brand }],
       as: 'product',
+    }, {
+      model: models.Booking,
+      as: 'bookings',
     }],
   })
     .then(stocks => next(stocks))
