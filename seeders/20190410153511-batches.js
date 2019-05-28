@@ -10,6 +10,7 @@ module.exports = {
     exchange_rate: 8368,
     transport_cash: 5800,
     transport_non_cash: 0,
+    warehouse: 1,
   },
   ], {}),
 
