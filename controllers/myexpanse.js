@@ -84,4 +84,27 @@ export default {
       .then(() => res.sendStatus(200))
       .catch(error => res.status(502).json(error));
   },
+
+  getAll(_, res) {
+    models.MyExpanse
+      .findAll({
+        include: [{
+          model: models.ExpanseForm,
+          as: 'form',
+        }, {
+          model: models.ExpanseType,
+          as: 'type',
+        }, {
+          model: models.ExpansePurpose,
+          as: 'purpose',
+        }, {
+          model: models.Person,
+          as: 'person',
+        }],
+      })
+      .then((items) => {
+        res.status(200).json(items);
+      })
+      .catch(error => res.status(502).json(error));
+  },
 };

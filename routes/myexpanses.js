@@ -15,6 +15,7 @@ router.post('/forms', authMiddleware, myexpanse.createForm);
 router.post('/purposes', authMiddleware, myexpanse.createPurpose);
 router.post('/people', authMiddleware, myexpanse.createPerson);
 
+router.get('/', authMiddleware, myexpanse.getAll);
 router.post('/', check, validate, authMiddleware, myexpanse.create);
 
 export default router;
