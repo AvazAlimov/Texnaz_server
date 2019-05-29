@@ -85,6 +85,13 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 
+  remove(req, res) {
+    models.MyExpanse.destroy({
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+
   getAll(_, res) {
     models.MyExpanse
       .findAll({

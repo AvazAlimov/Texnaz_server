@@ -17,5 +17,6 @@ router.post('/people', authMiddleware, myexpanse.createPerson);
 
 router.get('/', authMiddleware, myexpanse.getAll);
 router.post('/', check, validate, authMiddleware, myexpanse.create);
+router.delete('/:id', authMiddleware, myexpanse.remove);
 
 export default router;
