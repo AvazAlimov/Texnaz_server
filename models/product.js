@@ -12,6 +12,7 @@ export default (sequelize, DataTypes) => {
     vat: DataTypes.DOUBLE,
     tax: DataTypes.DOUBLE,
     excise: DataTypes.DOUBLE,
+    discount: DataTypes.DOUBLE,
   }, {});
   Product.associate = (models) => {
     Product.hasOne(models.Unit, { foreignKey: 'id' });

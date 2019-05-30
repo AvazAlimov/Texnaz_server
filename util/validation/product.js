@@ -25,6 +25,9 @@ export const check = checkSchema({
   excise: {
     isFloat: true,
   },
+  discount: {
+    optional: true,
+  },
   code: {
     optional: true,
   },
@@ -82,6 +85,7 @@ export function validate(req, res, next) {
       vat: req.body.vat,
       tax: req.body.tax,
       excise: req.body.excise,
+      discount: req.body.discount || 0,
       code: req.body.code || null,
       purpose: req.body.purpose || null,
       tags: req.body.tags || [],

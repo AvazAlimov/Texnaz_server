@@ -71,6 +71,11 @@ module.exports = {
       type: Sequelize.DOUBLE,
       allowNull: false,
     },
+    discount: {
+      type: Sequelize.DOUBLE,
+      allowNull: false,
+      defaultValue: 0,
+    },
   }),
 
   down: queryInterface => queryInterface.dropTable('Products'),
