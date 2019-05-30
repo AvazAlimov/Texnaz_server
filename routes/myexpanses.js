@@ -15,6 +15,16 @@ router.post('/forms', authMiddleware, myexpanse.createForm);
 router.post('/purposes', authMiddleware, myexpanse.createPurpose);
 router.post('/people', authMiddleware, myexpanse.createPerson);
 
+router.post('/types/:id', authMiddleware, myexpanse.updateType);
+router.post('/forms/:id', authMiddleware, myexpanse.updateForm);
+router.post('/purposes/:id', authMiddleware, myexpanse.updatePurpose);
+router.post('/people/:id', authMiddleware, myexpanse.updatePerson);
+
+router.delete('/types/:id', authMiddleware, myexpanse.removeType);
+router.delete('/forms/:id', authMiddleware, myexpanse.removeForm);
+router.delete('/purposes/:id', authMiddleware, myexpanse.removePurpose);
+router.delete('/people/:id', authMiddleware, myexpanse.removePerson);
+
 router.get('/', authMiddleware, myexpanse.getAll);
 router.post('/', check, validate, authMiddleware, myexpanse.create);
 router.delete('/:id', authMiddleware, myexpanse.remove);

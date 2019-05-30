@@ -9,7 +9,6 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
-
   getAllForms(_, res) {
     models.ExpanseForm
       .findAll({})
@@ -18,7 +17,6 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
-
   getAllPurposes(_, res) {
     models.ExpansePurpose
       .findAll({})
@@ -27,7 +25,6 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
-
   getAllPeople(_, res) {
     models.Person
       .findAll({})
@@ -36,6 +33,7 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
+
 
   createType(req, res) {
     if (!req.body.name) {
@@ -48,7 +46,6 @@ export default {
         .catch(error => res.status(502).json(error));
     }
   },
-
   createForm(req, res) {
     if (!req.body.name) { res.sendStatus(403); } else {
       models.ExpanseForm.create({
@@ -58,7 +55,6 @@ export default {
         .catch(error => res.status(502).json(error));
     }
   },
-
   createPurpose(req, res) {
     if (!req.body.name) { res.sendStatus(403); } else {
       models.ExpansePurpose.create({
@@ -68,7 +64,6 @@ export default {
         .catch(error => res.status(502).json(error));
     }
   },
-
   createPerson(req, res) {
     if (!req.body.name) { res.sendStatus(403); } else {
       models.Person.create({
@@ -78,6 +73,57 @@ export default {
         .catch(error => res.status(502).json(error));
     }
   },
+
+  updateType(req, res) {
+    models.ExpanseType.update({ name: req.body.name }, {
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  updateForm(req, res) {
+    models.ExpanseForm.update({ name: req.body.name }, {
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  updatePurpose(req, res) {
+    models.ExpansePurpose.update({ name: req.body.name }, {
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  updatePerson(req, res) {
+    models.Person.update({ name: req.body.name }, {
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+
+  removeType(req, res) {
+    models.ExpanseType.destroy({
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  removeForm(req, res) {
+    models.ExpanseForm.destroy({
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  removePurpose(req, res) {
+    models.ExpansePurpose.destroy({
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+  removePerson(req, res) {
+    models.Person.destroy({
+      where: { id: req.params.id },
+    }).then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
+
 
   create(req, res) {
     models.MyExpanse.create(req.expanse)
