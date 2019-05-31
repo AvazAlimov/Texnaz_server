@@ -27,6 +27,7 @@ router.delete('/people/:id', authMiddleware, myexpanse.removePerson);
 
 router.get('/', authMiddleware, myexpanse.getAll);
 router.post('/', check, validate, authMiddleware, myexpanse.create);
+router.post('/:id', check, validate, authMiddleware, myexpanse.update);
 router.delete('/:id', authMiddleware, myexpanse.remove);
 
 export default router;

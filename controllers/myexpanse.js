@@ -130,6 +130,13 @@ export default {
       .then(() => res.sendStatus(200))
       .catch(error => res.status(502).json(error));
   },
+  update(req, res) {
+    models.MyExpanse.update(req.expanse, {
+      where: { id: req.params.id },
+    })
+      .then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
 
   remove(req, res) {
     models.MyExpanse.destroy({
