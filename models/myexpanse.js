@@ -5,6 +5,7 @@ export default (sequelize, DataTypes) => {
     purposeId: DataTypes.INTEGER,
     typeId: DataTypes.INTEGER,
     personId: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
   }, {});
   MyExpanse.associate = (models) => {
     MyExpanse.belongsTo(models.ExpanseType, { as: 'type' });
