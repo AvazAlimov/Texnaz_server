@@ -56,4 +56,14 @@ export default {
       } else res.sendStatus(404);
     });
   },
+
+  delete(req, res) {
+    models.Payment.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(() => res.sendStatus(200))
+      .catch(error => res.status(502).json(error));
+  },
 };

@@ -8,5 +8,6 @@ router.get('/', authMiddleware, payment.getAll);
 router.get('/:id', authMiddleware, payment.get);
 router.post('/', authMiddleware, check, validate, payment.create);
 router.post('/approve/:id', authMiddleware, payment.approve);
+router.delete('/:id', authMiddleware, payment.delete);
 
 export default router;
