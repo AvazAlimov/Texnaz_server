@@ -29,9 +29,27 @@ export default {
     });
   },
 
+  get(req, res) {
+    find({ id: req.params.id }, res, (items) => {
+      if (items.length) res.status(200).json(items[0]);
+      else res.sendStatus(404);
+    });
+  },
+
   create(req, res) {
     models.Payment.create(req.payment)
       .then(payment => res.status(201).json(payment))
       .catch(error => res.status(502).json(error));
+  },
+
+  approve(req, res) {
+    find({ id: req.params.id }, res, ([item]) => {
+      if (item) {
+        models.Payment.update({
+          approved: true,
+        }, { where: { id: item.id } });
+        res.sendStatus(200);
+      } else res.sendStatus(404);
+    });
   },
 };
