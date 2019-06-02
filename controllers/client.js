@@ -13,6 +13,10 @@ function find(where, res, next) {
         model: models.User,
         as: 'manager',
       },
+      {
+        model: models.Payment,
+        as: 'payments',
+      },
     ],
   })
     .then(items => next(items))

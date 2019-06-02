@@ -6,8 +6,16 @@ function find(where, res, next) {
     where,
     include: [{
       model: models.Product,
-      include: [{ model: models.Brand }],
       as: 'product',
+      include: [
+        { model: models.Brand },
+        {
+          model: models.Price,
+          as: 'prices',
+          order: [['id', 'DESC']],
+          limit: 1,
+        },
+      ],
     }, {
       model: models.Booking,
       as: 'bookings',
