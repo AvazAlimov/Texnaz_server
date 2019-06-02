@@ -12,6 +12,7 @@ export default (sequelize, DataTypes) => {
   Client.associate = (models) => {
     Client.belongsTo(models.Region, { as: 'region' });
     Client.belongsTo(models.User, { as: 'manager' });
+    Client.hasMany(models.Payment, { as: 'payments', foreignKey: 'clientId' });
   };
   return Client;
 };

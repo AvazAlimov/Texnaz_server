@@ -15,6 +15,10 @@ function find(where, res, next) {
       {
         model: models.Client,
         as: 'client',
+        include: [{
+          model: models.Payment,
+          as: 'payments',
+        }],
       },
     ],
   })
