@@ -3,6 +3,34 @@ import models from '../models';
 function find(where, res, next) {
   models.Sale.findAll({
     where,
+    include: [
+      {
+        model: models.Client,
+        as: 'client',
+        include: [{
+          model: models.Payment,
+          as: 'payments',
+        }],
+      },
+      {
+        model: models.User,
+        as: 'user',
+      },
+      {
+        model: models.User,
+        as: 'manager',
+      },
+      {
+        model: models.SaleItem,
+        as: 'items',
+        include: [
+          {
+            model: models.Price,
+            as: 'price',
+          },
+        ],
+      },
+    ],
   })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));

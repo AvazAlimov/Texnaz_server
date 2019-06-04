@@ -12,6 +12,7 @@ export default (sequelize, DataTypes) => {
     Sale.belongsTo(models.Client, { as: 'client' });
     Sale.belongsTo(models.User, { as: 'user', foreignKey: 'userId' });
     Sale.belongsTo(models.User, { as: 'manager', foreignKey: 'managerId' });
+    Sale.hasMany(models.SaleItem, { as: 'items' });
   };
   return Sale;
 };

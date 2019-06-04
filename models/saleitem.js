@@ -6,6 +6,8 @@ export default (sequelize, DataTypes) => {
     quantity: DataTypes.DOUBLE,
     discount: DataTypes.DOUBLE,
   }, {});
-  SaleItem.associate = () => {};
+  SaleItem.associate = (models) => {
+    SaleItem.belongsTo(models.Price, { as: 'price' });
+  };
   return SaleItem;
 };
