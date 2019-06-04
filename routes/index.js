@@ -26,6 +26,7 @@ import losts from './losts';
 import bookings from './bookings';
 import myexpanses from './myexpanses';
 import payments from './payments';
+import sales from './sales';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -56,4 +57,5 @@ export default (app) => {
   app.use('/api/bookings', bookings);
   app.use('/api/myexpanses', myexpanses);
   app.use('/api/payments', payments);
+  app.use('/api/sales', sales);
 };

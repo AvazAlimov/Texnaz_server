@@ -29,12 +29,14 @@ module.exports = {
     userId: {
       type: Sequelize.INTEGER,
       references: {
+        allowNull: true,
         model: 'Users',
         key: 'id',
       },
     },
     approved: {
       type: Sequelize.BOOLEAN,
+      defaultValue: false,
     },
     createdAt: {
       allowNull: false,

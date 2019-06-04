@@ -20,7 +20,7 @@ module.exports = {
         key: 'id',
       },
     },
-    price_id: {
+    priceId: {
       type: Sequelize.INTEGER,
       references: {
         model: 'Prices',
