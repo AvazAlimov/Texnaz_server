@@ -50,7 +50,18 @@ export default {
         req.sale.items.forEach((item) => {
           // eslint-disable-next-line no-param-reassign
           item.saleId = sale.id;
-          tasks.push(models.SaleItem.create(item));
+          tasks.push(new Promise((resolve, reject) => {
+            models.SaleItem.create(item)
+              .then(() => {
+                models.Stock.findByPk(item.stockId)
+                  .then((stock) => {
+                    models.Stock.update({
+                      quantity: stock.quantity - item.quantity,
+                    }, { where: { id: stock.id } }).then(() => resolve());
+                  });
+              })
+              .catch(error => reject(error));
+          }));
         });
         Promise.all(tasks)
           .then(() => res.status(200).json(sale))
