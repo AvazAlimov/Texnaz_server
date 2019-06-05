@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   SaleItem.associate = (models) => {
     SaleItem.belongsTo(models.Price, { as: 'price' });
+    SaleItem.belongsTo(models.Stock, { as: 'stock' });
   };
   return SaleItem;
 };

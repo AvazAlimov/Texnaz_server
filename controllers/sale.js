@@ -28,6 +28,16 @@ function find(where, res, next) {
             model: models.Price,
             as: 'price',
           },
+          {
+            model: models.Stock,
+            as: 'stock',
+            include: [
+              {
+                model: models.Product,
+                as: 'product',
+              },
+            ],
+          },
         ],
       },
     ],
@@ -40,6 +50,12 @@ export default {
   getAll(_, res) {
     find(null, res, (items) => {
       res.status(200).json(items);
+    });
+  },
+
+  get(req, res) {
+    find({ id: req.params.id }, res, ([item]) => {
+      if (item) { res.status(200).json(item); } else res.sendStatus(404);
     });
   },
 
