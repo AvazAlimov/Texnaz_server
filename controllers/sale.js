@@ -21,6 +21,10 @@ function find(where, res, next) {
         as: 'manager',
       },
       {
+        model: models.Warehouse,
+        as: 'warehouse',
+      },
+      {
         model: models.SaleItem,
         as: 'items',
         include: [

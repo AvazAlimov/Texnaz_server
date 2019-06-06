@@ -28,6 +28,12 @@ export const check = checkSchema({
       options: id => (id ? exists(models.User, id) : true),
     },
   },
+  warehouseId: {
+    isInt: true,
+    custom: {
+      options: id => exists(models.Warehouse, id),
+    },
+  },
   items: {
     isArray: true,
     custom: {
@@ -56,6 +62,7 @@ export function validate(req, res, next) {
       clientId: req.body.clientId,
       managerId: req.body.managerId,
       userId: req.body.userId,
+      warehouseId: req.body.warehouseId,
       items: req.body.items,
     };
     next();

@@ -34,9 +34,16 @@ module.exports = {
         key: 'id',
       },
     },
+    warehouseId: {
+      type: Sequelize.INTEGER,
+      references: {
+        model: 'Warehouses',
+        key: 'id',
+      },
+    },
     approved: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: false,
+      type: Sequelize.INTEGER,
+      defaultValue: 0,
     },
     createdAt: {
       allowNull: false,
