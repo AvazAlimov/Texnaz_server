@@ -19,6 +19,9 @@ function find(where, res, next) {
           {
             model: models.Product,
             as: 'product',
+            include: [{
+              model: models.Brand,
+            }],
           },
         ],
       },
