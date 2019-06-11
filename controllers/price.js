@@ -22,6 +22,15 @@ export default {
     });
   },
 
+  get(req, res) {
+    find({
+      id: req.params.id,
+    }, res, ([item]) => {
+      if (item) res.status(200).json(item);
+      else res.sendStatus(404);
+    });
+  },
+
   async getUnpricedProducts(_, res) {
     const priced = await models.Price.findAll({
       attributes: ['productId'],
