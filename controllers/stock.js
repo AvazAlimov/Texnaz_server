@@ -19,6 +19,16 @@ function find(where, res, next) {
     }, {
       model: models.Booking,
       as: 'bookings',
+      include: [
+        {
+          model: models.User,
+          as: 'user',
+        },
+        {
+          model: models.Client,
+          as: 'client',
+        },
+      ],
     }],
   })
     .then(stocks => next(stocks))
