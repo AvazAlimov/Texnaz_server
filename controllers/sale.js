@@ -89,4 +89,30 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
+
+  approve(req, res) {
+    models.Sale.update({
+      approved: 1,
+    }, {
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.sendStatus(200);
+    })
+      .catch(error => res.status(502).json(error));
+  },
+
+  disapprove(req, res) {
+    models.Sale.update({
+      approved: -1,
+    }, {
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.sendStatus(200);
+    })
+      .catch(error => res.status(502).json(error));
+  },
 };
