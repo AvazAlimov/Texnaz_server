@@ -10,7 +10,7 @@ module.exports = {
     },
     value: {
       type: Sequelize.DOUBLE,
-    }, 
+    },
     formId: {
       allowNull: true,
       type: Sequelize.INTEGER,

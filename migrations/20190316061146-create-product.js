@@ -13,7 +13,7 @@ module.exports = {
     code: {
       type: Sequelize.STRING,
       allowNull: true,
-      unique: false,
+      unique: true,
     },
     packing: {
       type: Sequelize.DOUBLE,
