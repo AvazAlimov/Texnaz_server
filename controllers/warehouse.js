@@ -1,5 +1,39 @@
 import models from '../models';
-import stock from './stock';
+
+function getStocks(warehouseId) {
+  return new Promise((resolve, reject) => {
+    models.Stock.findAll({
+      where: { warehouseId },
+      include: [{
+        model: models.Product,
+        as: 'product',
+        include: [{
+          model: models.Price,
+          as: 'prices',
+          order: [['id', 'DESC']],
+          limit: 1,
+        }],
+      }],
+    })
+      .then(stocks => resolve(stocks))
+      .catch(err => reject(err));
+  });
+}
+
+function totalPrice(warehouses, res, next) {
+  Promise.all(warehouses.map(warehouse => getStocks(warehouse.id)))
+    .then((results) => {
+      results.forEach((stocks, index) => {
+        let price = 0;
+        stocks.forEach((stock) => {
+          price += stock.product.prices.length ? stock.product.prices[0].secondPrice : 0;
+        });
+        warehouses[index].setDataValue('totalPrice', price);
+      });
+      next(warehouses);
+    })
+    .catch(error => res.status(502).json(error));
+}
 
 function find(where, res, next) {
   models.Warehouse.findAll({
@@ -12,44 +46,6 @@ function find(where, res, next) {
   })
     .then(warehouses => totalPrice(warehouses, res, next))
     .catch(error => res.status(502).json(error));
-}
-
-function getStocks(warehouseId) {
-  return new Promise((resolve, reject) => {
-    models.Stock.findAll({
-      where: { warehouseId },
-      include: [
-        {
-          model: models.Product,
-          as: 'product',
-          include: [
-            {
-              model: models.Price,
-              as: 'prices',
-              order: [['id', 'DESC']],
-              limit: 1,
-            }
-          ]
-        }
-      ]
-    }).then(stocks => {
-      resolve(stocks);
-    }).catch(err => reject(err));
-  });
-}
-
-async function totalPrice(warehouses, res, next) {
-  for (let warehouse of warehouses) {
-    await getStocks(warehouse.id)
-      .then(stocks => {
-        let totalPrice = 0;
-        stocks.forEach(element => {
-          totalPrice += element.product.prices[0].secondPrice;
-        });
-        warehouse.setDataValue('totalPrice', totalPrice);
-      });
-  }
-  next(warehouses);
 }
 
 export default {
