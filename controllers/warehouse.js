@@ -1,4 +1,5 @@
 import models from '../models';
+import stock from './stock';
 
 function find(where, res, next) {
   models.Warehouse.findAll({
@@ -9,8 +10,44 @@ function find(where, res, next) {
       attributes: ['id', 'name'],
     }],
   })
-    .then(warehouses => next(warehouses))
+    .then(warehouses => totalPrice(warehouses, res, next))
     .catch(error => res.status(502).json(error));
+}
+
+function getStocks(warehouseId) {
+  return new Promise((resolve, reject) => {
+    models.Stock.findAll({
+      where: { warehouseId },
+      include: [
+        {
+          model: models.Product,
+          as: 'product',
+          include: [
+            {
+              model: models.Price,
+              as: 'prices',
+              order: [['id', 'DESC']],
+              limit: 1,
+            }
+          ]
+        }
+      ]
+    }).then(stocks => {
+      resolve(stocks);
+    }).catch(err => reject(err));
+  });
+}
+
+async function totalPrice(warehouses, res, next) {
+  for (let warehouse of warehouses) {
+    await getStocks(warehouse.id)
+      .then(stocks => {
+        stocks.forEach(element => {
+          warehouse.totalPrice += element.product.prices[0].secondPrice;
+        });
+      });
+  }
+  next(warehouses);
 }
 
 export default {

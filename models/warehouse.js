@@ -3,6 +3,7 @@ export default (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     company: DataTypes.STRING,
     ownerId: DataTypes.INTEGER,
+    totalPrice: DataTypes.DOUBLE,
     type: DataTypes.INTEGER,
   }, {});
   Warehouse.associate = (models) => {

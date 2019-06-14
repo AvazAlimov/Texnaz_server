@@ -11,6 +11,7 @@ export function validate(req, res, next) {
   } else {
     req.warehouse = {
       name: req.body.name,
+      totalPrice:0.0,
       company: req.body.company,
       ownerId: req.body.ownerId,
       type: req.body.type,
