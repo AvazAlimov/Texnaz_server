@@ -10,9 +10,6 @@ module.exports = {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    totalPrice: {
-      type: Sequelize.DOUBLE
-    },
     company: {
       type: Sequelize.STRING,
     },

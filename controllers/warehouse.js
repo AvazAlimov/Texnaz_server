@@ -42,9 +42,11 @@ async function totalPrice(warehouses, res, next) {
   for (let warehouse of warehouses) {
     await getStocks(warehouse.id)
       .then(stocks => {
+        let totalPrice = 0;
         stocks.forEach(element => {
-          warehouse.totalPrice += element.product.prices[0].secondPrice;
+          totalPrice += element.product.prices[0].secondPrice;
         });
+        warehouse.setDataValue('totalPrice', totalPrice);
       });
   }
   next(warehouses);
