@@ -26,7 +26,9 @@ function totalPrice(warehouses, res, next) {
       results.forEach((stocks, index) => {
         let price = 0;
         stocks.forEach((stock) => {
-          price += stock.product.prices.length ? stock.product.prices[0].secondPrice : 0;
+          price += stock.product.prices.length
+            ? stock.product.prices[0].secondPrice * stock.quantity
+            : 0;
         });
         warehouses[index].setDataValue('totalPrice', price);
       });
