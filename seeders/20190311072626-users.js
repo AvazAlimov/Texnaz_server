@@ -86,6 +86,12 @@ module.exports = {
     username: 'operator',
     password: bcrypt.hashSync('operator', 10),
   },
+  {
+    id: 15,
+    name: 'Алишер',
+    username: 'alisher',
+    password: bcrypt.hashSync('alisher', 10),
+  },
   ], {}),
 
   down: queryInterface => queryInterface.bulkDelete('Users', null, {}),
