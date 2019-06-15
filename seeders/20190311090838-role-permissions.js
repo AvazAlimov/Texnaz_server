@@ -79,6 +79,16 @@ module.exports = {
         Permissions.SHOW_PAYMENTS,
         Permissions.SHOW_CLIENTS,
         Permissions.SHOW_SETTINGS,
+      ]))
+    // Chief
+      .concat(getBindings(6, [
+        Permissions.SHOW_PRICES,
+        Permissions.SHOW_PRICES_PRICED,
+        Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_MANAGERS,
+        Permissions.SHOW_CLIENTS,
+        Permissions.SHOW_SETTINGS,
+        Permissions.CAN_BOOK,
       ])),
     {}),
 

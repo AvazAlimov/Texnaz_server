@@ -8,7 +8,7 @@ module.exports = {
     },
     number: {
       type: Sequelize.INTEGER,
-      unique: false,
+      unique: true,
     },
     description: {
       type: Sequelize.STRING,
