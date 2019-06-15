@@ -41,6 +41,7 @@ module.exports = {
         Permissions.SHOW_PRICES,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_SHIPMENTS,
         Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
         Permissions.SHOW_SETTINGS,
