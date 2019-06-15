@@ -38,11 +38,11 @@ module.exports = {
     ])
     // MANAGER
       .concat(getBindings(2, [
+        Permissions.SHOW_STATISTICS,
         Permissions.SHOW_PRICES,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_SHIPMENTS,
-        Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
         Permissions.SHOW_SETTINGS,
         Permissions.CAN_BOOK,
