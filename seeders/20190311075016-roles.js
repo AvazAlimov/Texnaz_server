@@ -24,11 +24,5 @@ module.exports = {
     name: 'Начальник',
   },
   ], {}),
-
-  // Завсклад
-  // Управляющий
-  // Продавец
-  // Оператор
-
   down: queryInterface => queryInterface.bulkDelete('Roles', null, {}),
 };
