@@ -33,6 +33,9 @@ export const check = checkSchema({
       options: id => exists(models.User, id),
     },
   },
+  createdAt: {
+    isString: true,
+  },
 });
 
 export function validate(req, res, next) {
@@ -51,6 +54,7 @@ export function validate(req, res, next) {
       regionId: req.body.regionId,
       sphere: req.body.sphere,
       managerId: req.body.managerId,
+      createdAt: req.body.createdAt,
     };
     next();
   }
