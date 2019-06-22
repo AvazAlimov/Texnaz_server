@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
     regionId: DataTypes.INTEGER,
     sphere: DataTypes.STRING,
     managerId: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
   }, {});
   Client.associate = (models) => {
     Client.belongsTo(models.Region, { as: 'region' });
