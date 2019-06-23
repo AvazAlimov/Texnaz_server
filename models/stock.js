@@ -11,6 +11,7 @@ export default (sequelize, DataTypes) => {
     Stock.belongsTo(models.Warehouse, { as: 'warehouse', foreignKey: 'warehouseId' });
     Stock.belongsTo(models.Product, { as: 'product', foreignKey: 'productId' });
     Stock.hasMany(models.Booking, { as: 'bookings', foreignKey: 'stockId' });
+    Stock.hasMany(models.SaleItem, { as: 'sales', foreignKey: 'stockId' });
   };
   return Stock;
 };

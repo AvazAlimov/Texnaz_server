@@ -73,12 +73,13 @@ export default {
           tasks.push(new Promise((resolve, reject) => {
             models.SaleItem.create(item)
               .then(() => {
-                models.Stock.findByPk(item.stockId)
-                  .then((stock) => {
-                    models.Stock.update({
-                      quantity: stock.quantity - item.quantity,
-                    }, { where: { id: stock.id } }).then(() => resolve());
-                  });
+                resolve();
+                // models.Stock.findByPk(item.stockId)
+                //   .then((stock) => {
+                //     models.Stock.update({
+                //       quantity: stock.quantity - item.quantity,
+                //     }, { where: { id: stock.id } }).then(() => resolve());
+                //   });
               })
               .catch(error => reject(error));
           }));

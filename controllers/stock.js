@@ -9,7 +9,7 @@ function find(where, res, next) {
       as: 'product',
       include: [
         { model: models.Brand },
-        { 
+        {
           model: models.Price,
           as: 'prices',
           order: [['id', 'DESC']],
@@ -27,6 +27,25 @@ function find(where, res, next) {
         {
           model: models.Client,
           as: 'client',
+        },
+      ],
+    }, {
+      model: models.SaleItem,
+      as: 'sales',
+      include: [
+        {
+          model: models.Sale,
+          as: 'sale',
+          include: [
+            {
+              model: models.User,
+              as: 'manager',
+            },
+            {
+              model: models.Client,
+              as: 'client',
+            },
+          ],
         },
       ],
     }],
