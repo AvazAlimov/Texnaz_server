@@ -99,7 +99,25 @@ export default {
         id: req.params.id,
       },
     }).then(() => {
-      res.sendStatus(200);
+      const tasks = [];
+      find({ id: req.params.id }, res, (sales) => {
+        sales[0].toJSON().items.forEach((item) => {
+          tasks.push(new Promise((resolve) => {
+            models.Stock
+              .findByPk(item.stockId)
+              .then((stock) => {
+                models.Stock
+                  .update({
+                    quantity: stock.quantity - item.quantity,
+                  }, { where: { id: stock.id } })
+                  .then(() => resolve());
+              });
+          }));
+        });
+        Promise.all(tasks)
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
+      });
     })
       .catch(error => res.status(502).json(error));
   },
