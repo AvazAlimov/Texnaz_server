@@ -6,6 +6,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Lost.associate = (models) => {
     Lost.belongsTo(models.Stock, { as: 'stock' });
+    Lost.belongsTo(models.Warehouse, { as: 'warehouse' });
   };
   return Lost;
 };
