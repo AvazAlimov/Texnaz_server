@@ -42,6 +42,7 @@ export function validate(req, res, next) {
       userId: req.body.userId,
       managerId: req.body.managerId,
       clientId: req.body.clientId,
+      brandId: req.body.brandId,
     };
     next();
   }

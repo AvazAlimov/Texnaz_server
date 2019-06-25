@@ -13,6 +13,10 @@ function find(where, res, next) {
         as: 'manager',
       },
       {
+        model: models.Brand,
+        as: 'brand',
+      },
+      {
         model: models.Client,
         as: 'client',
         include: [{
