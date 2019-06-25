@@ -19,7 +19,7 @@ const backup = new CronJob(process.env.BACKUP_DELAY || '0 0 */1 * * *', () => {
   const database = process.env.DB_DATABASE;
   const filename = (new Date()).toISOString().substring(0, 16).replace(':', '');
   const folder = process.env.BACKUP_FOLDER || 'backup';
-  const command = `cd ${folder} && mysqldump -u ${user} -p ${password} ${database} > ${filename}.sql`;
+  const command = `cd ${folder} && mysqldump -u ${user} -p ${database} > ${filename}.sql \n ${password}`;
   exec(command);
   console.log((new Date()).toLocaleTimeString());
 });
