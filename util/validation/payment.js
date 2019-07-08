@@ -25,7 +25,7 @@ export const check = checkSchema({
     },
   },
   sum: {
-    isInt: true,
+    isFloat: true,
   },
 });
 
