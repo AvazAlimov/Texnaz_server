@@ -5,6 +5,7 @@ function getRegions(provinceId, names) {
 const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Андижанская область
   getRegions(1, [
+    'Андижанская область',
     'Buloqboshi tuman',
     'Asaka tuman',
     'Baliqchi tuman',
@@ -27,6 +28,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Бухарская область
     .concat(
       getRegions(2, [
+        'Бухарская область',
         'Kogon tumani',
         'Buxoro tumani',
         'Olot tumani',
@@ -45,6 +47,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Ферганская область
     .concat(
       getRegions(3, [
+        'Ферганская область',
         'Yozyovon tuman',
         'Rishton tuman',
         'Quva tuman',
@@ -70,6 +73,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Джиззахская область
     .concat(
       getRegions(4, [
+        'Джиззахская область',
         'Baxmal tuman',
         'Zafarobod tuman',
         'Sh.Rashidov tuman',
@@ -88,6 +92,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Наманганская область
     .concat(
       getRegions(5, [
+        'Наманганская область',
         'Norin tuman',
         'Uychi tuman',
         'Namangan tuman',
@@ -106,6 +111,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Навоийская область
     .concat(
       getRegions(6, [
+        'Навоийская область',
         'Karmana tuman',
         'Navoiy shahar',
         'Tomdi tuman',
@@ -121,6 +127,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Кашкадарьинская область
     .concat(
       getRegions(7, [
+        'Кашкадарьинская область',
         'Dehqonobod tuman',
         'Mirishkor tuman',
         'G`uzor tuman',
@@ -141,6 +148,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Каракалпакстан
     .concat(
       getRegions(8, [
+        'Каракалпакстан',
         'Chimboy tumani',
         'Xo`jayli tumani',
         'Qanliko`l tumani',
@@ -162,6 +170,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Самаркандская область
     .concat(
       getRegions(9, [
+        'Самаркандская область',
         'Paxtachi tuman',
         'Pastdarg`om tuman',
         'Ishtixon tuman',
@@ -183,6 +192,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Сырдарьинская область
     .concat(
       getRegions(10, [
+        'Сырдарьинская область',
         'Boyovut tuman',
         'Xovos tuman',
         'Sayxunobod tumani',
@@ -198,6 +208,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Сурхандарьинская область
     .concat(
       getRegions(11, [
+        'Сурхандарьинская область',
         'Angor tuman',
         'Uzun tuman',
         'Termiz tuman',
@@ -217,6 +228,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // г. Ташкент
     .concat(
       getRegions(12, [
+        'г.Ташкент',
         'Uchtepa tuman',
         'Yashnobod tuman',
         'Olmazor tuman',
@@ -233,6 +245,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Ташкентская область
     .concat(
       getRegions(13, [
+        'Ташкентская область',
         'Parkent tuman',
         'Yuqorichirchiq tuman',
         'Oqqo`rg`on tuman',
@@ -260,6 +273,7 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
   // Хорезмская область
     .concat(
       getRegions(14, [
+        'Хорезмская область',
         'Xiva tuman',
         'Shovot tuman',
         'Urganch shaxar',
@@ -281,5 +295,5 @@ module.exports = {
 
   down: queryInterface => queryInterface.bulkDelete('Regions', null, {}),
 
-  getRegions: () => regions,
+  getRegions: () => regions.map(region => region.name),
 };
