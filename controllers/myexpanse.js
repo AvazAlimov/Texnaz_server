@@ -145,9 +145,12 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 
-  getAll(_, res) {
+  getAll(req, res) {
     models.MyExpanse
       .findAll({
+        where: {
+          userId: req.query.userId,
+        },
         include: [{
           model: models.ExpanseForm,
           as: 'form',

@@ -6,6 +6,11 @@ export const check = checkSchema({
   value: {
     isFloat: true,
   },
+  userId: {
+    custom: {
+      options: id => exists(models.User, id),
+    },
+  },
   typeId: {
     custom: {
       options: id => (id ? exists(models.ExpanseType, id) : true),
@@ -36,6 +41,7 @@ export function validate(req, res, next) {
     });
   } else {
     req.expanse = {
+      userId: req.body.userId,
       value: req.body.value,
       typeId: req.body.typeId,
       formId: req.body.formId,

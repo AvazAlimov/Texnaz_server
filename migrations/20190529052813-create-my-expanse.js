@@ -11,6 +11,13 @@ module.exports = {
     value: {
       type: Sequelize.DOUBLE,
     },
+    userId: {
+      type: Sequelize.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id',
+      },
+    },
     formId: {
       allowNull: true,
       type: Sequelize.INTEGER,
