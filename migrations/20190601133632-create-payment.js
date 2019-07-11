@@ -6,6 +6,9 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
+    number: {
+      type: Sequelize.STRING,
+    },
     approved: {
       type: Sequelize.BOOLEAN,
       defaultValue: false,

@@ -15,6 +15,9 @@ export const check = checkSchema({
       options: id => exists(models.User, id),
     },
   },
+  number: {
+    isString: true,
+  },
   ratio: {
     isFloat: true,
   },
@@ -37,6 +40,7 @@ export function validate(req, res, next) {
     });
   } else {
     req.payment = {
+      number: req.body.number,
       sum: req.body.sum,
       ratio: req.body.ratio,
       userId: req.body.userId,
