@@ -8,6 +8,7 @@ module.exports = {
     },
     number: {
       type: Sequelize.STRING,
+      unique: true,
     },
     approved: {
       type: Sequelize.BOOLEAN,
