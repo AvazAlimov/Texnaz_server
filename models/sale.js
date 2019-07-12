@@ -1,5 +1,6 @@
 export default (sequelize, DataTypes) => {
   const Sale = sequelize.define('Sale', {
+    number: DataTypes.STRING,
     type: DataTypes.INTEGER,
     form: DataTypes.INTEGER,
     clientId: DataTypes.INTEGER,

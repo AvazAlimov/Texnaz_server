@@ -3,6 +3,9 @@ import models from '../../models';
 import exists from '../check';
 
 export const check = checkSchema({
+  number: {
+    isString: true,
+  },
   type: {
     isInt: true,
   },
@@ -57,6 +60,7 @@ export function validate(req, res, next) {
     });
   } else {
     req.sale = {
+      number: req.body.number,
       type: req.body.type,
       form: req.body.form,
       clientId: req.body.clientId,
