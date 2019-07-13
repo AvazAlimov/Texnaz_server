@@ -35,6 +35,9 @@ module.exports = {
       Permissions.SHOW_SETTINGS_EXPANSES,
       Permissions.SHOW_SETTINGS_CONFIGURATIONS,
       Permissions.SHOW_SETTINGS_REGIONS,
+      Permissions.SHOW_SALES_INFORMATION,
+      Permissions.SHOW_SALES_PENDING,
+      Permissions.SHOW_SALES_APPROVED,
     ])
     // MANAGER
       .concat(getBindings(2, [
@@ -46,6 +49,7 @@ module.exports = {
         Permissions.SHOW_CLIENTS,
         Permissions.SHOW_SETTINGS,
         Permissions.CAN_BOOK,
+        Permissions.SHOW_SALES_MY_SALES,
       ]))
     // OPERATOR
       .concat(getBindings(3, [
@@ -68,6 +72,9 @@ module.exports = {
         Permissions.SHOW_SETTINGS_TAGS,
         Permissions.SHOW_SETTINGS_USERS,
         Permissions.SHOW_SETTINGS_REGIONS,
+        Permissions.SHOW_SALES_INFORMATION,
+        Permissions.SHOW_SALES_PENDING,
+        Permissions.SHOW_SALES_APPROVED,
       ]))
     // WAREHOUSE OWNER
       .concat(getBindings(4, [
