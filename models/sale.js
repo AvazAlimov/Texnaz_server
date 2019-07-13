@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     warehouseId: DataTypes.INTEGER,
     approved: DataTypes.INTEGER,
+    days: DataTypes.INTEGER,
     createdAt: DataTypes.DATE,
   }, {});
   Sale.associate = (models) => {

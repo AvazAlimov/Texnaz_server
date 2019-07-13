@@ -12,6 +12,9 @@ export const check = checkSchema({
   form: {
     isInt: true,
   },
+  days: {
+    isInt: true,
+  },
   clientId: {
     isInt: true,
     custom: {
@@ -68,6 +71,7 @@ export function validate(req, res, next) {
       userId: req.body.userId,
       warehouseId: req.body.warehouseId,
       items: req.body.items,
+      days: req.body.days,
     };
     next();
   }

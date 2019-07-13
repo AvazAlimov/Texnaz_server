@@ -39,6 +39,11 @@ function find(where, res, next) {
               {
                 model: models.Product,
                 as: 'product',
+                include: [
+                  {
+                    model: models.Brand,
+                  },
+                ],
               },
             ],
           },
@@ -78,21 +83,33 @@ export default {
           // eslint-disable-next-line no-param-reassign
           item.saleId = sale.id;
           tasks.push(new Promise((resolve, reject) => {
-            models.SaleItem.create(item)
-              .then(() => {
-                resolve();
-                // models.Stock.findByPk(item.stockId)
-                //   .then((stock) => {
-                //     models.Stock.update({
-                //       quantity: stock.quantity - item.quantity,
-                //     }, { where: { id: stock.id } }).then(() => resolve());
-                //   });
-              })
-              .catch(error => reject(error));
+            models.SaleItem.create(item).then(() => resolve()).catch(error => reject(error));
           }));
         });
         Promise.all(tasks)
           .then(() => res.status(200).json(sale))
+          .catch(error => res.status(502).json(error));
+      })
+      .catch(error => res.status(502).json(error));
+  },
+
+  update(req, res) {
+    models.SaleItem.destroy({ where: { saleId: req.params.id } })
+      .then(() => {
+        models.Sale.update(req.sale, { where: { id: req.params.id } })
+          .then((sale) => {
+            const tasks = [];
+            req.sale.items.forEach((item) => {
+              // eslint-disable-next-line no-param-reassign
+              item.saleId = req.params.id;
+              tasks.push(new Promise((resolve, reject) => {
+                models.SaleItem.create(item).then(() => resolve()).catch(error => reject(error));
+              }));
+            });
+            Promise.all(tasks)
+              .then(() => res.status(200).json(sale))
+              .catch(error => res.status(502).json(error));
+          })
           .catch(error => res.status(502).json(error));
       })
       .catch(error => res.status(502).json(error));
@@ -139,6 +156,16 @@ export default {
     }).then(() => {
       res.sendStatus(200);
     })
+      .catch(error => res.status(502).json(error));
+  },
+
+  delete(req, res) {
+    models.SaleItem.destroy({ where: { saleId: req.params.id } })
+      .then(() => {
+        models.Sale.destroy({ where: { id: req.params.id } })
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
+      })
       .catch(error => res.status(502).json(error));
   },
 };
