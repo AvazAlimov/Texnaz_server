@@ -33,6 +33,10 @@ module.exports = {
     discount: {
       type: Sequelize.DOUBLE,
     },
+    commissionPrice: {
+      type: Sequelize.DOUBLE,
+      defaultValue: 0,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('SaleItems'),
 };

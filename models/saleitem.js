@@ -5,6 +5,7 @@ export default (sequelize, DataTypes) => {
     priceId: DataTypes.INTEGER,
     quantity: DataTypes.DOUBLE,
     discount: DataTypes.DOUBLE,
+    commissionPrice: DataTypes.DOUBLE,
   }, {});
   SaleItem.associate = (models) => {
     SaleItem.belongsTo(models.Price, { as: 'price' });
