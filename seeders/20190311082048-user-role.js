@@ -19,8 +19,8 @@ module.exports = {
         roleId: 2,
       },
       {
-        userId: 3,
-        roleId: 5,
+        userId: 5,
+        roleId: 3,
       },
       {
         userId: 4,
