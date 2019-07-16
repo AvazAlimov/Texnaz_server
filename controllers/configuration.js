@@ -32,6 +32,8 @@ export default {
   },
 
   update(req, res) {
+    // req.userId
+    // if (req.params.id === 4, 5, 6)
     models.Configuration.update(req.configuration, { where: { id: req.params.id } })
       .then(() => res.sendStatus(200))
       .catch(error => res.status(502).json(error));

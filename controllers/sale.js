@@ -96,6 +96,7 @@ export default {
   update(req, res) {
     models.SaleItem.destroy({ where: { saleId: req.params.id } })
       .then(() => {
+        req.sale.approved = 0;
         models.Sale.update(req.sale, { where: { id: req.params.id } })
           .then((sale) => {
             const tasks = [];
