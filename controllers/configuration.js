@@ -31,6 +31,15 @@ export default {
     });
   },
 
+  getOfficialRate(_, res) {
+    find({
+      id: 5,
+    }, res, ([rate]) => {
+      if (rate) res.status(200).json(rate);
+      else res.sendStatus(404);
+    });
+  },
+
   update(req, res) {
     models.Configuration.update(req.configuration, { where: { id: req.params.id } })
       .then(() => res.sendStatus(200))
