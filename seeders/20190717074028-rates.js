@@ -13,7 +13,7 @@ module.exports = {
     },
     {
       id: 2,
-      userId: 2,
+      userId: 1,
       marketRate: 7528,
       exchangeRate: 7431,
       officialRate: 71352,
