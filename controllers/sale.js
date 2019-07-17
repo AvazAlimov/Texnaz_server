@@ -96,6 +96,7 @@ export default {
   update(req, res) {
     models.SaleItem.destroy({ where: { saleId: req.params.id } })
       .then(() => {
+        req.sale.approved = 0;
         models.Sale.update(req.sale, { where: { id: req.params.id } })
           .then((sale) => {
             const tasks = [];
@@ -118,6 +119,7 @@ export default {
   approve(req, res) {
     models.Sale.update({
       approved: 1,
+      userId: req.userId,
     }, {
       where: {
         id: req.params.id,
@@ -149,6 +151,7 @@ export default {
   disapprove(req, res) {
     models.Sale.update({
       approved: -1,
+      userId: req.userId,
     }, {
       where: {
         id: req.params.id,
@@ -166,6 +169,36 @@ export default {
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
       })
+      .catch(error => res.status(502).json(error));
+  },
+
+  approveShipment(req, res) {
+    models.Sale.update({
+      approved: 1,
+      shipped: 1,
+      userId: req.userId,
+    }, {
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.sendStatus(200);
+    })
+      .catch(error => res.status(502).json(error));
+  },
+
+  rejectShipment(req, res) {
+    models.Sale.update({
+      approved: -1,
+      shipped: 0,
+      userId: req.userId,
+    }, {
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.sendStatus(200);
+    })
       .catch(error => res.status(502).json(error));
   },
 };
