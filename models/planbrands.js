@@ -1,8 +1,10 @@
 export default (sequelize, DataTypes) => {
   const PlanBrands = sequelize.define('PlanBrands', {
-    plandId: DataTypes.INTEGER,
+    planId: DataTypes.INTEGER,
     brandId: DataTypes.INTEGER,
   }, {});
-  PlanBrands.associate = () => {};
+  PlanBrands.associate = (models) => {
+    PlanBrands.belongsTo(models.Plan, { as: 'plan' });
+  };
   return PlanBrands;
 };

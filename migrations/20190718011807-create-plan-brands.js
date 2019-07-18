@@ -6,7 +6,7 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    plandId: {
+    planId: {
       type: Sequelize.INTEGER,
       references: {
         model: 'Plans',
