@@ -70,6 +70,34 @@ export default {
   },
 
   update(req, res) {
+    Promise.all([
+      models.PlanBrands.destroy({ where: { planId: req.params.id } }),
+      models.Range.destroy({ where: { planId: req.params.id } }),
+    ])
+      .then(() => {
+        models.Plan.update(req.plan, { where: { id: req.params.id } })
+          .then(() => {
+            const brands = req.plan.brands
+              .map(brandId => ({
+                planId: req.params.id,
+                brandId,
+              }));
+            const ranges = req.plan.ranges
+              .map(range => ({
+                planId: req.params.id,
+                from: range.from,
+                percentage: range.percentage,
+              }));
+            Promise.all([
+              models.PlanBrands.bulkCreate(brands),
+              models.Range.bulkCreate(ranges),
+            ])
+              .then(() => res.sendStatus(200))
+              .catch(error => res.status(502).json(error));
+          })
+          .catch(error => res.status(502).json(error));
+      })
+      .catch(error => res.status(502).json(error));
     res.status(200).json({});
   },
 
