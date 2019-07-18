@@ -31,6 +31,15 @@ export default {
     });
   },
 
+  getOfficialRate(_, res) {
+    find({
+      id: 5,
+    }, res, ([rate]) => {
+      if (rate) res.status(200).json(rate);
+      else res.sendStatus(404);
+    });
+  },
+
   update(req, res) {
     // req.userId
     // if (req.params.id === 4, 5, 6)
