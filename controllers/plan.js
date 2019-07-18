@@ -42,7 +42,18 @@ export default {
   },
 
   create(req, res) {
-    res.status(200).json({});
+    models.Plan.create(req.plan)
+      .then((plan) => {
+        const brands = req.plan.brands
+          .map(brandId => ({
+            planId: plan.id,
+            brandId,
+          }));
+        models.PlanBrands.bulkCreate(brands)
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
+      })
+      .catch(error => res.status(502).json(error));
   },
 
   update(req, res) {

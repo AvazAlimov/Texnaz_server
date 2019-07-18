@@ -35,7 +35,7 @@ export const check = checkSchema({
     custom: {
       options: (items) => {
         for (let i = 0; i < items.length; i += 1) {
-          if (!exists(models.Brand, items[i].id)) {
+          if (!exists(models.Brand, items[i])) {
             return false;
           }
         }
@@ -61,7 +61,7 @@ export function validate(req, res, next) {
       total: req.body.total,
       allBrands: req.body.allBrands,
       min: req.body.min,
-      brnads: req.body.brands,
+      brands: req.body.brands,
     };
     next();
   }

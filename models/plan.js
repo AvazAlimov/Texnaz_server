@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
     total: DataTypes.DOUBLE,
     allBrands: DataTypes.BOOLEAN,
     min: DataTypes.DOUBLE,
+    createdAt: DataTypes.DATE,
   }, {});
   Plan.associate = (models) => {
     Plan.belongsTo(models.User, { as: 'manager' });
