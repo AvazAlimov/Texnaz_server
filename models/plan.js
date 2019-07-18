@@ -13,6 +13,7 @@ export default (sequelize, DataTypes) => {
   Plan.associate = (models) => {
     Plan.belongsTo(models.User, { as: 'manager' });
     Plan.hasMany(models.PlanBrands, { as: 'brands' });
+    Plan.hasMany(models.Range, { as: 'ranges' });
   };
   return Plan;
 };

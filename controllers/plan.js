@@ -12,6 +12,10 @@ function find(where, res, next) {
         model: models.PlanBrands,
         as: 'brands',
       },
+      {
+        model: models.Range,
+        as: 'ranges',
+      },
     ],
   })
     .then(items => next(items))
@@ -49,7 +53,16 @@ export default {
             planId: plan.id,
             brandId,
           }));
-        models.PlanBrands.bulkCreate(brands)
+        const ranges = req.plan.ranges
+          .map(range => ({
+            planId: plan.id,
+            from: range.from,
+            percentage: range.percentage,
+          }));
+        Promise.all([
+          models.PlanBrands.bulkCreate(brands),
+          models.Range.bulkCreate(ranges),
+        ])
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
       })
@@ -61,7 +74,10 @@ export default {
   },
 
   delete(req, res) {
-    models.PlanBrands.destroy({ where: { planId: req.params.id } })
+    Promise.all([
+      models.PlanBrands.destroy({ where: { planId: req.params.id } }),
+      models.Range.destroy({ where: { planId: req.params.id } }),
+    ])
       .then(() => {
         models.Plan.destroy({ where: { id: req.params.id } })
           .then(() => res.sendStatus(200))

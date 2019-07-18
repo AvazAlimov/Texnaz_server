@@ -62,6 +62,7 @@ export function validate(req, res, next) {
       allBrands: req.body.allBrands,
       min: req.body.min,
       brands: req.body.brands,
+      ranges: req.body.ranges || [],
     };
     next();
   }
