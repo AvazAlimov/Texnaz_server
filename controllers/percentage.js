@@ -1,7 +1,7 @@
 import models from '../models';
 
 function find(where, res, next) {
-  models.Plan.findAll({
+  models.Percentage.findAll({
     where,
     include: [
       {
@@ -9,12 +9,8 @@ function find(where, res, next) {
         as: 'manager',
       },
       {
-        model: models.PlanBrands,
+        model: models.PercentageBrands,
         as: 'brands',
-      },
-      {
-        model: models.Range,
-        as: 'ranges',
       },
     ],
   })
@@ -46,22 +42,17 @@ export default {
   },
 
   create(req, res) {
-    models.Plan.create(req.plan)
-      .then((plan) => {
-        const brands = req.plan.brands
-          .map(brandId => ({
-            planId: plan.id,
-            brandId,
-          }));
-        const ranges = req.plan.ranges
-          .map(range => ({
-            planId: plan.id,
-            from: range.from,
-            percentage: range.percentage,
+    models.Percentage.create(req.percentage)
+      .then((percentage) => {
+        console.log(percentage);
+        const brands = req.percentage.brands
+          .map(item => ({
+            percentageId: percentage.id,
+            brandId: item.brandId,
+            percentage: item.percentage,
           }));
         Promise.all([
-          models.PlanBrands.bulkCreate(brands),
-          models.Range.bulkCreate(ranges),
+          models.PercentageBrands.bulkCreate(brands),
         ])
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
@@ -71,26 +62,19 @@ export default {
 
   update(req, res) {
     Promise.all([
-      models.PlanBrands.destroy({ where: { planId: req.params.id } }),
-      models.Range.destroy({ where: { planId: req.params.id } }),
+      models.PercentageBrands.destroy({ where: { percentageId: req.params.id } }),
     ])
       .then(() => {
-        models.Plan.update(req.plan, { where: { id: req.params.id } })
+        models.Percentage.update(req.percentage, { where: { id: req.params.id } })
           .then(() => {
-            const brands = req.plan.brands
-              .map(brandId => ({
-                planId: req.params.id,
-                brandId,
-              }));
-            const ranges = req.plan.ranges
-              .map(range => ({
-                planId: req.params.id,
-                from: range.from,
-                percentage: range.percentage,
+            const brands = req.percentage.brands
+              .map(item => ({
+                percentageId: req.params.id,
+                brandId: item.brandId,
+                percentage: item.percentage,
               }));
             Promise.all([
-              models.PlanBrands.bulkCreate(brands),
-              models.Range.bulkCreate(ranges),
+              models.PercentageBrands.bulkCreate(brands),
             ])
               .then(() => res.sendStatus(200))
               .catch(error => res.status(502).json(error));
@@ -102,11 +86,10 @@ export default {
 
   delete(req, res) {
     Promise.all([
-      models.PlanBrands.destroy({ where: { planId: req.params.id } }),
-      models.Range.destroy({ where: { planId: req.params.id } }),
+      models.PercentageBrands.destroy({ where: { percentageId: req.params.id } }),
     ])
       .then(() => {
-        models.Plan.destroy({ where: { id: req.params.id } })
+        models.Percentage.destroy({ where: { id: req.params.id } })
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
       })

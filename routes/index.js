@@ -29,6 +29,7 @@ import payments from './payments';
 import sales from './sales';
 import rates from './rates';
 import plans from './plans';
+import percentages from './percentages';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -62,4 +63,5 @@ export default (app) => {
   app.use('/api/sales', sales);
   app.use('/api/rates', rates);
   app.use('/api/plans', plans);
+  app.use('/api/percentages', percentages);
 };
