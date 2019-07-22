@@ -5,7 +5,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   MixRange.associate = (models) => {
     MixRange.belongsTo(models.Mix, { as: 'mix' });
-    MixRange.hasMany(models.MixRangeBrands, { as: 'brands' });
+    MixRange.hasMany(models.MixRangeBrands, { as: 'brands', onDelete: 'cascade', foreignKey: 'rangeId' });
   };
   return MixRange;
 };

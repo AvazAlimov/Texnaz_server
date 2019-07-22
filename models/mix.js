@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
   const Mix = sequelize.define('Mix', {
-    mangerId: DataTypes.INTEGER,
+    managerId: DataTypes.INTEGER,
     type: DataTypes.INTEGER,
     start: DataTypes.DATE,
     end: DataTypes.DATE,
@@ -8,7 +8,8 @@ export default (sequelize, DataTypes) => {
     min: DataTypes.DOUBLE,
   }, {});
   Mix.associate = (models) => {
-    Mix.hasMany(models.MixRanges, { as: 'ranges' });
+    Mix.belongsTo(models.User, { as: 'manager' });
+    Mix.hasMany(models.MixRange, { as: 'ranges', onDelete: 'cascade' });
   };
   return Mix;
 };

@@ -5,7 +5,8 @@ export default (sequelize, DataTypes) => {
     percentage: DataTypes.DOUBLE,
   }, {});
   MixRangeBrands.associate = (models) => {
-    MixRangeBrands.belongsTo(models.MixRanges, { as: 'mixRange' });
+    MixRangeBrands.belongsTo(models.MixRange, { as: 'mixRange', foreignKey: 'rangeId' });
+    MixRangeBrands.belongsTo(models.Brand, { as: 'brand' });
   };
   return MixRangeBrands;
 };

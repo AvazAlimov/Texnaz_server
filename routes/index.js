@@ -30,6 +30,7 @@ import sales from './sales';
 import rates from './rates';
 import plans from './plans';
 import percentages from './percentages';
+import mixes from './mixes';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -64,4 +65,5 @@ export default (app) => {
   app.use('/api/rates', rates);
   app.use('/api/plans', plans);
   app.use('/api/percentages', percentages);
+  app.use('/api/mixes', mixes);
 };
