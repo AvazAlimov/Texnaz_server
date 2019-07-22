@@ -17,8 +17,8 @@ module.exports = {
     {
       id: 2,
       number: '2',
-      type: 3,
-      form: 4,
+      type: 4,
+      form: 3,
       clientId: 2,
       managerId: 2,
       userId: 2,
