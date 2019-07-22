@@ -11,6 +11,7 @@ module.exports = {
     },
     mixId: {
       type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
       references: {
         model: 'Mixes',
         key: 'id',

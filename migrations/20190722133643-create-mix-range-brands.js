@@ -8,6 +8,7 @@ module.exports = {
     },
     rangeId: {
       type: Sequelize.INTEGER,
+      onDelete: 'CASCADE',
       references: {
         model: 'MixRanges',
         key: 'id',

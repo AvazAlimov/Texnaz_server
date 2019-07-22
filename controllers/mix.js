@@ -50,56 +50,61 @@ export default {
   create(req, res) {
     models.Mix.create(req.mix)
       .then((mix) => {
-        // const brands = req.mix.brands
-        //   .map(brandId => ({
-        //     planId: plan.id,
-        //     brandId,
-        //   }));
-        // const ranges = req.plan.ranges
-        //   .map(range => ({
-        //     planId: plan.id,
-        //     from: range.from,
-        //     percentage: range.percentage,
-        //   }));
-        // Promise.all([
-        //   models.PlanBrands.bulkCreate(brands),
-        //   models.Range.bulkCreate(ranges),
-        // ])
-        //   .then(() => res.sendStatus(200))
-        //   .catch(error => res.status(502).json(error));
+        const ranges = req.mix.ranges.map(range => ({
+          mixId: mix.id,
+          from: range.from,
+        }));
+        models.MixRange.bulkCreate(ranges, { returning: true })
+          .then((items) => {
+            const rangeBrands = [];
+            items.forEach((range, index) => {
+              req.mix.ranges[index].brands.forEach((item) => {
+                rangeBrands.push({
+                  rangeId: range.dataValues.id,
+                  brandId: item.brandId,
+                  percentage: item.percentage,
+                });
+              });
+            });
+            models.MixRangeBrands.bulkCreate(rangeBrands)
+              .then(() => res.sendStatus(200))
+              .catch(error => res.status(502).json(error));
+          })
+          .catch(error => res.status(502).json(error));
       })
       .catch(error => res.status(502).json(error));
   },
 
   update(req, res) {
-    // Promise.all([
-    //   models.PlanBrands.destroy({ where: { planId: req.params.id } }),
-    //   models.Range.destroy({ where: { planId: req.params.id } }),
-    // ])
-    //   .then(() => {
-    //     models.Plan.update(req.plan, { where: { id: req.params.id } })
-    //       .then(() => {
-    //         const brands = req.plan.brands
-    //           .map(brandId => ({
-    //             planId: req.params.id,
-    //             brandId,
-    //           }));
-    //         const ranges = req.plan.ranges
-    //           .map(range => ({
-    //             planId: req.params.id,
-    //             from: range.from,
-    //             percentage: range.percentage,
-    //           }));
-    //         Promise.all([
-    //           models.PlanBrands.bulkCreate(brands),
-    //           models.Range.bulkCreate(ranges),
-    //         ])
-    //           .then(() => res.sendStatus(200))
-    //           .catch(error => res.status(502).json(error));
-    //       })
-    //       .catch(error => res.status(502).json(error));
-    //   })
-    //   .catch(error => res.status(502).json(error));
+    models.MixRange.destroy({ where: { mixId: req.params.id } })
+      .then(() => {
+        models.Mix.update(req.mix, { where: { id: req.params.id } })
+          .then(() => {
+            const ranges = req.mix.ranges.map(range => ({
+              mixId: req.params.id,
+              from: range.from,
+            }));
+            models.MixRange.bulkCreate(ranges, { returning: true })
+              .then((items) => {
+                const rangeBrands = [];
+                items.forEach((range, index) => {
+                  req.mix.ranges[index].brands.forEach((item) => {
+                    rangeBrands.push({
+                      rangeId: range.dataValues.id,
+                      brandId: item.brandId,
+                      percentage: item.percentage,
+                    });
+                  });
+                });
+                models.MixRangeBrands.bulkCreate(rangeBrands)
+                  .then(() => res.sendStatus(200))
+                  .catch(error => res.status(502).json(error));
+              })
+              .catch(error => res.status(502).json(error));
+          })
+          .catch(error => res.status(502).json(error));
+      })
+      .catch(error => res.status(502).json(error));
   },
 
   delete(req, res) {
