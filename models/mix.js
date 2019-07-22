@@ -7,6 +7,8 @@ export default (sequelize, DataTypes) => {
     total: DataTypes.DOUBLE,
     min: DataTypes.DOUBLE,
   }, {});
-  Mix.associate = () => {};
+  Mix.associate = (models) => {
+    Mix.hasMany(models.MixRanges, { as: 'ranges' });
+  };
   return Mix;
 };
