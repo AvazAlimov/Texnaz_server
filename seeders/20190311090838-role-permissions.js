@@ -21,6 +21,8 @@ module.exports = {
       Permissions.SHOW_PAYMENTS,
       Permissions.SHOW_MY_EXPANSES,
       Permissions.SHOW_SETTINGS,
+      Permissions.SHOW_TABELS,
+      Permissions.SHOW_MOTIVATIONS,
       Permissions.SHOW_CALCULATOR_APPROVED,
       Permissions.SHOW_CALCULATOR_NON_APPROVED,
       Permissions.SHOW_PRICES_PRICED,
@@ -43,6 +45,8 @@ module.exports = {
       .concat(getBindings(2, [
         Permissions.SHOW_STATISTICS,
         Permissions.SHOW_PRICES,
+        Permissions.SHOW_TABELS,
+        Permissions.SHOW_MOTIVATIONS,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_SHIPMENTS,
@@ -62,6 +66,8 @@ module.exports = {
         Permissions.SHOW_SHIPMENTS,
         Permissions.SHOW_PAYMENTS,
         Permissions.SHOW_SETTINGS,
+        Permissions.SHOW_TABELS,
+        Permissions.SHOW_MOTIVATIONS,
         Permissions.SHOW_CALCULATOR_APPROVED,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_SETTINGS_PRODUCTS,
@@ -78,18 +84,20 @@ module.exports = {
       ]))
     // WAREHOUSE OWNER
       .concat(getBindings(4, [
+        Permissions.SHOW_TABELS,
+        Permissions.SHOW_MOTIVATIONS,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_SETTINGS,
       ]))
     // ACCOUNTANT
       .concat(getBindings(5, [
-        Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_PAYMENTS,
-        Permissions.SHOW_CLIENTS,
         Permissions.SHOW_SETTINGS,
       ]))
     // CHIEF
       .concat(getBindings(6, [
+        Permissions.SHOW_TABELS,
+        Permissions.SHOW_MOTIVATIONS,
         Permissions.SHOW_PRICES,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_WAREHOUSES,
