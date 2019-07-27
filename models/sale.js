@@ -10,6 +10,8 @@ export default (sequelize, DataTypes) => {
     approved: DataTypes.INTEGER,
     shipped: DataTypes.INTEGER,
     days: DataTypes.INTEGER,
+    officialRate: DataTypes.STRING,
+    exchangeRate: DataTypes.STRING,
     createdAt: DataTypes.DATE,
   }, {});
   Sale.associate = (models) => {

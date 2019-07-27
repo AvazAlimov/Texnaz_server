@@ -55,6 +55,14 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+function rates(where) {
+  return new Promise((resolve, reject) => {
+    models.Configuration.findAll({ where })
+      .then(data => resolve(data[0]))
+      .catch(err => reject(err));
+  });
+}
+
 export default {
   getAll(req, res) {
     let where = null;
@@ -117,35 +125,41 @@ export default {
   },
 
   approve(req, res) {
-    models.Sale.update({
-      approved: 1,
-      userId: req.userId,
-    }, {
-      where: {
-        id: req.params.id,
-      },
-    }).then(() => {
-      const tasks = [];
-      find({ id: req.params.id }, res, (sales) => {
-        sales[0].toJSON().items.forEach((item) => {
-          tasks.push(new Promise((resolve) => {
-            models.Stock
-              .findByPk(item.stockId)
-              .then((stock) => {
-                models.Stock
-                  .update({
-                    quantity: stock.quantity - item.quantity,
-                  }, { where: { id: stock.id } })
-                  .then(() => resolve());
-              });
-          }));
+    Promise.all([
+      rates({ id: 4 }),
+      rates({ id: 5 }),
+    ]).then((result) => {
+      models.Sale.update({
+        approved: 1,
+        exchangeRate: result[0].value,
+        officialRate: result[1].value,
+        userId: req.userId,
+      }, {
+        where: {
+          id: req.params.id,
+        },
+      }).then(() => {
+        const tasks = [];
+        find({ id: req.params.id }, res, (sales) => {
+          sales[0].toJSON().items.forEach((item) => {
+            tasks.push(new Promise((resolve) => {
+              models.Stock
+                .findByPk(item.stockId)
+                .then((stock) => {
+                  models.Stock
+                    .update({
+                      quantity: stock.quantity - item.quantity,
+                    }, { where: { id: stock.id } })
+                    .then(() => resolve());
+                });
+            }));
+          });
+          Promise.all(tasks)
+            .then(() => res.sendStatus(200))
+            .catch(error => res.status(502).json(error));
         });
-        Promise.all(tasks)
-          .then(() => res.sendStatus(200))
-          .catch(error => res.status(502).json(error));
       });
-    })
-      .catch(error => res.status(502).json(error));
+    }).catch(error => res.status(502).json(error));
   },
 
   disapprove(req, res) {

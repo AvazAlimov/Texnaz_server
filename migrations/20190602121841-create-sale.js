@@ -57,6 +57,14 @@ module.exports = {
       type: Sequelize.INTEGER,
       defaultValue: 1,
     },
+    officialRate: {
+      type: Sequelize.STRING,
+      defaultValue: 1,
+    },
+    exchangeRate: {
+      type: Sequelize.STRING,
+      defaultValue: 1,
+    },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
