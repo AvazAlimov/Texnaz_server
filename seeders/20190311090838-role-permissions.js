@@ -76,6 +76,7 @@ module.exports = {
         Permissions.SHOW_WAREHOUSE_INFORMATION,
         Permissions.SHOW_WAREHOUSE_BOOKING,
         Permissions.SHOW_WAREHOUSE_RETURN,
+        Permissions.SHOW_WAREHOUSE_SALE,
       ]))
     // OPERATOR
       .concat(getBindings(3, [
