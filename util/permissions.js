@@ -132,3 +132,75 @@ module.exports.SHOW_SALES_APPROVED = {
   name: 'show sales approved',
   id: 31,
 };
+
+// Warehouse
+module.exports.SHOW_WAREHOUSE_INFORMATION = {
+  name: 'show information',
+  id: 32,
+};
+
+module.exports.SHOW_WAREHOUSE_MOVE = {
+  name: 'show move',
+  id: 33,
+};
+
+module.exports.SHOW_WAREHOUSE_BOOKING = {
+  name: 'show booking',
+  id: 34,
+};
+
+module.exports.SHOW_WAREHOUSE_RETURN = {
+  name: 'show return',
+  id: 35,
+};
+
+module.exports.SHOW_WAREHOUSE_LOST_STOCKS = {
+  name: 'show lost stocks',
+  id: 36,
+};
+
+module.exports.SHOW_WAREHOUSE_SALE = {
+  name: 'show warehouse sales',
+  id: 37,
+};
+
+module.exports.SHOW_WAREHOUSE_SHIPMENTS = {
+  name: 'show warehouse shipments',
+  id: 38,
+};
+
+module.exports.SHOW_WAREHOUSE_PRE_STOCKS = {
+  name: 'show pre stocks',
+  id: 39,
+};
+
+module.exports.SHOW_WAREHOUSE_ACCEPTANCE = {
+  name: 'show acceptance',
+  id: 40,
+};
+
+// Shipments
+module.exports.SHOW_SHIPMENTS_PENDING_SALES = {
+  name: 'show pending sales',
+  id: 41,
+};
+
+module.exports.SHOW_SHIPMENTS_APPROVED_SALES = {
+  name: 'show approved sales',
+  id: 42,
+};
+
+module.exports.SHOW_SHIPMENTS_FINISHED = {
+  name: 'show finished',
+  id: 43,
+};
+
+module.exports.SHOW_SHIPMENTS_REJECTED = {
+  name: 'show rejected',
+  id: 44,
+};
+
+module.exports.SHOW_SHIPMENTS_ACCOUNTING = {
+  name: 'show accounting',
+  id: 45,
+};

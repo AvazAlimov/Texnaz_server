@@ -19,12 +19,16 @@ module.exports = {
         roleId: 2,
       },
       {
-        userId: 5,
-        roleId: 3,
+        userId: 3,
+        roleId: 5,
       },
       {
         userId: 4,
         roleId: 4,
+      },
+      {
+        userId: 5,
+        roleId: 3,
       },
     ].concat(bindManagers([7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17])),
     {},
