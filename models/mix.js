@@ -6,6 +6,7 @@ export default (sequelize, DataTypes) => {
     end: DataTypes.DATE,
     total: DataTypes.DOUBLE,
     min: DataTypes.DOUBLE,
+    createdAt: DataTypes.DATE,
   }, {});
   Mix.associate = (models) => {
     Mix.belongsTo(models.User, { as: 'manager' });
