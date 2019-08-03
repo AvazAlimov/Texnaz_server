@@ -5,6 +5,7 @@ import { check, validate } from '../util/validation/sale';
 
 const router = Router();
 router.get('/', authMiddleware, sale.getAll);
+router.put('/', authMiddleware, sale.return);
 router.get('/:id', authMiddleware, sale.get);
 router.post('/', authMiddleware, check, validate, sale.create);
 router.post('/:id', authMiddleware, check, validate, sale.update);

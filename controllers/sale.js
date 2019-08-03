@@ -162,6 +162,24 @@ export default {
     }).catch(error => res.status(502).json(error));
   },
 
+  return(req, res) {
+    if (req.body.items) {
+      const tasks = [];
+      req.body.items.forEach((item) => {
+        tasks.push(new Promise((resolve, reject) => {
+          models.SaleItem.update(item, { where: { id: item.id } })
+            .then(() => { resolve(); })
+            .catch((errors) => { reject(errors); });
+        }));
+      });
+      Promise.all(tasks)
+        .then(() => { res.send(200); })
+        .catch((errors) => { res.status(501).json({ errors }); });
+    } else {
+      res.send(403);
+    }
+  },
+
   disapprove(req, res) {
     models.Sale.update({
       approved: -1,
