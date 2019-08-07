@@ -22,6 +22,7 @@ import prices from './prices';
 import clients from './clients';
 import moves from './moves';
 import returns from './returns';
+import returnclients from './returnclient';
 import losts from './losts';
 import bookings from './bookings';
 import myexpanses from './myexpanses';
@@ -57,6 +58,7 @@ export default (app) => {
   app.use('/api/clients', clients);
   app.use('/api/moves', moves);
   app.use('/api/returns', returns);
+  app.use('/api/returnclients', returnclients);
   app.use('/api/losts', losts);
   app.use('/api/bookings', bookings);
   app.use('/api/myexpanses', myexpanses);
