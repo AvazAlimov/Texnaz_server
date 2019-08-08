@@ -17,6 +17,6 @@ export default {
   create(req, res) {
     models.Rate.create(req.rate)
       .then(() => res.send(200))
-      .catch(err => res.status(501).json(err));
+      .catch(err => res.status(504).json(err.message));
   },
 };

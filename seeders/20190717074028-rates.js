@@ -9,7 +9,6 @@ module.exports = {
       exchangeRate: 7231,
       officialRate: 71452,
       createdAt: new Date('2019-05-20'),
-      updatedAt: new Date('2019-05-20'),
     },
     {
       id: 2,
@@ -18,7 +17,6 @@ module.exports = {
       exchangeRate: 7431,
       officialRate: 71352,
       createdAt: new Date('2019-06-21'),
-      updatedAt: new Date('2019-06-21'),
     },
   ], {}),
   down: queryInterface => queryInterface.bulkDelete('Rates', null, {}),

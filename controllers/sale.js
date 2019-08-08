@@ -185,7 +185,8 @@ export default {
     if (req.body.items.length) {
       const tasks = [];
       req.body.items.forEach((item) => {
-        // Updates databse with coming new item and substructs the item quantity from warehouse stocks
+        // Updates databse with coming new item and substructs
+        // the item quantity from warehouse stocks
         tasks.push(new Promise((resolve, reject) => {
           new Promise((resolved, rejected) => returnToStock(item, resolved, rejected))
             .then(() => {
