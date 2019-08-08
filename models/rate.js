@@ -1,7 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Rate = sequelize.define('Rate', {
     userId: DataTypes.INTEGER,
-    marketRate: DataTypes.STRING,
     exchangeRate: DataTypes.STRING,
     officialRate: DataTypes.STRING,
     createdAt: DataTypes.DATE,
