@@ -55,25 +55,6 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
-function returnToStock(item, resolved, rejected) {
-  new Promise((resolve, reject) => {
-    models.SaleItem.findAll({ where: { id: item.id } })
-      .then((saleItems) => {
-        resolve(saleItems.length ? saleItems[0].quantity : 0);
-      }).catch((errors) => { reject(errors); });
-  })
-    .then((quantity) => {
-      models.Stock.findByPk(item.stockId)
-        .then((stock) => {
-          models.Stock.update({
-            quantity: stock.quantity + (quantity - item.quantity),
-          }, { where: { id: stock.id } })
-            .then(() => { resolved(); });
-        })
-        .catch((errors) => { rejected(errors); });
-    });
-}
-
 function rates(where) {
   return new Promise((resolve, reject) => {
     models.Configuration.findAll({ where })
@@ -179,36 +160,6 @@ export default {
         });
       });
     }).catch(error => res.status(502).json(error));
-  },
-
-  return(req, res) {
-    if (req.body.items.length) {
-      const tasks = [];
-      req.body.items.forEach((item) => {
-        // Updates databse with coming new item and substructs
-        // the item quantity from warehouse stocks
-        tasks.push(new Promise((resolve, reject) => {
-          new Promise((resolved, rejected) => returnToStock(item, resolved, rejected))
-            .then(() => {
-              models.SaleItem.update(item, { where: { id: item.id } })
-                .then(() => { resolve(); })
-                .catch((errors) => { reject(errors); });
-            });
-        }));
-      });
-      Promise.all(tasks)
-        .then(() => {
-          // Write user's return history
-          models.ReturnClient.create({
-            saleId: req.body.items[0].saleId,
-            createdAt: new Date(),
-          }).then(() => res.send(200))
-            .catch((errors) => { res.status(501).json({ errors }); });
-        })
-        .catch((errors) => { res.status(501).json({ errors }); });
-    } else {
-      res.send(403);
-    }
   },
 
   disapprove(req, res) {
