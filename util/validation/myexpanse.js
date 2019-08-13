@@ -6,6 +6,9 @@ export const check = checkSchema({
   value: {
     isFloat: true,
   },
+  createdAt: {
+    isString: true,
+  },
   userId: {
     custom: {
       options: id => exists(models.User, id),
@@ -47,6 +50,7 @@ export function validate(req, res, next) {
       formId: req.body.formId,
       purposeId: req.body.purposeId,
       personId: req.body.personId,
+      createdAt: req.body.createdAt,
     };
     next();
   }
