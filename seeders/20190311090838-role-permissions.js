@@ -111,15 +111,6 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
-        Permissions.SHOW_WAREHOUSE_MOVE,
-        Permissions.SHOW_WAREHOUSE_BOOKING,
-        Permissions.SHOW_WAREHOUSE_RETURN,
-        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
-        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
-        Permissions.SHOW_WAREHOUSE_SALE,
-        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
-        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
-        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ]))
     // WAREHOUSE OWNER
       .concat(getBindings(4, [
@@ -172,15 +163,6 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
-        Permissions.SHOW_WAREHOUSE_MOVE,
-        Permissions.SHOW_WAREHOUSE_BOOKING,
-        Permissions.SHOW_WAREHOUSE_RETURN,
-        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
-        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
-        Permissions.SHOW_WAREHOUSE_SALE,
-        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
-        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
-        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ])),
     {}),
 
