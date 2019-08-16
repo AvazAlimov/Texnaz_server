@@ -8,6 +8,7 @@ export default (sequelize, DataTypes) => {
     clientId: DataTypes.INTEGER,
     brandId: DataTypes.INTEGER,
     sum: DataTypes.DOUBLE,
+    exchangeRate: DataTypes.STRING,
     createdAt: DataTypes.DATE,
   }, {});
   Payment.associate = (models) => {

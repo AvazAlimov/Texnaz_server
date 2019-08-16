@@ -49,6 +49,10 @@ module.exports = {
         key: 'id',
       },
     },
+    exchangeRate: {
+      type: Sequelize.STRING,
+      defaultValue: 1,
+    },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
