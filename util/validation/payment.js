@@ -30,6 +30,9 @@ export const check = checkSchema({
   sum: {
     isFloat: true,
   },
+  currency: {
+    isInt: true,
+  },
 });
 
 export function validate(req, res, next) {
@@ -42,6 +45,7 @@ export function validate(req, res, next) {
     req.payment = {
       number: req.body.number,
       sum: req.body.sum,
+      currency: req.body.currency,
       ratio: req.body.ratio,
       userId: req.body.userId,
       managerId: req.body.managerId,

@@ -20,6 +20,9 @@ module.exports = {
     sum: {
       type: Sequelize.DOUBLE,
     },
+    currency: {
+      type: Sequelize.INTEGER,
+    },
     userId: {
       type: Sequelize.INTEGER,
       references: {
