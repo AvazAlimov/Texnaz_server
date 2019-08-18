@@ -19,6 +19,18 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+function check(where, res, next) {
+  find(where, res, ([item]) => {
+    if (item.quantity <= 0) {
+      models.Lost.destroy({ where: { id: item.id } })
+        .then(() => next())
+        .catch(err => res.status(502).json(err));
+    } else {
+      next();
+    }
+  });
+}
+
 export default {
   getAll(req, res) {
     find({
@@ -27,6 +39,34 @@ export default {
       res.status(200).json(items);
     });
   },
+  found(req, res) {
+    find({
+      id: req.body.id,
+    }, res, ([item]) => {
+      new Promise((resolve, reject) => {
+        models.Stock.findByPk(item.stockId)
+          .then((stock) => {
+            models.Stock.update({
+              quantity: stock.quantity + Number(req.body.quantity),
+            }, { where: { id: stock.id } })
+              .then(() => resolve())
+              .catch(() => reject());
+          })
+          .catch(() => reject());
+      }).then(() => {
+        models.Lost.update({
+          quantity: item.quantity - req.body.quantity,
+        }, { where: { id: req.body.id } })
+          .then(() => {
+            check({ id: req.body.id }, res, () => {
+              res.send(200);
+            });
+          })
+          .catch(err => res.status(509).json(err));
+      });
+    });
+  },
+
 
   //   async acceptMultiple(req, res) {
   //     if (req.returns.length) {
