@@ -6,14 +6,21 @@ function constructSelector(attributes) {
   const selector = {
     where: attributes,
     attributes: ['id', 'name', 'username', 'password'],
-    include: [{
-      model: models.Role,
-      as: 'roles',
-      include: [{
-        model: models.Permission,
-        as: 'permissions',
+    include: [
+      {
+        model: models.Province,
+        as: 'province',
+      },
+      {
+        model: models.Role,
+        as: 'roles',
+        include: [
+          {
+            model: models.Permission,
+            as: 'permissions',
+          },
+        ],
       }],
-    }],
   };
   return selector;
 }

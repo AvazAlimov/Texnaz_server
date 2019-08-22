@@ -7,10 +7,16 @@ function find(where, res, next) {
   models.User.findAll({
     where,
     attributes: ['id', 'name', 'username'],
-    include: [{
-      model: models.Role,
-      as: 'roles',
-    }],
+    include: [
+      {
+        model: models.Role,
+        as: 'roles',
+      },
+      {
+        model: models.Province,
+        as: 'province',
+      },
+    ],
   })
     // Succeeded: passes result to NEXT function
     .then((items) => {
