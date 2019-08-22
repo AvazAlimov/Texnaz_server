@@ -11,8 +11,9 @@ export function validate(req, res, next) {
   } else {
     req.warehouse = {
       name: req.body.name,
-      totalPrice:0.0,
+      totalPrice: 0.0,
       company: req.body.company,
+      provinceId: req.body.provinceId,
       ownerId: req.body.ownerId,
       type: req.body.type,
     };
@@ -26,6 +27,9 @@ export const check = checkSchema({
   },
   company: {
     isString: true,
+  },
+  provinceId: {
+    isInt: true,
   },
   ownerId: {
     isInt: true,

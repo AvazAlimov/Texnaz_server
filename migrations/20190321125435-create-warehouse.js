@@ -13,6 +13,9 @@ module.exports = {
     company: {
       type: Sequelize.STRING,
     },
+    provinceId: {
+      type: Sequelize.INTEGER,
+    },
     ownerId: {
       type: Sequelize.INTEGER,
       allowNull: false,

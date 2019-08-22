@@ -4,16 +4,17 @@ function getStocks(warehouseId) {
   return new Promise((resolve, reject) => {
     models.Stock.findAll({
       where: { warehouseId },
-      include: [{
-        model: models.Product,
-        as: 'product',
-        include: [{
-          model: models.Price,
-          as: 'prices',
-          order: [['id', 'DESC']],
-          limit: 1,
+      include: [
+        {
+          model: models.Product,
+          as: 'product',
+          include: [{
+            model: models.Price,
+            as: 'prices',
+            order: [['id', 'DESC']],
+            limit: 1,
+          }],
         }],
-      }],
     })
       .then(stocks => resolve(stocks))
       .catch(err => reject(err));
@@ -40,11 +41,16 @@ function totalPrice(warehouses, res, next) {
 function find(where, res, next) {
   models.Warehouse.findAll({
     where,
-    include: [{
-      model: models.User,
-      as: 'owner',
-      attributes: ['id', 'name'],
-    }],
+    include: [
+      {
+        model: models.User,
+        as: 'owner',
+        attributes: ['id', 'name'],
+      },
+      {
+        model: models.Province,
+        as: 'province',
+      }],
   })
     .then(warehouses => totalPrice(warehouses, res, next))
     .catch(error => res.status(502).json(error));
