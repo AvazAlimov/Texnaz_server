@@ -23,6 +23,14 @@ module.exports = {
     id: 6,
     name: 'Начальник',
   },
+  {
+    id: 7,
+    name: 'Руководитель',
+  },
+  {
+    id: 8,
+    name: 'Управление провинции',
+  },
   ], {}),
   down: queryInterface => queryInterface.bulkDelete('Roles', null, {}),
 };
