@@ -15,6 +15,9 @@ export const check = checkSchema({
   start: {
     isString: true,
   },
+  provinceId: {
+    isInt: true,
+  },
   end: {
     isString: true,
   },
@@ -38,6 +41,7 @@ export function validate(req, res, next) {
       type: req.body.type,
       start: req.body.start,
       end: req.body.end,
+      provinceId: req.body.provinceId,
       total: req.body.total,
       min: req.body.min,
       ranges: req.body.ranges || [],

@@ -3,6 +3,7 @@ export default (sequelize, DataTypes) => {
     managerId: DataTypes.INTEGER,
     type: DataTypes.INTEGER,
     method: DataTypes.INTEGER,
+    provinceId: DataTypes.INTEGER,
     start: DataTypes.DATE,
     end: DataTypes.DATE,
     total: DataTypes.DOUBLE,
@@ -12,6 +13,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Plan.associate = (models) => {
     Plan.belongsTo(models.User, { as: 'manager' });
+    Plan.belongsTo(models.Province, { as: 'province', foreignKey: 'provinceId' });
     Plan.hasMany(models.PlanBrands, { as: 'brands' });
     Plan.hasMany(models.Range, { as: 'ranges' });
   };

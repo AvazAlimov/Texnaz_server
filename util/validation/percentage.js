@@ -9,6 +9,9 @@ export const check = checkSchema({
       options: id => exists(models.User, id),
     },
   },
+  provinceId: {
+    isInt: true,
+  },
   type: {
     isInt: true,
   },
@@ -45,6 +48,7 @@ export function validate(req, res, next) {
   } else {
     req.percentage = {
       managerId: req.body.managerId,
+      provinceId: req.body.provinceId,
       type: req.body.type,
       start: req.body.start,
       end: req.body.end,

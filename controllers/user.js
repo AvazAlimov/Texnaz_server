@@ -37,8 +37,14 @@ async function bindUserRole(roles, userId) {
 
 export default {
   // Function to response all users
-  getAll(_, res) {
-    find(null, res, (items) => {
+  getAll(req, res) {
+    const where = {};
+    if (Object.keys(req.query).length) {
+      Object.keys(req.query).forEach((key) => {
+        where[key] = req.query[key];
+      });
+    }
+    find(where, res, (items) => {
       res.status(200).json(items);
     });
   },

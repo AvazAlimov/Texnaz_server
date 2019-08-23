@@ -9,6 +9,9 @@ export const check = checkSchema({
       options: id => exists(models.User, id),
     },
   },
+  provinceId: {
+    isInt: true,
+  },
   type: {
     isInt: true,
   },
@@ -58,6 +61,7 @@ export function validate(req, res, next) {
       method: req.body.method,
       start: req.body.start,
       end: req.body.end,
+      provinceId: req.body.provinceId,
       total: req.body.total,
       allBrands: req.body.allBrands,
       min: req.body.min,

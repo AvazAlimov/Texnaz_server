@@ -13,6 +13,9 @@ module.exports = {
         key: 'id',
       },
     },
+    provinceId: {
+      type: Sequelize.INTEGER,
+    },
     type: {
       type: Sequelize.INTEGER,
     },
