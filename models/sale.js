@@ -10,6 +10,7 @@ export default (sequelize, DataTypes) => {
     approved: DataTypes.INTEGER,
     shipped: DataTypes.INTEGER,
     days: DataTypes.INTEGER,
+    provinceId: DataTypes.INTEGER,
     officialRate: DataTypes.STRING,
     exchangeRate: DataTypes.STRING,
     createdAt: DataTypes.DATE,
@@ -19,6 +20,7 @@ export default (sequelize, DataTypes) => {
     Sale.belongsTo(models.User, { as: 'user', foreignKey: 'userId' });
     Sale.belongsTo(models.User, { as: 'manager', foreignKey: 'managerId' });
     Sale.belongsTo(models.Warehouse, { as: 'warehouse' });
+    Sale.belongsTo(models.Province, { as: 'province', foreignKey: 'provinceId' });
     Sale.hasMany(models.SaleItem, { as: 'items' });
   };
   return Sale;

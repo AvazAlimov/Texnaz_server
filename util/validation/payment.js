@@ -21,6 +21,9 @@ export const check = checkSchema({
   ratio: {
     isFloat: true,
   },
+  provinceId: {
+    isInt: true,
+  },
   clientId: {
     isInt: true,
     custom: {
@@ -48,6 +51,7 @@ export function validate(req, res, next) {
       currency: req.body.currency,
       ratio: req.body.ratio,
       userId: req.body.userId,
+      provinceId: req.body.provinceId,
       managerId: req.body.managerId,
       clientId: req.body.clientId,
       brandId: req.body.brandId,

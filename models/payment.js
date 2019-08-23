@@ -11,12 +11,14 @@ export default (sequelize, DataTypes) => {
     currency: DataTypes.INTEGER,
     exchangeRate: DataTypes.STRING,
     createdAt: DataTypes.DATE,
+    provinceId: DataTypes.INTEGER,
   }, {});
   Payment.associate = (models) => {
     Payment.belongsTo(models.Brand, { as: 'brand' });
     Payment.belongsTo(models.Client, { as: 'client' });
     Payment.belongsTo(models.User, { as: 'user', foreignKey: 'userId' });
     Payment.belongsTo(models.User, { as: 'manager', foreignKey: 'managerId' });
+    Payment.belongsTo(models.Province, { as: 'province', foreignKey: 'provinceId' });
   };
   return Payment;
 };

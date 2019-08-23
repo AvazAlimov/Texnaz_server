@@ -16,6 +16,9 @@ module.exports = {
     form: {
       type: Sequelize.INTEGER,
     },
+    provinceId: {
+      type: Sequelize.INTEGER,
+    },
     clientId: {
       type: Sequelize.INTEGER,
       references: {

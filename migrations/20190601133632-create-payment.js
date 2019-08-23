@@ -23,6 +23,9 @@ module.exports = {
     currency: {
       type: Sequelize.INTEGER,
     },
+    provinceId: {
+      type: Sequelize.INTEGER,
+    },
     userId: {
       type: Sequelize.INTEGER,
       references: {

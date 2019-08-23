@@ -5,6 +5,10 @@ function find(where, res, next) {
     where,
     include: [
       {
+        model: models.Province,
+        as: 'province',
+      },
+      {
         model: models.Client,
         as: 'client',
         include: [{

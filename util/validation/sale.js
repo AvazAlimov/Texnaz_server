@@ -15,6 +15,9 @@ export const check = checkSchema({
   days: {
     isInt: true,
   },
+  provinceId: {
+    isInt: true,
+  },
   clientId: {
     isInt: true,
     custom: {
@@ -69,6 +72,7 @@ export function validate(req, res, next) {
       clientId: req.body.clientId,
       managerId: req.body.managerId,
       userId: req.body.userId,
+      provinceId: req.body.provinceId,
       warehouseId: req.body.warehouseId,
       items: req.body.items,
       days: req.body.days,
