@@ -13,6 +13,10 @@ module.exports = {
       type: Sequelize.STRING,
       unique: true,
     },
+    controllerId: {
+      type: Sequelize.INTEGER,
+      allowNull: true,
+    },
     password: {
       type: Sequelize.STRING,
     },

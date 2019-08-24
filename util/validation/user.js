@@ -39,6 +39,7 @@ export function validate(req, res, next) {
       name: req.body.name,
       username: req.body.username,
       password: req.body.password,
+      controllerId: req.body.controllerId,
       provinceId: req.body.provinceId,
       roles: req.body.roles,
     };

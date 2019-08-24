@@ -9,6 +9,10 @@ function find(where, res, next) {
     attributes: ['id', 'name', 'username'],
     include: [
       {
+        model: models.User,
+        as: 'controller',
+      },
+      {
         model: models.Role,
         as: 'roles',
       },
@@ -20,7 +24,10 @@ function find(where, res, next) {
   })
     // Succeeded: passes result to NEXT function
     .then((items) => {
-      items.forEach(element => element.roles.forEach(role => delete role.dataValues.UserRoles));
+      items.forEach((element) => {
+        if (!element.controller) delete element.dataValues.controller;
+        element.roles.forEach(role => delete role.dataValues.UserRoles);
+      });
       next(items);
     })
     // Failed: responses error message with status 502
