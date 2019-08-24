@@ -229,6 +229,28 @@ module.exports = {
         Permissions.SHOW_WAREHOUSE_SHIPMENTS,
         Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
         Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
+      ]))
+    // Sales Representative
+      .concat(getBindings(9, [
+        Permissions.SHOW_STATISTICS,
+        Permissions.SHOW_PRICES,
+        Permissions.SHOW_TABELS,
+        Permissions.SHOW_MOTIVATIONS,
+        Permissions.SHOW_PRICES_PRICED,
+        Permissions.SHOW_WAREHOUSES,
+        Permissions.SHOW_SHIPMENTS,
+        Permissions.SHOW_SHIPMENTS_PENDING_SALES,
+        Permissions.SHOW_SHIPMENTS_APPROVED_SALES,
+        Permissions.SHOW_SHIPMENTS_FINISHED,
+        Permissions.SHOW_SHIPMENTS_REJECTED,
+        Permissions.SHOW_CLIENTS,
+        Permissions.SHOW_SETTINGS,
+        Permissions.CAN_BOOK,
+        Permissions.SHOW_SALES_MY_SALES,
+        Permissions.SHOW_WAREHOUSE_INFORMATION,
+        Permissions.SHOW_WAREHOUSE_BOOKING,
+        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
+        Permissions.SHOW_WAREHOUSE_SALE,
       ])),
     {}),
 
