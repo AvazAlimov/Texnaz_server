@@ -258,7 +258,7 @@ module.exports = {
           id: 29,
           name: 'Samarkand Suppervisor 2',
           username: 'ss2',
-          provinceId: 1,
+          provinceId: 9,
           controllerId: 27,
           password: bcrypt.hashSync('ss2', 10),
         },
