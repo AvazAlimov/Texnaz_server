@@ -5,6 +5,10 @@ function find(where, res, next) {
     where,
     include: [
       {
+        model: models.Province,
+        as: 'province',
+      },
+      {
         model: models.Region,
         include: [{ model: models.Province, as: 'province' }],
         as: 'region',
@@ -24,8 +28,14 @@ function find(where, res, next) {
 }
 
 export default {
-  getAll(_, res) {
-    find(null, res, (items) => {
+  getAll(req, res) {
+    const where = {};
+    if (Object.keys(req.query).length) {
+      Object.keys(req.query).forEach((key) => {
+        where[key] = req.query[key];
+      });
+    }
+    find(where, res, (items) => {
       res.status(200).json(items);
     });
   },

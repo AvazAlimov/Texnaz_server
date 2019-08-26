@@ -21,6 +21,9 @@ module.exports = {
     phone: {
       type: Sequelize.STRING,
     },
+    provinceId: {
+      type: Sequelize.INTEGER,
+    },
     regionId: {
       type: Sequelize.INTEGER,
       allowNull: false,

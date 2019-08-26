@@ -5932,7 +5932,13 @@ module.exports = {
         name: 'Саша',
         regionId: getRegionId('г.Ташкент'),
       },
-    ],
+    ].map(client => ({
+      icc: client.icc,
+      managerId: client.managerId,
+      name: client.name,
+      provinceId: regions.getProvinceId(client.regionId - 1),
+      regionId: client.regionId,
+    })),
     {},
   ),
 

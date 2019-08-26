@@ -296,4 +296,6 @@ module.exports = {
   down: queryInterface => queryInterface.bulkDelete('Regions', null, {}),
 
   getRegions: () => regions.map(region => region.name),
+
+  getProvinceId: regionId => regions[regionId].provinceId,
 };

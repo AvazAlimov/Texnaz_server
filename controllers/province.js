@@ -12,4 +12,9 @@ export default {
       res.status(200).json(items);
     });
   },
+  get(req, res) {
+    find({ id: req.params.id }, res, (items) => {
+      res.status(200).json(items);
+    });
+  },
 };
