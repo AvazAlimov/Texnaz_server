@@ -58,7 +58,6 @@ module.exports = {
     ])
     // MANAGER
       .concat(getBindings(2, [
-        Permissions.SHOW_STATISTICS,
         Permissions.SHOW_PRICES,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
@@ -80,7 +79,6 @@ module.exports = {
       ]))
     // OPERATOR
       .concat(getBindings(3, [
-        Permissions.SHOW_STATISTICS,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
@@ -131,7 +129,6 @@ module.exports = {
       ]))
     // CHIEF
       .concat(getBindings(6, [
-        Permissions.SHOW_STATISTICS,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
@@ -232,7 +229,6 @@ module.exports = {
       ]))
     // Sales Representative
       .concat(getBindings(9, [
-        Permissions.SHOW_STATISTICS,
         Permissions.SHOW_PRICES,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
