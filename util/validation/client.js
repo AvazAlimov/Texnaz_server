@@ -21,11 +21,8 @@ export const check = checkSchema({
   sphere: {
     isString: true,
   },
-  regionId: {
+  provinceId: {
     isInt: true,
-    custom: {
-      options: id => exists(models.Region, id),
-    },
   },
   managerId: {
     isInt: true,
@@ -51,6 +48,7 @@ export function validate(req, res, next) {
       itn: req.body.itn,
       contactPerson: req.body.contactPerson,
       phone: req.body.phone,
+      provinceId: req.body.provinceId,
       regionId: req.body.regionId,
       sphere: req.body.sphere,
       managerId: req.body.managerId,
