@@ -4,6 +4,7 @@ export default (sequelize, DataTypes) => {
     type: DataTypes.INTEGER,
     method: DataTypes.INTEGER,
     provinceId: DataTypes.INTEGER,
+    roleId: DataTypes.INTEGER,
     start: DataTypes.DATE,
     end: DataTypes.DATE,
     total: DataTypes.DOUBLE,

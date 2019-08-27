@@ -16,6 +16,9 @@ module.exports = {
     provinceId: {
       type: Sequelize.INTEGER,
     },
+    roleId: {
+      type: Sequelize.INTEGER,
+    },
     type: {
       type: Sequelize.INTEGER,
     },

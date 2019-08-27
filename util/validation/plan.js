@@ -33,6 +33,9 @@ export const check = checkSchema({
   min: {
     isFloat: true,
   },
+  roleId: {
+    isInt: true,
+  },
   brands: {
     isArray: true,
     custom: {
@@ -61,6 +64,7 @@ export function validate(req, res, next) {
       method: req.body.method,
       start: req.body.start,
       end: req.body.end,
+      roleId: req.body.roleId,
       provinceId: req.body.provinceId,
       total: req.body.total,
       allBrands: req.body.allBrands,
