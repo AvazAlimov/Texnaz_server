@@ -1,7 +1,7 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Roles', [{
     id: 1,
-    name: 'Управление',
+    name: 'Учредитель',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ module.exports = {
   },
   {
     id: 5,
-    name: 'Бухгалтер',
+    name: 'Финансовый менеджер',
   },
   {
     id: 6,
@@ -25,7 +25,7 @@ module.exports = {
   },
   {
     id: 7,
-    name: 'Учредитель',
+    name: 'Supervisor',
   },
   {
     id: 8,
