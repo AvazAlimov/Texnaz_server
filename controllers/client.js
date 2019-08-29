@@ -16,6 +16,13 @@ function find(where, res, next) {
       {
         model: models.User,
         as: 'manager',
+        include: [
+          {
+            model: models.User,
+            attributes: ['id', 'name'],
+            as: 'controller',
+          },
+        ],
       },
       {
         model: models.Payment,
