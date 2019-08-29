@@ -21,7 +21,6 @@ module.exports = {
       Permissions.SHOW_SHIPMENTS_PENDING_SALES,
       Permissions.SHOW_SHIPMENTS_APPROVED_SALES,
       Permissions.SHOW_SHIPMENTS_FINISHED,
-      Permissions.SHOW_SHIPMENTS_REJECTED,
       Permissions.SHOW_SHIPMENTS_ACCOUNTING,
       Permissions.SHOW_PAYMENTS,
       Permissions.SHOW_MY_EXPANSES,
@@ -171,7 +170,6 @@ module.exports = {
         Permissions.SHOW_SHIPMENTS_FINISHED,
         Permissions.SHOW_SHIPMENTS_REJECTED,
         Permissions.SHOW_SHIPMENTS_ACCOUNTING,
-        // Permissions.SHOW_PAYMENTS,
         Permissions.SHOW_SETTINGS,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
@@ -183,15 +181,6 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
-        Permissions.SHOW_WAREHOUSE_MOVE,
-        Permissions.SHOW_WAREHOUSE_BOOKING,
-        Permissions.SHOW_WAREHOUSE_RETURN,
-        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
-        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
-        Permissions.SHOW_WAREHOUSE_SALE,
-        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
-        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
-        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ]))
       // PROVINCE CEO
       .concat(getBindings(8, [
@@ -205,7 +194,6 @@ module.exports = {
         Permissions.SHOW_SHIPMENTS_FINISHED,
         Permissions.SHOW_SHIPMENTS_REJECTED,
         Permissions.SHOW_SHIPMENTS_ACCOUNTING,
-        // Permissions.SHOW_PAYMENTS,
         Permissions.SHOW_SETTINGS,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
@@ -217,15 +205,6 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
-        Permissions.SHOW_WAREHOUSE_MOVE,
-        Permissions.SHOW_WAREHOUSE_BOOKING,
-        Permissions.SHOW_WAREHOUSE_RETURN,
-        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
-        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
-        Permissions.SHOW_WAREHOUSE_SALE,
-        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
-        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
-        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ]))
     // Sales Representative
       .concat(getBindings(9, [
