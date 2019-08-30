@@ -11,7 +11,7 @@ export const check = checkSchema({
   password: {
     isString: true,
   },
-  provinceId: {
+  territoryId: {
     isInt: true,
   },
   roles: {
@@ -40,7 +40,7 @@ export function validate(req, res, next) {
       username: req.body.username,
       password: req.body.password,
       controllerId: req.body.controllerId,
-      provinceId: req.body.provinceId,
+      territoryId: req.body.territoryId,
       roles: req.body.roles,
     };
     next();

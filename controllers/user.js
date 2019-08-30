@@ -11,14 +11,26 @@ function find(where, res, next) {
       {
         model: models.User,
         as: 'controller',
+        attributes: ['id', 'name'],
       },
       {
         model: models.Role,
         as: 'roles',
       },
       {
-        model: models.Province,
-        as: 'province',
+        model: models.Territory,
+        as: 'territory',
+      },
+      {
+        model: models.UserProvince,
+        as: 'provinces',
+        include: [
+          {
+            model: models.Province,
+            as: 'province',
+            attributes: ['id', 'name'],
+          },
+        ],
       },
     ],
   })
@@ -26,6 +38,12 @@ function find(where, res, next) {
     .then((items) => {
       items.forEach((element) => {
         if (!element.controller) delete element.dataValues.controller;
+        if (!element.territory) delete element.dataValues.territory;
+
+        if (element.provinces.length) {
+          element.dataValues.provinces = element.provinces.map(province => province.province);
+        } else delete element.dataValues.provinces;
+
         element.roles.forEach(role => delete role.dataValues.UserRoles);
       });
       next(items);

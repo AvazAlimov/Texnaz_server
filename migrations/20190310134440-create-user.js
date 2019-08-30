@@ -20,7 +20,8 @@ module.exports = {
     password: {
       type: Sequelize.STRING,
     },
-    provinceId: {
+    territoryId: {
+      allowNull: true,
       type: Sequelize.INTEGER,
     },
     createdAt: {
