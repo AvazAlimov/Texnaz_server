@@ -9,6 +9,9 @@ module.exports = {
     name: {
       type: Sequelize.STRING,
     },
+    territoryId: {
+      type: Sequelize.INTEGER,
+    },
   }),
   down: queryInterface => queryInterface.dropTable('Provinces'),
 };
