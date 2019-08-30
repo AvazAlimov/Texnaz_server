@@ -4,7 +4,7 @@ export default (sequelize, DataTypes) => {
     territoryId: DataTypes.INTEGER,
   }, {});
   Province.associate = (models) => {
-    Province.belongsTo(models.Territory, { as: 'territory', foreignKey: 'territory' });
+    Province.belongsTo(models.Territory, { as: 'territory', foreignKey: 'territoryId' });
   };
   return Province;
 };
