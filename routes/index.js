@@ -32,6 +32,7 @@ import rates from './rates';
 import plans from './plans';
 import percentages from './percentages';
 import mixes from './mixes';
+import territories from './territories';
 
 export default (app) => {
   app.use('/api/auth', auth);
@@ -68,4 +69,5 @@ export default (app) => {
   app.use('/api/plans', plans);
   app.use('/api/percentages', percentages);
   app.use('/api/mixes', mixes);
+  app.use('/api/territories', territories);
 };

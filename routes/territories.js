@@ -1,11 +1,10 @@
 import { Router } from 'express';
+import middleware from '../middlewares/auth';
+import territory from '../controllers/territory';
 
 const router = Router();
 
-router.get('/');
-router.get('/:id');
-router.post('/');
-router.post('/:id');
-router.delete('/');
+router.get('/', middleware, territory.getAll);
+router.get('/:id', middleware, territory.get);
 
 export default router;
