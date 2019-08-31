@@ -145,6 +145,7 @@ module.exports = {
           name: 'Suppervisor 1 Territory 2',
           username: 's1t2',
           controllerId: 18,
+          territoryId: 2,
           password: bcrypt.hashSync('s1t2', 10),
         },
         {
@@ -152,6 +153,7 @@ module.exports = {
           name: 'Suppervisor 2 Territory 2',
           username: 's2t2',
           controllerId: 18,
+          territoryId: 2,
           password: bcrypt.hashSync('s2t2', 10),
         },
         // #endregion
@@ -162,13 +164,15 @@ module.exports = {
           name: 'Manager 1 of suppervisor 1 territory 2',
           username: 'm1s1t2',
           controllerId: 19,
-          password: bcrypt.hashSync('m2s1t2', 10),
+          territoryId: 2,
+          password: bcrypt.hashSync('m1s1t2', 10),
         },
         {
           id: 22,
           name: 'Manager 2 of suppervisor 1 territory 2',
           username: 'm2s1t2',
           controllerId: 19,
+          territoryId: 2,
           password: bcrypt.hashSync('m2s1t2', 10),
         },
         {
@@ -176,6 +180,7 @@ module.exports = {
           name: 'Manager 1 of suppervisor 2 territory 2',
           username: 'm1s2t2',
           controllerId: 20,
+          territoryId: 2,
           password: bcrypt.hashSync('m1s2t2', 10),
         },
         {
@@ -183,6 +188,7 @@ module.exports = {
           name: 'Manager 2 of suppervisor 2 territory 2',
           username: 'm2s2t2',
           controllerId: 20,
+          territoryId: 2,
           password: bcrypt.hashSync('m2s2t2', 10),
         },
         // #endregion

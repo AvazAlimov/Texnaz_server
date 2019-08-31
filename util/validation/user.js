@@ -42,6 +42,7 @@ export function validate(req, res, next) {
       controllerId: req.body.controllerId,
       territoryId: req.body.territoryId,
       roles: req.body.roles,
+      provinces: req.body.provinces || [],
     };
     next();
   }
