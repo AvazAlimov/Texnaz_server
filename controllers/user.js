@@ -6,7 +6,7 @@ import models from '../models';
 function find(where, res, next) {
   models.User.findAll({
     where,
-    attributes: ['id', 'name', 'username'],
+    attributes: ['id', 'name', 'username', 'territoryId'],
     include: [
       {
         model: models.User,
@@ -60,6 +60,14 @@ async function bindUserRole(roles, userId) {
   await models.sequelize.getQueryInterface().bulkInsert('UserRoles', userRoles);
 }
 
+// Function to bind user with province. For whose role is supervisors
+async function bindUserProvince(provinces, userId) {
+  // Objects for bindings
+  const userProvinces = provinces.map(provinceId => ({ provinceId, userId }));
+  // Implement bindings with created objects
+  await models.sequelize.getQueryInterface().bulkInsert('UserProvinces', userProvinces);
+}
+
 export default {
   // Function to response all users
   getAll(req, res) {
@@ -91,11 +99,16 @@ export default {
       .then(async (user) => {
         // Binding user with roles
         await bindUserRole(req.user.roles, user.id);
+        // checks whether province exist,
+        if (req.user.provinces.length) {
+          // If exist then bind provinces with the user
+          await bindUserProvince(req.user.provinces, user.id);
+        }
         // Respond a successful creation
         res.sendStatus(201);
       })
       // Failed
-      .catch(error => res.status(502).json(error));
+      .catch(error => res.status(502).json({ error }));
   },
 
   // Function to update a specified user
@@ -107,8 +120,15 @@ export default {
       .then(async () => {
         // Deletion of all user and role bindings
         await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
+        // Deletion of all provinces belongs to the user
+        await models.UserProvince.destroy({ where: { userId: req.params.id }, raw: true });
         // Binding user with roles
         await bindUserRole(req.user.roles, req.params.id);
+        // checks whether province exist,
+        if (req.provinces.length) {
+          // If exist then bind provinces with the user
+          await bindUserProvince(req.user.provinces, user.id);
+        }
         // Respond a successful modification
         res.sendStatus(200);
       })
@@ -120,6 +140,8 @@ export default {
   async delete(req, res) {
     // Deletion of all user and role bindings
     await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
+    // Deletion of all provinces belongs to the user
+    await models.UserProvince.destroy({ where: { userId: req.params.id }, raw: true });
     // Deletion of a user
     models.User.destroy({ where: { id: req.params.id } })
       // Succeeded

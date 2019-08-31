@@ -8,8 +8,9 @@ function constructSelector(attributes) {
     attributes: ['id', 'name', 'username', 'password'],
     include: [
       {
-        model: models.Province,
-        as: 'province',
+        model: models.User,
+        as: 'controller',
+        attributes: ['id', 'name'],
       },
       {
         model: models.Role,
@@ -20,7 +21,29 @@ function constructSelector(attributes) {
             as: 'permissions',
           },
         ],
-      }],
+      },
+      {
+        model: models.Territory,
+        as: 'territory',
+        include: [
+          {
+            model: models.Province,
+            as: 'provinces',
+          },
+        ],
+      },
+      {
+        model: models.UserProvince,
+        as: 'provinces',
+        include: [
+          {
+            model: models.Province,
+            as: 'province',
+            attributes: ['id', 'name'],
+          },
+        ],
+      },
+    ],
   };
   return selector;
 }
@@ -28,8 +51,15 @@ function constructSelector(attributes) {
 async function findUser(attributes, res, next) {
   try {
     const users = await models.User.findAll(constructSelector(attributes));
-    if (users && users[0]) next(users[0]);
-    else res.sendStatus(404);
+    if (users && users[0]) {
+      if (!users[0].controller) delete users[0].dataValues.controller;
+      if (!users[0].territory) delete users[0].dataValues.territory;
+
+      if (users[0].provinces.length) {
+        users[0].dataValues.provinces = users[0].provinces.map(province => province.province);
+      } else delete users[0].dataValues.provinces;
+      next(users[0]);
+    } else res.sendStatus(404);
   } catch (error) { res.status(502).json(error); }
 }
 
