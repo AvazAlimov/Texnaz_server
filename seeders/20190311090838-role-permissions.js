@@ -78,6 +78,8 @@ module.exports = {
       ]))
     // OPERATOR
       .concat(getBindings(3, [
+        Permissions.SHOW_STATISTICS,
+        Permissions.SHOW_PRICES,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
@@ -85,11 +87,14 @@ module.exports = {
         Permissions.SHOW_SHIPMENTS_PENDING_SALES,
         Permissions.SHOW_SHIPMENTS_APPROVED_SALES,
         Permissions.SHOW_SHIPMENTS_FINISHED,
-        Permissions.SHOW_SHIPMENTS_REJECTED,
+        Permissions.SHOW_SHIPMENTS_ACCOUNTING,
         Permissions.SHOW_PAYMENTS,
+        Permissions.SHOW_MY_EXPANSES,
         Permissions.SHOW_SETTINGS,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
+        Permissions.SHOW_CALCULATOR_APPROVED,
+        Permissions.SHOW_CALCULATOR_NON_APPROVED,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_PRICES_UNPRICED,
         Permissions.SHOW_SETTINGS_PRODUCTS,
@@ -106,6 +111,15 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
+        Permissions.SHOW_WAREHOUSE_MOVE,
+        Permissions.SHOW_WAREHOUSE_BOOKING,
+        Permissions.SHOW_WAREHOUSE_RETURN,
+        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
+        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
+        Permissions.SHOW_WAREHOUSE_SALE,
+        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
+        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
+        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ]))
     // WAREHOUSE OWNER
       .concat(getBindings(4, [
@@ -128,6 +142,8 @@ module.exports = {
       ]))
     // CHIEF
       .concat(getBindings(6, [
+        Permissions.SHOW_STATISTICS,
+        Permissions.SHOW_PRICES,
         Permissions.SHOW_WAREHOUSES,
         Permissions.SHOW_MANAGERS,
         Permissions.SHOW_CLIENTS,
@@ -135,12 +151,14 @@ module.exports = {
         Permissions.SHOW_SHIPMENTS_PENDING_SALES,
         Permissions.SHOW_SHIPMENTS_APPROVED_SALES,
         Permissions.SHOW_SHIPMENTS_FINISHED,
-        Permissions.SHOW_SHIPMENTS_REJECTED,
         Permissions.SHOW_SHIPMENTS_ACCOUNTING,
         Permissions.SHOW_PAYMENTS,
+        Permissions.SHOW_MY_EXPANSES,
         Permissions.SHOW_SETTINGS,
         Permissions.SHOW_TABELS,
         Permissions.SHOW_MOTIVATIONS,
+        Permissions.SHOW_CALCULATOR_APPROVED,
+        Permissions.SHOW_CALCULATOR_NON_APPROVED,
         Permissions.SHOW_PRICES_PRICED,
         Permissions.SHOW_PRICES_UNPRICED,
         Permissions.SHOW_SETTINGS_PRODUCTS,
@@ -157,6 +175,15 @@ module.exports = {
         Permissions.SHOW_SALES_PENDING,
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
+        Permissions.SHOW_WAREHOUSE_MOVE,
+        Permissions.SHOW_WAREHOUSE_BOOKING,
+        Permissions.SHOW_WAREHOUSE_RETURN,
+        Permissions.SHOW_WAREHOUSE_RETURN_CLIENT,
+        Permissions.SHOW_WAREHOUSE_LOST_STOCKS,
+        Permissions.SHOW_WAREHOUSE_SALE,
+        Permissions.SHOW_WAREHOUSE_SHIPMENTS,
+        Permissions.SHOW_WAREHOUSE_PRE_STOCKS,
+        Permissions.SHOW_WAREHOUSE_ACCEPTANCE,
       ]))
       // SUPERVISOR
       .concat(getBindings(7, [
