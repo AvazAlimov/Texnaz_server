@@ -7,10 +7,16 @@ function find(where, res, next) {
       {
         model: models.Client,
         as: 'client',
-        include: [{
-          model: models.Payment,
-          as: 'payments',
-        }],
+        include: [
+          {
+            model: models.Payment,
+            as: 'payments',
+          },
+          {
+            model: models.Province,
+            as: 'province',
+          },
+        ],
       },
       {
         model: models.User,
