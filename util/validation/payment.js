@@ -54,7 +54,7 @@ export function validate(req, res, next) {
       provinceId: req.body.provinceId,
       managerId: req.body.managerId,
       clientId: req.body.clientId,
-      brandId: req.body.brandId,
+      brandId: 1,
     };
     next();
   }
