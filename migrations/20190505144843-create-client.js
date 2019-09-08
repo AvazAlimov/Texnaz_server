@@ -12,6 +12,10 @@ module.exports = {
     name: {
       type: Sequelize.STRING,
     },
+    balance: {
+      type: Sequelize.DOUBLE,
+      defaultValue: 0,
+    },
     itn: {
       type: Sequelize.STRING,
     },

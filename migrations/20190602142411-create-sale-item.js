@@ -27,6 +27,14 @@ module.exports = {
         key: 'id',
       },
     },
+    paidPrice: {
+      type: Sequelize.DOUBLE,
+      defaultValue: 0,
+    },
+    debtPrice: {
+      type: Sequelize.DOUBLE,
+      defaultValue: 0,
+    },
     quantity: {
       type: Sequelize.DOUBLE,
     },
