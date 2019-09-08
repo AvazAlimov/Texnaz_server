@@ -72,6 +72,18 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 
+  updateBalance(req, res) {
+    models.Client.findAll({ where: { id: req.params.id } })
+      .then(([client]) => {
+        models.Client.update({
+          balance: client.balance + req.body.balance,
+        }, { where: { id: req.params.id } })
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
+      })
+      .catch(error => res.status(502).json(error));
+  },
+
   delete(req, res) {
     models.Client.destroy({
       where: {
