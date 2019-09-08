@@ -11,6 +11,12 @@ module.exports = {
     'Clients',
     [
       {
+        icc: 9559,
+        managerId: 21,
+        name: '"Steve" МЧЖ',
+        regionId: getRegionId('Андижанская область'),
+      },
+      {
         icc: 3001,
         managerId: 9,
         name: 'VOSTOK STROY DETAL" МЧЖ',
