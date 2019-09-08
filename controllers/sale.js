@@ -128,6 +128,18 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 
+  updateSaleItem(req, res) {
+    models.SaleItem.update(req.body, { where: { id: req.params.id } })
+      .then(() => res.send(200))
+      .catch(err => res.status(500).json(err));
+  },
+
+  close(req, res) {
+    models.Sale.update({ isClosed: true }, { where: { id: req.params.id } })
+      .then(() => res.send(200))
+      .catch(err => res.status(500).json(err));
+  },
+
   approve(req, res) {
     Promise.all([
       rates({ id: 4 }),
