@@ -3,6 +3,8 @@ export default (sequelize, DataTypes) => {
     saleId: DataTypes.INTEGER,
     stockId: DataTypes.INTEGER,
     priceId: DataTypes.INTEGER,
+    paidPrice: DataTypes.DOUBLE,
+    debtPrice: DataTypes.DOUBLE,
     quantity: DataTypes.DOUBLE,
     discount: DataTypes.DOUBLE,
     commissionPrice: DataTypes.DOUBLE,

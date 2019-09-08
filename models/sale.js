@@ -1,6 +1,7 @@
 export default (sequelize, DataTypes) => {
   const Sale = sequelize.define('Sale', {
     number: DataTypes.STRING,
+    isClosed: DataTypes.BOOLEAN,
     type: DataTypes.INTEGER,
     form: DataTypes.INTEGER,
     clientId: DataTypes.INTEGER,

@@ -3,6 +3,7 @@ export default (sequelize, DataTypes) => {
     icc: DataTypes.STRING,
     name: DataTypes.STRING,
     itn: DataTypes.STRING,
+    balance: DataTypes.DOUBLE,
     contactPerson: DataTypes.STRING,
     phone: DataTypes.STRING,
     provinceId: DataTypes.INTEGER,
