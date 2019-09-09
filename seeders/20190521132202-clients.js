@@ -14,6 +14,7 @@ module.exports = {
         icc: 9559,
         managerId: 21,
         name: '"Steve" МЧЖ',
+        balance: -633.25443787,
         regionId: getRegionId('Андижанская область'),
       },
       {
@@ -5941,6 +5942,7 @@ module.exports = {
     ].map(client => ({
       icc: client.icc,
       managerId: client.managerId,
+      balance: client.balance,
       name: client.name,
       provinceId: regions.getProvinceId(client.regionId - 1),
       regionId: client.regionId,
