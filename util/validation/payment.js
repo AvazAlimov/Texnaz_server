@@ -15,6 +15,9 @@ export const check = checkSchema({
       options: id => exists(models.User, id),
     },
   },
+  exchangeRate: {
+    isString: true,
+  },
   number: {
     isString: true,
   },
@@ -54,6 +57,7 @@ export function validate(req, res, next) {
       provinceId: req.body.provinceId,
       managerId: req.body.managerId,
       clientId: req.body.clientId,
+      exchangeRate: req.body.exchangeRate,
       brandId: 1,
     };
     next();
