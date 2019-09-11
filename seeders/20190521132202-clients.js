@@ -14,7 +14,7 @@ module.exports = {
         icc: 9559,
         managerId: 21,
         name: '"Steve" МЧЖ',
-        balance: -633.25443787,
+        balance: -639.459847036,
         regionId: getRegionId('Андижанская область'),
       },
       {

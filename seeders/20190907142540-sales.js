@@ -10,7 +10,7 @@ module.exports = {
       managerId: 1,
       userId: null,
       warehouseId: 1,
-      approved: 0,
+      approved: 1,
       shipped: 0,
       days: 1,
       provinceId: 1,
