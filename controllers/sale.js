@@ -134,8 +134,16 @@ export default {
       .catch(err => res.status(500).json(err));
   },
 
-  close(req, res) {
-    models.Sale.update({ isClosed: true }, { where: { id: req.params.id } })
+  checkIsClosed(req, res) {
+    const tasks = [];
+    find({ clientId: req.params.id }, res, (sales) => {
+      sales.forEach((sale) => {
+        if (!sale.items.filter(({ debtPrice }) => debtPrice !== 0).length) {
+          tasks.push(models.Sale.update({ isClosed: true }, { where: { id: sale.id } }));
+        }
+      });
+    });
+    Promise.all(tasks)
       .then(() => res.send(200))
       .catch(err => res.status(500).json(err));
   },

@@ -14,6 +14,6 @@ router.post('/disapprove/:id', authMiddleware, sale.disapprove);
 router.post('/shipment/approve/:id', authMiddleware, sale.approveShipment);
 router.post('/shipment/reject/:id', authMiddleware, sale.rejectShipment);
 router.post('/saleItem/:id', authMiddleware, sale.updateSaleItem);
-router.post('/close/:id', authMiddleware, sale.close);
+router.post('/check/:id', authMiddleware, sale.checkIsClosed);
 
 export default router;
