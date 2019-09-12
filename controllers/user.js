@@ -119,16 +119,16 @@ export default {
       // Succeeded
       .then(async () => {
         // Deletion of all user and role bindings
-        await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
+        // await models.UserRole.destroy({ where: { userId: req.params.id }, raw: true });
         // Deletion of all provinces belongs to the user
-        await models.UserProvince.destroy({ where: { userId: req.params.id }, raw: true });
+        // await models.UserProvince.destroy({ where: { userId: req.params.id }, raw: true });
         // Binding user with roles
-        await bindUserRole(req.user.roles, req.params.id);
+        // await bindUserRole(req.user.roles, req.params.id);
         // checks whether province exist,
-        if (req.provinces.length) {
-          // If exist then bind provinces with the user
-          await bindUserProvince(req.user.provinces, user.id);
-        }
+        // if (req.provinces.length) {
+        // If exist then bind provinces with the user
+        // await bindUserProvince(req.user.provinces, req.user.id);
+        // }
         // Respond a successful modification
         res.sendStatus(200);
       })
