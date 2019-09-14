@@ -3,14 +3,11 @@ import models from '../../models';
 import exists from '../check';
 
 export const check = checkSchema({
-  managerId: {
+  userId: {
     isInt: true,
     custom: {
       options: id => exists(models.User, id),
     },
-  },
-  provinceId: {
-    isInt: true,
   },
   type: {
     isInt: true,
@@ -59,13 +56,12 @@ export function validate(req, res, next) {
     });
   } else {
     req.plan = {
-      managerId: req.body.managerId,
+      userId: req.body.userId,
       type: req.body.type,
       method: req.body.method,
       start: req.body.start,
       end: req.body.end,
       roleId: req.body.roleId,
-      provinceId: req.body.provinceId,
       total: req.body.total,
       allBrands: req.body.allBrands,
       min: req.body.min,

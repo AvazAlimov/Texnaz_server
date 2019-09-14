@@ -6,15 +6,12 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    managerId: {
+    userId: {
       type: Sequelize.INTEGER,
       references: {
         model: 'Users',
         key: 'id',
       },
-    },
-    provinceId: {
-      type: Sequelize.INTEGER,
     },
     roleId: {
       type: Sequelize.INTEGER,

@@ -5,12 +5,23 @@ function find(where, res, next) {
     where,
     include: [
       {
-        model: models.Province,
-        as: 'province',
+        model: models.Role,
+        as: 'role',
       },
       {
         model: models.User,
-        as: 'manager',
+        as: 'user',
+        include: [
+          {
+            model: models.User,
+            as: 'controller',
+            attributes: ['id', 'name'],
+          },
+          {
+            model: models.Territory,
+            as: 'territory',
+          },
+        ],
       },
       {
         model: models.PlanBrands,

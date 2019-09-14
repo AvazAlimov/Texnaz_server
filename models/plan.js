@@ -1,9 +1,8 @@
 export default (sequelize, DataTypes) => {
   const Plan = sequelize.define('Plan', {
-    managerId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     type: DataTypes.INTEGER,
     method: DataTypes.INTEGER,
-    provinceId: DataTypes.INTEGER,
     roleId: DataTypes.INTEGER,
     start: DataTypes.DATE,
     end: DataTypes.DATE,
@@ -13,8 +12,8 @@ export default (sequelize, DataTypes) => {
     createdAt: DataTypes.DATE,
   }, {});
   Plan.associate = (models) => {
-    Plan.belongsTo(models.User, { as: 'manager' });
-    Plan.belongsTo(models.Province, { as: 'province', foreignKey: 'provinceId' });
+    Plan.belongsTo(models.User, { as: 'user' });
+    Plan.belongsTo(models.Role, { as: 'role' });
     Plan.hasMany(models.PlanBrands, { as: 'brands' });
     Plan.hasMany(models.Range, { as: 'ranges' });
   };
