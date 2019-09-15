@@ -11,6 +11,7 @@ function find(where, res, next) {
       {
         model: models.User,
         as: 'user',
+        attributes: ['id', 'name'],
         include: [
           {
             model: models.User,
