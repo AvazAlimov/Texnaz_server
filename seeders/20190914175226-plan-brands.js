@@ -2,7 +2,7 @@ module.exports = {
   up: queryInterface => queryInterface.bulkInsert('PlanBrands', [
     {
       planId: 1,
-      brandId: 7,
+      brandId: 10,
     },
     {
       planId: 1,
