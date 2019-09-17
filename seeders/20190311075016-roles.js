@@ -25,7 +25,7 @@ module.exports = {
   },
   {
     id: 7,
-    name: 'Supervisor',
+    name: 'Супервайзер',
   },
   {
     id: 8,
