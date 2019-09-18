@@ -40,12 +40,24 @@ module.exports = {
         roleId: 8,
       },
       {
+        userId: 18,
+        roleId: 2,
+      },
+      {
         userId: 19,
         roleId: 7,
       },
       {
         userId: 20,
         roleId: 7,
+      },
+      {
+        userId: 19,
+        roleId: 2,
+      },
+      {
+        userId: 20,
+        roleId: 2,
       },
       {
         userId: 21,

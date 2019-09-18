@@ -23,10 +23,10 @@ function find(where, res, next) {
       {
         model: models.Client,
         as: 'client',
-        include: [{
+        /* include: [{
           model: models.Payment,
           as: 'payments',
-        }],
+        }], */
       },
     ],
   })
