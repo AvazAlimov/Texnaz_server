@@ -67,6 +67,27 @@ function rates(where) {
   });
 }
 
+function returnStock(items) {
+  return new Promise((resolve, reject) => {
+    const tasks = [];
+    items.forEach((item) => {
+      tasks.push(new Promise((res, rej) => {
+        models.Stock.findByPk(item.stockId)
+          .then((stock) => {
+            models.Stock.update({
+              quantity: stock.quantity + item.quantity,
+            }, { where: { id: stock.id } })
+              .then(() => res());
+          })
+          .catch(err => rej(err));
+      }));
+    });
+    Promise.all(tasks)
+      .then(() => resolve())
+      .catch(error => reject(error));
+  });
+}
+
 export default {
   getAll(req, res) {
     let where = null;
@@ -95,7 +116,15 @@ export default {
           // eslint-disable-next-line no-param-reassign
           item.saleId = sale.id;
           tasks.push(new Promise((resolve, reject) => {
-            models.SaleItem.create(item).then(() => resolve()).catch(error => reject(error));
+            models.SaleItem.create(item).then(() => {
+              models.Stock.findByPk(item.stockId).then((stock) => {
+                models.Stock
+                  .update({
+                    quantity: stock.quantity - item.quantity,
+                  }, { where: { id: stock.id } })
+                  .then(() => resolve());
+              });
+            }).catch(error => reject(error));
           }));
         });
         Promise.all(tasks)
@@ -153,35 +182,35 @@ export default {
       rates({ id: 4 }),
       rates({ id: 5 }),
     ]).then((result) => {
-      models.Sale.update({
-        approved: 1,
-        exchangeRate: result[0].value,
-        officialRate: result[1].value,
-        userId: req.userId,
-      }, {
-        where: {
-          id: req.params.id,
-        },
-      }).then(() => {
+      find({ id: req.params.id }, res, ([sale]) => {
         const tasks = [];
-        find({ id: req.params.id }, res, (sales) => {
-          sales[0].toJSON().items.forEach((item) => {
-            tasks.push(new Promise((resolve) => {
-              models.Stock
-                .findByPk(item.stockId)
+        if (sale.approved === -1) {
+          sale.items.forEach((item) => {
+            tasks.push(new Promise((res, rej) => {
+              models.Stock.findByPk(item.stockId)
                 .then((stock) => {
-                  models.Stock
-                    .update({
-                      quantity: stock.quantity - item.quantity,
-                    }, { where: { id: stock.id } })
-                    .then(() => resolve());
+                  models.Stock.update({
+                    quantity: stock.quantity - item.quantity,
+                  }, { where: { id: stock.id } })
+                    .then(() => res())
+                    .catch(err => rej(err));
                 });
             }));
           });
-          Promise.all(tasks)
-            .then(() => res.sendStatus(200))
-            .catch(error => res.status(502).json(error));
-        });
+        }
+        tasks.push(models.Sale.update({
+          approved: 1,
+          exchangeRate: result[0].value,
+          officialRate: result[1].value,
+          userId: req.userId,
+        }, {
+          where: {
+            id: req.params.id,
+          },
+        }));
+        Promise.all(tasks)
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
       });
     }).catch(error => res.status(502).json(error));
   },
@@ -195,7 +224,10 @@ export default {
         id: req.params.id,
       },
     }).then(() => {
-      res.sendStatus(200);
+      find({ id: req.params.id }, res, ([sale]) => {
+        returnStock(sale.items)
+          .then(() => res.sendStatus(200));
+      });
     })
       .catch(error => res.status(502).json(error));
   },
@@ -235,7 +267,10 @@ export default {
         id: req.params.id,
       },
     }).then(() => {
-      res.sendStatus(200);
+      find({ id: req.params.id }, res, ([sale]) => {
+        returnStock(sale.items)
+          .then(() => res.sendStatus(200));
+      });
     })
       .catch(error => res.status(502).json(error));
   },
