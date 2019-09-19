@@ -62,18 +62,14 @@ export default {
   },
 
   approve(req, res) {
-    models.Configuration.findAll({ where: { id: 4 } })
-      .then((ratio) => {
-        find({ id: req.params.id }, res, ([item]) => {
-          if (item) {
-            models.Payment.update({
-              approved: true,
-              exchangeRate: ratio[0].value,
-            }, { where: { id: item.id } });
-            res.sendStatus(200);
-          } else res.sendStatus(404);
-        });
-      })
+    find({ id: req.params.id }, res, ([item]) => {
+      if (item) {
+        models.Payment.update({
+          approved: true,
+        }, { where: { id: item.id } });
+        res.sendStatus(200);
+      } else res.sendStatus(404);
+    })
       .catch(error => res.status(502).json(error));
   },
 
