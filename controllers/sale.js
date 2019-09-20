@@ -145,7 +145,19 @@ export default {
               // eslint-disable-next-line no-param-reassign
               item.saleId = req.params.id;
               tasks.push(new Promise((resolve, reject) => {
-                models.SaleItem.create(item).then(() => resolve()).catch(error => reject(error));
+                models.SaleItem.create(item).then(() => {
+                  // If it is rejected we take product from stocks, else no need
+                  if (req.sale.approved === -1) {
+                    models.Stock.findByPk(item.stockId)
+                      .then((stock) => {
+                        models.Stock.update({
+                          quantity: stock.quantity - item.quantity,
+                        }, { where: { id: stock.id } }).then(() => resolve());
+                      });
+                  } else {
+                    resolve();
+                  }
+                }).catch(error => reject(error));
               }));
             });
             Promise.all(tasks)
