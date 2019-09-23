@@ -66,11 +66,11 @@ export default {
       if (item) {
         models.Payment.update({
           approved: true,
-        }, { where: { id: item.id } });
-        res.sendStatus(200);
+        }, { where: { id: item.id } })
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
       } else res.sendStatus(404);
-    })
-      .catch(error => res.status(502).json(error));
+    });
   },
 
   delete(req, res) {
