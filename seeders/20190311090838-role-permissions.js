@@ -209,7 +209,7 @@ module.exports = {
         Permissions.SHOW_SALES_APPROVED,
         Permissions.SHOW_WAREHOUSE_INFORMATION,
       ]))
-      // PROVINCE CEO
+      // Territory CEO
       .concat(getBindings(8, [
         Permissions.SHOW_PRICES,
         Permissions.SHOW_WAREHOUSES,
