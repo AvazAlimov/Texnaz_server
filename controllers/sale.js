@@ -47,6 +47,10 @@ function find(where, res, next) {
                   {
                     model: models.Brand,
                   },
+                  {
+                    model: models.Unit,
+                    as: 'typeUnit',
+                  },
                 ],
               },
             ],

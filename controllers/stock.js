@@ -15,6 +15,10 @@ function find(where, res, next) {
           order: [['id', 'DESC']],
           limit: 1,
         },
+        {
+          model: models.Unit,
+          as: 'typeUnit',
+        },
       ],
     }, {
       model: models.Booking,

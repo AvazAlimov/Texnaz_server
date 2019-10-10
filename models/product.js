@@ -15,10 +15,10 @@ export default (sequelize, DataTypes) => {
     discount: DataTypes.DOUBLE,
   }, {});
   Product.associate = (models) => {
-    Product.hasOne(models.Unit, { foreignKey: 'id' });
     Product.hasOne(models.ProductType, { foreignKey: 'id' });
     Product.hasOne(models.Purpose, { foreignKey: 'id' });
     Product.hasMany(models.Price, { as: 'prices', foreignKey: 'productId' });
+    Product.belongsTo(models.Unit, { foreignKey: 'unit', as: 'typeUnit' });
     Product.belongsTo(models.Brand, { foreignKey: 'brand' });
     Product.belongsToMany(models.Tag, { as: 'tags', through: 'ProductTag', foreignKey: 'product' });
   };
