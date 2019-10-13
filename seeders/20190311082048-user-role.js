@@ -34,47 +34,6 @@ module.exports = {
         userId: 6,
         roleId: 6,
       },
-      // Additional users
-      {
-        userId: 18,
-        roleId: 8,
-      },
-      {
-        userId: 18,
-        roleId: 2,
-      },
-      {
-        userId: 19,
-        roleId: 7,
-      },
-      {
-        userId: 20,
-        roleId: 7,
-      },
-      {
-        userId: 19,
-        roleId: 2,
-      },
-      {
-        userId: 20,
-        roleId: 2,
-      },
-      {
-        userId: 21,
-        roleId: 2,
-      },
-      {
-        userId: 22,
-        roleId: 2,
-      },
-      {
-        userId: 23,
-        roleId: 2,
-      },
-      {
-        userId: 24,
-        roleId: 2,
-      },
     ].concat(bindManagers([7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17])),
     {},
   ),
