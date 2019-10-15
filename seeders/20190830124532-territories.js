@@ -4,7 +4,7 @@ module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Territories', [
     {
       id: 1,
-      name: 'Ташкент + Ташкент область',
+      name: 'Центр',
     },
     {
       id: 2,
