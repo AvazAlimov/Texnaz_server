@@ -3,10 +3,7 @@ import models from '../models';
 function find(where, res, next) {
   models.Region.findAll({
     where,
-    include: [{
-      model: models.Province,
-      as: 'province',
-    }],
+    attributes: ['id', 'provinceId'],
   })
     .then(items => next(items))
     .catch(error => res.status(502).json(error));

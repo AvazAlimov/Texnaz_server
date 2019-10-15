@@ -287,7 +287,13 @@ const regions = [{ provinceId: 1, name: 'Надо изменить' }].concat(
         'Gurlan tuman',
         'Hozarasp tuman',
       ]),
-    ),
+    )
+    .concat(getRegions(15, [
+      'г.Денау',
+    ]))
+    .concat(getRegions(16, [
+      'г.Коканд',
+    ])),
 );
 
 module.exports = {
