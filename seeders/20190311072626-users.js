@@ -49,151 +49,134 @@ module.exports = {
         password: bcrypt.hashSync('sales', 10),
       },
       // #endregion
-
-      // #region Managers
-      {
-        id: 2,
-        name: 'Steve Wozniack',
-        username: 'manager',
-        password: bcrypt.hashSync('manager', 10),
-      },
-      {
-        id: 7,
-        name: 'Абдуллаев Д.',
-        username: 'davron',
-        password: bcrypt.hashSync('davron', 10),
-      },
-      {
-        id: 8,
-        name: 'Алтынбеков Р.',
-        username: 'altinbekov',
-        password: bcrypt.hashSync('altinbekov', 10),
-      },
-      {
-        id: 9,
-        name: 'Аракулов Д.',
-        username: 'doniyor',
-        password: bcrypt.hashSync('doniyor', 10),
-      },
-      {
-        id: 10,
-        name: 'Газизов И.',
-        username: 'ildar',
-        password: bcrypt.hashSync('ildar', 10),
-      },
-      {
-        id: 11,
-        name: 'Джураев С.',
-        username: 'sanjar',
-        password: bcrypt.hashSync('sanjar', 10),
-      },
-      {
-        id: 12,
-        name: 'Замалетдинова А.',
-        username: 'alfiya',
-        password: bcrypt.hashSync('alfiya', 10),
-      },
-      {
-        id: 13,
-        name: 'Мирзаев К.',
-        username: 'kurbon',
-        password: bcrypt.hashSync('kurbon', 10),
-      },
-      {
-        id: 14,
-        name: 'Нусеров Р.',
-        username: 'nuserov',
-        password: bcrypt.hashSync('nuserov', 10),
-      },
-      {
-        id: 15,
-        name: 'Нусеров Рустам.',
-        username: 'rustam',
-        password: bcrypt.hashSync('rustam', 10),
-      },
-      {
-        id: 16,
-        name: 'Орипов А.',
-        username: 'ahmatxuja',
-        password: bcrypt.hashSync('ahmatxuja', 10),
-      },
-      {
-        id: 17,
-        name: 'Сили Н.',
-        username: 'nailya',
-        password: bcrypt.hashSync('nailya', 10),
-      },
-      // #endregion
     ]
     // #endregion
 
-    // #region Territory 2
+    // All users
       .concat([
-        // #region CEO
         {
-          id: 18,
-          name: 'CEO Territory 2',
-          username: 'ct2',
-          territoryId: 2,
-          password: bcrypt.hashSync('ct2', 10),
-        },
-        // #endregion
-
-        // #region Supervisors
-        {
-          id: 19,
-          name: 'Suppervisor 1 Territory 2',
-          username: 's1t2',
-          controllerId: 18,
-          territoryId: 2,
-          password: bcrypt.hashSync('s1t2', 10),
+          id: 40,
+          name: 'Альфия Замалетдинова',
+          username: 'a.zamaletdinova',
+          territoryId: 1,
+          controllerId: 35,
         },
         {
-          id: 20,
-          name: 'Suppervisor 2 Territory 2',
-          username: 's2t2',
-          controllerId: 18,
-          territoryId: 2,
-          password: bcrypt.hashSync('s2t2', 10),
-        },
-        // #endregion
-
-        // #region Managers
-        {
-          id: 21,
-          name: 'Manager 1 of suppervisor 1 territory 2',
-          username: 'm1s1t2',
-          controllerId: 19,
-          territoryId: 2,
-          password: bcrypt.hashSync('m1s1t2', 10),
+          id: 35,
+          name: 'Супервайзер Центр',
+          username: 'supcentre',
+          territoryId: 1,
+          controllerId: 22,
         },
         {
           id: 22,
-          name: 'Manager 2 of suppervisor 1 territory 2',
-          username: 'm2s1t2',
-          controllerId: 19,
-          territoryId: 2,
-          password: bcrypt.hashSync('m2s1t2', 10),
+          name: 'Анвар Ирсалиев',
+          username: 'a.irsaliyev',
+          territoryId: 1,
         },
         {
-          id: 23,
-          name: 'Manager 1 of suppervisor 2 territory 2',
-          username: 'm1s2t2',
-          controllerId: 20,
-          territoryId: 2,
-          password: bcrypt.hashSync('m1s2t2', 10),
+          id: 26,
+          name: 'Артем Фарманов',
+          username: 'a.farmanov',
+          territoryId: 3,
+        },
+        {
+          id: 36,
+          name: 'Даврон Абдуллаев',
+          username: 'd.abdullayev',
+          territoryId: 1,
+          controllerId: 35,
+        },
+        {
+          id: 39,
+          name: 'Ильдар Газизов',
+          username: 'i.gazizov',
+          territoryId: 1,
+          controllerId: 35,
         },
         {
           id: 24,
-          name: 'Manager 2 of suppervisor 2 territory 2',
-          username: 'm2s2t2',
-          controllerId: 20,
+          name: 'Курбан Мирзаев',
+          username: 'k.mirzayev',
           territoryId: 2,
-          password: bcrypt.hashSync('m2s2t2', 10),
         },
-        // #endregion
+        {
+          id: 41,
+          name: 'Наиля Сили',
+          username: 'n.sili',
+          territoryId: 1,
+          controllerId: 35,
+        },
+        {
+          id: 42,
+          name: 'Нармина Наджафалиева',
+          username: 'n.nadjafaliyeva',
+          territoryId: 1,
+          controllerId: 35,
+        },
+        {
+          id: 38,
+          name: 'Рустам Нусеров',
+          username: 'r.nuserov',
+          territoryId: 1,
+          controllerId: 35,
+        },
+        {
+          id: 25,
+          name: 'Санжар Джураев',
+          username: 's.jurayev',
+          territoryId: 4,
+        },
+        {
+          id: 29,
+          name: 'Супервайзер Анд и Нам',
+          username: 'supanreg',
+          territoryId: 2,
+          controllerId: 24,
+        },
+        {
+          id: 33,
+          name: 'Супервайзер Каш, Сур и Ден',
+          username: 'supksdreg',
+          territoryId: 4,
+          controllerId: 25,
+        },
+        {
+          id: 32,
+          name: 'Супервайзер Нав и Бух',
+          username: 'supnbreg',
+          territoryId: 3,
+          controllerId: 26,
+        },
+        {
+          id: 31,
+          name: 'Супервайзер Сыр, Джиз и Сам',
+          username: 'supsdsreg',
+          territoryId: 3,
+          controllerId: 26,
+        },
+        {
+          id: 30,
+          name: 'Супервайзер Фер и Кок',
+          username: 'supfkreg',
+          territoryId: 2,
+          controllerId: 24,
+        },
+        {
+          id: 34,
+          name: 'Супервайзер Хор и Кар',
+          username: 'supxkreg',
+          territoryId: 4,
+          controllerId: 25,
+        },
+        {
+          id: 37,
+          name: 'Хусан Аракулов',
+          username: 'x.arakulov',
+          territoryId: 1,
+          controllerId: 35,
+        },
       ]),
-    // #endregion
     {},
   ),
 
