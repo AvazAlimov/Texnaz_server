@@ -1,3 +1,4 @@
+import { promises } from 'dns';
 import models from '../models';
 
 function find(where, res, next) {
@@ -90,6 +91,31 @@ function returnStock(items) {
       .then(() => resolve())
       .catch(error => reject(error));
   });
+}
+
+function clientBalance({ id }, sum) {
+  return new Promise((resolve, reject) => {
+    models.Client.findByPk(id)
+      .then((client) => {
+        models.Client.update({
+          balance: client.balance + Number.parseFloat(sum),
+        }, {
+          where: { id },
+        })
+          .then(() => resolve())
+          .catch(err => reject(err));
+      })
+      .catch(err => reject(err));
+  });
+}
+
+function getSalePrice({ type, items }, officialRate) {
+  if (type === 3) {
+    return items.map(({ debtPrice, paidPrice }) => (debtPrice === 0 ? paidPrice : debtPrice))
+      .reduce((a, b) => a + b, 0);
+  }
+  return items.map(({ debtPrice, paidPrice }) => (debtPrice === 0 ? paidPrice : debtPrice))
+    .reduce((a, b) => a + (b / officialRate), 0);
 }
 
 export default {
@@ -228,19 +254,26 @@ export default {
   },
 
   disapprove(req, res) {
-    models.Sale.update({
-      approved: -1,
-      userId: req.userId,
-    }, {
-      where: {
-        id: req.params.id,
-      },
-    }).then(() => {
-      find({ id: req.params.id }, res, ([sale]) => {
-        returnStock(sale.items)
-          .then(() => res.sendStatus(200));
-      });
-    })
+    Promise.all([
+      rates({ id: 5 }),
+      models.Sale.update({
+        approved: -1,
+        userId: req.userId,
+      }, {
+        where: {
+          id: req.params.id,
+        },
+      }),
+    ])
+      .then(([officialRate]) => {
+        find({ id: req.params.id }, res, ([sale]) => {
+          Promise.all([
+            returnStock(sale.items),
+            clientBalance(sale.client, getSalePrice(sale, Number.parseFloat(officialRate.value))),
+          ])
+            .then(() => res.sendStatus(200));
+        });
+      })
       .catch(error => res.status(502).json(error));
   },
 
@@ -270,20 +303,27 @@ export default {
   },
 
   rejectShipment(req, res) {
-    models.Sale.update({
-      approved: -1,
-      shipped: 0,
-      userId: req.userId,
-    }, {
-      where: {
-        id: req.params.id,
-      },
-    }).then(() => {
-      find({ id: req.params.id }, res, ([sale]) => {
-        returnStock(sale.items)
-          .then(() => res.sendStatus(200));
-      });
-    })
+    Promise.all([
+      rates({ id: 5 }),
+      models.Sale.update({
+        approved: -1,
+        shipped: 0,
+        userId: req.userId,
+      }, {
+        where: {
+          id: req.params.id,
+        },
+      }),
+    ])
+      .then(([officialRate]) => {
+        find({ id: req.params.id }, res, ([sale]) => {
+          Promise.all([
+            returnStock(sale.items),
+            clientBalance(sale.client, getSalePrice(sale, Number.parseFloat(officialRate.value))),
+          ])
+            .then(() => res.sendStatus(200));
+        });
+      })
       .catch(error => res.status(502).json(error));
   },
 };
