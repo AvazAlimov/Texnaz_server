@@ -11,7 +11,7 @@ function find(where, res, next) {
       },
     ],
   })
-    .then(data => next(data))
+    .then(data => next(data.filter(({ id }) => id > 0)))
     .catch(err => res.status(500).json({ err }));
 }
 

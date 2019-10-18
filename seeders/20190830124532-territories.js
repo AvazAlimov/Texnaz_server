@@ -3,6 +3,10 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Territories', [
     {
+      id: -1,
+      name: 'Office',
+    },
+    {
       id: 1,
       name: 'Центр',
     },
