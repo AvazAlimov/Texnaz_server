@@ -10,6 +10,7 @@ module.exports = {
         id: 1,
         name: 'Steve Jobs',
         username: 'ceo',
+        territoryId: -1,
         password: bcrypt.hashSync('ceo', 10),
       },
       // #endregion
@@ -19,6 +20,7 @@ module.exports = {
         id: 3,
         name: 'John Nash',
         username: 'accountant',
+        territoryId: -1,
         password: bcrypt.hashSync('accountant', 10),
       },
       // #endregion
@@ -28,6 +30,7 @@ module.exports = {
         id: 4,
         name: 'John Sculley',
         username: 'owner',
+        territoryId: -1,
         password: bcrypt.hashSync('owner', 10),
       },
       // #endregion
@@ -37,6 +40,7 @@ module.exports = {
         id: 5,
         name: 'Operator',
         username: 'operator',
+        territoryId: -1,
         password: bcrypt.hashSync('operator', 10),
       },
       // #endregion
@@ -45,6 +49,7 @@ module.exports = {
       {
         id: 6,
         name: 'Sales Manager',
+        territoryId: -1,
         username: 'sales',
         password: bcrypt.hashSync('sales', 10),
       },
