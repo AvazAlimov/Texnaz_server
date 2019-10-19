@@ -10,6 +10,10 @@ module.exports = {
       type: Sequelize.STRING,
       unique: true,
     },
+    accepted: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    },
     isClosed: {
       type: Sequelize.BOOLEAN,
       defaultValue: false,
