@@ -253,6 +253,19 @@ export default {
     }).catch(error => res.status(502).json(error));
   },
 
+  accept(req, res) {
+    models.Sale.update({
+      accepted: true,
+    }, {
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.sendStatus(200);
+    })
+      .catch(error => res.status(502).json(error));
+  },
+
   disapprove(req, res) {
     Promise.all([
       rates({ id: 5 }),

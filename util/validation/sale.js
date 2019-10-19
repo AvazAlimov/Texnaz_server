@@ -1,4 +1,7 @@
-import { validationResult, checkSchema } from 'express-validator/check';
+import {
+  validationResult,
+  checkSchema,
+} from 'express-validator/check';
 import models from '../../models';
 import exists from '../check';
 
@@ -76,6 +79,7 @@ export function validate(req, res, next) {
       warehouseId: req.body.warehouseId,
       items: req.body.items,
       days: req.body.days,
+      accepted: false,
     };
     next();
   }
