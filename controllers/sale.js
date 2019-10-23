@@ -343,4 +343,7 @@ export default {
       })
       .catch(error => res.status(502).json(error));
   },
+  empty() {
+
+  },
 };
