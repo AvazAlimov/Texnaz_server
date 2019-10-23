@@ -52,6 +52,10 @@ function find(where, res, next) {
                     model: models.Unit,
                     as: 'typeUnit',
                   },
+                  {
+                    model: models.Tag,
+                    as: 'tags',
+                  },
                 ],
               },
             ],
