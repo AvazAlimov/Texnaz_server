@@ -36,7 +36,7 @@ module.exports = {
         provinceId: '14',
         regionId: '206',
         managerId: '25',
-        balance: '-44116.858',
+        balance: '-55169.478',
       },
       {
         icc: '4010',
@@ -60,7 +60,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '-8117.755',
+        balance: '-8606.705',
       },
       {
         icc: '4015',
@@ -276,7 +276,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '19.55',
       },
       {
         icc: '3502',
@@ -288,7 +288,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '28',
       },
       {
         icc: '3503',
@@ -300,7 +300,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '178.4',
       },
       {
         icc: '3505',
@@ -360,7 +360,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '331.32',
       },
       {
         icc: '3521',
@@ -408,7 +408,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '-711.28',
+        balance: '-2799.51',
       },
       {
         icc: '3536',
@@ -420,7 +420,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-4433.26',
       },
       {
         icc: '3537',
@@ -432,7 +432,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-1472.04',
       },
       {
         icc: '3538',
@@ -444,7 +444,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-21178.03',
       },
       {
         icc: '3541',
@@ -456,7 +456,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-722.51',
       },
       {
         icc: '3543',
@@ -468,7 +468,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-799.67',
       },
       {
         icc: '3544',
@@ -480,7 +480,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-411.1',
+        balance: '-3434.85',
       },
       {
         icc: '3545',
@@ -504,7 +504,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-2881.4',
       },
       {
         icc: '3547',
@@ -564,7 +564,7 @@ module.exports = {
         provinceId: '3',
         regionId: '35',
         managerId: '24',
-        balance: '0',
+        balance: '-24358.5',
       },
       {
         icc: '3553',
@@ -612,7 +612,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '-17903.49',
       },
       {
         icc: '3567',
@@ -648,7 +648,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '-10874.26',
       },
       {
         icc: '3581',
@@ -660,7 +660,7 @@ module.exports = {
         provinceId: '15',
         regionId: '219',
         managerId: '24',
-        balance: '0',
+        balance: '-12538.5',
       },
       {
         icc: '3582',
@@ -708,7 +708,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '-4531.8',
+        balance: '-7951.76',
       },
       {
         icc: '3520',
@@ -744,7 +744,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '-5898.75',
+        balance: '0',
       },
       {
         icc: '3604',
@@ -768,7 +768,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '2.7',
       },
       {
         icc: '3614',
@@ -780,7 +780,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-1308.3',
       },
       {
         icc: '3615',
@@ -792,7 +792,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-3154.05',
       },
       {
         icc: '3623',
@@ -828,7 +828,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '-738.2',
       },
       {
         icc: '3631',
@@ -864,7 +864,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '515.47',
       },
       {
         icc: '3639',
@@ -948,7 +948,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '412.5',
       },
       {
         icc: '4517',
@@ -1008,7 +1008,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '3634.58',
       },
       {
         icc: '4524',
@@ -1020,7 +1020,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '189.31',
       },
       {
         icc: '4525',
@@ -1032,7 +1032,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '-1920.4',
+        balance: '0',
       },
       {
         icc: '4528',
@@ -1092,7 +1092,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-4936.7',
+        balance: '-2560.2',
       },
       {
         icc: '4541',
@@ -1176,7 +1176,7 @@ module.exports = {
         provinceId: '3',
         regionId: '35',
         managerId: '24',
-        balance: '0',
+        balance: '15.49',
       },
       {
         icc: '4558',
@@ -1200,7 +1200,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '935.08',
       },
       {
         icc: '4559',
@@ -1260,7 +1260,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '259.26',
       },
       {
         icc: '4564',
@@ -1272,7 +1272,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-129.54',
       },
       {
         icc: '4566',
@@ -1344,7 +1344,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '110',
       },
       {
         icc: '4577',
@@ -1392,7 +1392,7 @@ module.exports = {
         provinceId: '15',
         regionId: '219',
         managerId: '24',
-        balance: '-497.5',
+        balance: '-10',
       },
       {
         icc: '4581',
@@ -1428,7 +1428,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '282',
       },
       {
         icc: '4586',
@@ -1440,7 +1440,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-2482.31',
+        balance: '-958.01',
       },
       {
         icc: '4588',
@@ -1488,7 +1488,7 @@ module.exports = {
         provinceId: '1',
         regionId: '1',
         managerId: '24',
-        balance: '-4658.3',
+        balance: '-3230.3',
       },
       {
         icc: '8001',
@@ -1644,7 +1644,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '-237.98',
+        balance: '-21.23',
       },
       {
         icc: '8014',
@@ -1764,7 +1764,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '0.5',
       },
       {
         icc: '8028',
@@ -1824,7 +1824,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '0.14',
       },
       {
         icc: '8034',
@@ -1872,7 +1872,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '38',
-        balance: '-4656.1',
+        balance: '-3681.1',
       },
       {
         icc: '8038',
@@ -1884,7 +1884,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '-5859.12',
+        balance: '-6839.15',
       },
       {
         icc: '8040',
@@ -1896,7 +1896,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '-1645',
       },
       {
         icc: '8041',
@@ -1908,7 +1908,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '38',
-        balance: '-735',
+        balance: '0',
       },
       {
         icc: '8042',
@@ -2124,7 +2124,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '62.27',
       },
       {
         icc: '3006',
@@ -2328,7 +2328,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-821.96',
       },
       {
         icc: '3033',
@@ -2508,7 +2508,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-829.18',
       },
       {
         icc: '3050',
@@ -2520,7 +2520,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '0.9',
       },
       {
         icc: '3052',
@@ -2616,7 +2616,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '-501.29',
       },
       {
         icc: '3068',
@@ -2724,7 +2724,7 @@ module.exports = {
         provinceId: '8',
         regionId: '111',
         managerId: '25',
-        balance: '0',
+        balance: '65.55',
       },
       {
         icc: '3134',
@@ -2748,7 +2748,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '315',
       },
       {
         icc: '3136',
@@ -2772,7 +2772,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '-1567',
+        balance: '0',
       },
       {
         icc: '3148',
@@ -2796,7 +2796,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '0',
+        balance: '4',
       },
       {
         icc: '3153',
@@ -2988,7 +2988,7 @@ module.exports = {
         provinceId: '1',
         regionId: '1',
         managerId: '24',
-        balance: '0',
+        balance: '-55220.24',
       },
       {
         icc: '1009',
@@ -3060,7 +3060,7 @@ module.exports = {
         provinceId: '5',
         regionId: '70',
         managerId: '24',
-        balance: '-79205.57',
+        balance: '-62564.57',
       },
       {
         icc: '1017',
@@ -3084,7 +3084,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '-0.39',
+        balance: '31.25',
       },
       {
         icc: '1019',
@@ -3096,7 +3096,7 @@ module.exports = {
         provinceId: '1',
         regionId: '1',
         managerId: '24',
-        balance: '0',
+        balance: '2500',
       },
       {
         icc: '1021',
@@ -3156,7 +3156,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '458.28',
       },
       {
         icc: '1039',
@@ -3204,7 +3204,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '38',
-        balance: '0',
+        balance: '2.62',
       },
       {
         icc: '1043',
@@ -3264,7 +3264,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '187.88',
       },
       {
         icc: '1629',
@@ -3288,7 +3288,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '-4853.05',
       },
       {
         icc: '1630',
@@ -3336,7 +3336,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '-221.53',
+        balance: '149.5',
       },
       {
         icc: '1573-Н',
@@ -3348,7 +3348,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '6909.04',
       },
       {
         icc: '1548-Н',
@@ -3360,7 +3360,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '-7130.85',
       },
       {
         icc: '1632',
@@ -3408,7 +3408,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '-312.26',
       },
       {
         icc: '9501/Н',
@@ -3420,7 +3420,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '185.58',
       },
       {
         icc: '9514/Н',
@@ -3432,7 +3432,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '1633.86',
       },
       {
         icc: '1637',
@@ -3492,7 +3492,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '0',
+        balance: '174.25',
       },
       {
         icc: '1645',
@@ -3648,7 +3648,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-5.2',
       },
       {
         icc: '2043',
@@ -3660,7 +3660,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '114.6',
       },
       {
         icc: '2044',
@@ -3672,7 +3672,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '39',
-        balance: '0',
+        balance: '-686.7',
       },
       {
         icc: '2046',
@@ -3687,7 +3687,7 @@ module.exports = {
         balance: '0',
       },
       {
-        icc: '2040',
+        icc: '9537',
         name: 'Зафар (Урикзор)',
         phone: '+998983077868',
         sphere: 'Магазин',
@@ -3696,7 +3696,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '0',
+        balance: '-9412.25',
       },
       {
         icc: '4598',
@@ -3780,7 +3780,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '3.14',
       },
       {
         icc: '2506',
@@ -3828,7 +3828,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '-466.84',
       },
       {
         icc: '2512',
@@ -3948,7 +3948,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '39.04',
       },
       {
         icc: '2532',
@@ -4056,7 +4056,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '57.6',
       },
       {
         icc: '2547',
@@ -4140,7 +4140,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '107.47',
       },
       {
         icc: '2554',
@@ -4164,7 +4164,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '40.86',
       },
       {
         icc: '2565',
@@ -4176,7 +4176,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '0.2',
       },
       {
         icc: '2567',
@@ -4188,7 +4188,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '9.37',
       },
       {
         icc: '2570',
@@ -4224,7 +4224,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '-554.56',
       },
       {
         icc: '2618',
@@ -4296,7 +4296,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '67.3',
       },
       {
         icc: '2629',
@@ -4332,7 +4332,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '17.47',
       },
       {
         icc: '2632',
@@ -4368,7 +4368,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '-426.73',
       },
       {
         icc: '2635',
@@ -4404,7 +4404,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '474.68',
       },
       {
         icc: '2640',
@@ -4428,7 +4428,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '245.67',
       },
       {
         icc: '2647',
@@ -4452,7 +4452,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '10673.63',
       },
       {
         icc: '2649',
@@ -4560,7 +4560,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '270',
       },
       {
         icc: '2715',
@@ -4584,7 +4584,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '339.57',
       },
       {
         icc: '2725',
@@ -4608,7 +4608,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '7.26',
       },
       {
         icc: '2731',
@@ -4716,7 +4716,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '577.41',
       },
       {
         icc: '2745',
@@ -4740,7 +4740,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '7735.95',
       },
       {
         icc: '2754',
@@ -4749,18 +4749,6 @@ module.exports = {
         sphere: 'Комбинат',
         itn: '12345678',
         contactPerson: 'Зафар   Абдусамат',
-        provinceId: '12',
-        regionId: '171',
-        managerId: '40',
-        balance: '0',
-      },
-      {
-        icc: '2631',
-        name: 'ООО "Novo  Wood"',
-        phone: '+998951261250',
-        sphere: 'Цех',
-        itn: '12345678',
-        contactPerson: 'Лена',
         provinceId: '12',
         regionId: '171',
         managerId: '40',
@@ -4776,7 +4764,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '21.92',
       },
       {
         icc: '2762',
@@ -4944,7 +4932,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '55.94',
       },
       {
         icc: '2790',
@@ -5016,7 +5004,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '-4121.866',
       },
       {
         icc: '2808',
@@ -5028,7 +5016,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '465.45',
       },
       {
         icc: '2812',
@@ -5040,7 +5028,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '38.52',
       },
       {
         icc: '2813',
@@ -5148,7 +5136,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '567',
       },
       {
         icc: '2829',
@@ -5160,7 +5148,7 @@ module.exports = {
         provinceId: '13',
         regionId: '183',
         managerId: '40',
-        balance: '0',
+        balance: '1592.55',
       },
       {
         icc: '2830',
@@ -5220,7 +5208,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '157.79',
       },
       {
         icc: '2026/А',
@@ -5256,7 +5244,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '34.7',
       },
       {
         icc: '2847',
@@ -5280,7 +5268,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '76.72',
       },
       {
         icc: '2854',
@@ -5292,7 +5280,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '417.09',
       },
       {
         icc: '2855',
@@ -5316,7 +5304,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '2798.88',
       },
       {
         icc: '2859',
@@ -5364,7 +5352,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '0.4',
       },
       {
         icc: '2864',
@@ -5412,7 +5400,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '0.001',
       },
       {
         icc: '2868',
@@ -5448,7 +5436,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '-467.22',
       },
       {
         icc: '2873',
@@ -5472,7 +5460,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '0',
+        balance: '172.1',
       },
       {
         icc: '2883',
@@ -5552,7 +5540,7 @@ module.exports = {
         provinceId: '1',
         regionId: '1',
         managerId: '24',
-        balance: '-105062.64',
+        balance: '-65542.4',
       },
       {
         icc: '3642',
@@ -5560,7 +5548,7 @@ module.exports = {
         provinceId: '8',
         regionId: '111',
         managerId: '25',
-        balance: '-52965.88',
+        balance: '-48764.88',
       },
       {
         icc: '4073',
@@ -5576,7 +5564,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-15520.42',
+        balance: '-19867.92',
       },
       {
         icc: '1053/полч.',
@@ -5584,7 +5572,7 @@ module.exports = {
         provinceId: '2',
         regionId: '21',
         managerId: '26',
-        balance: '-14714.5',
+        balance: '0',
       },
       {
         icc: '1049',
@@ -5600,7 +5588,7 @@ module.exports = {
         provinceId: '9',
         regionId: '128',
         managerId: '26',
-        balance: '-8973.35',
+        balance: '0',
       },
       {
         icc: '1053',
@@ -5608,7 +5596,7 @@ module.exports = {
         provinceId: '2',
         regionId: '21',
         managerId: '26',
-        balance: '-8638.35',
+        balance: '-877.5',
       },
       {
         icc: '3508',
@@ -5616,7 +5604,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '25',
-        balance: '-8211.96',
+        balance: '-5551.96',
       },
       {
         icc: '4609',
@@ -5624,7 +5612,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-6149',
+        balance: '0',
       },
       {
         icc: '1063/полч.',
@@ -5632,7 +5620,7 @@ module.exports = {
         provinceId: '9',
         regionId: '128',
         managerId: '26',
-        balance: '-4756.3',
+        balance: '0',
       },
       {
         icc: '1050',
@@ -5640,7 +5628,7 @@ module.exports = {
         provinceId: '4',
         regionId: '56',
         managerId: '26',
-        balance: '-3882.4',
+        balance: '-6678.8',
       },
       {
         icc: '1056',
@@ -5648,7 +5636,7 @@ module.exports = {
         provinceId: '2',
         regionId: '21',
         managerId: '26',
-        balance: '-3705.03',
+        balance: '-4447.34',
       },
       {
         icc: '4072',
@@ -5704,7 +5692,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '-2230',
+        balance: '-1115',
       },
       {
         icc: '4607',
@@ -5712,7 +5700,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-2140',
+        balance: '-460',
       },
       {
         icc: '3643',
@@ -5720,7 +5708,7 @@ module.exports = {
         provinceId: '7',
         regionId: '95',
         managerId: '25',
-        balance: '-2090',
+        balance: '0',
       },
       {
         icc: '9503',
@@ -5728,7 +5716,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '42',
-        balance: '-1648',
+        balance: '0',
       },
       {
         icc: '4605',
@@ -5736,7 +5724,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-1643',
+        balance: '-1223',
       },
       {
         icc: '3130',
@@ -5784,7 +5772,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-495',
+        balance: '0',
       },
       {
         icc: '4599',
@@ -5792,7 +5780,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '36',
-        balance: '-414.5',
+        balance: '-189.5',
       },
       {
         icc: '2913',
@@ -5800,7 +5788,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '-400',
+        balance: '0',
       },
       {
         icc: '4019',
@@ -5904,7 +5892,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '37',
-        balance: '-57.3',
+        balance: '0',
       },
       {
         icc: '3103',
@@ -5984,7 +5972,7 @@ module.exports = {
         provinceId: '12',
         regionId: '171',
         managerId: '40',
-        balance: '-0.11',
+        balance: '0',
       },
     ],
     {},
