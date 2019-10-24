@@ -1,4 +1,3 @@
-import { promises } from 'dns';
 import models from '../models';
 
 function find(where, res, next) {
