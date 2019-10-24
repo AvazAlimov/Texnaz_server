@@ -24,6 +24,10 @@ module.exports = {
       id: 6,
       name: 'Гр',
     },
+    {
+      id: 7,
+      name: 'Рулон',
+    },
   ], {}),
 
   down: queryInterface => queryInterface.bulkDelete('Units', null, {}),

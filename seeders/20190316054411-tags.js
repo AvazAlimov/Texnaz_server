@@ -1,9 +1,11 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Tags', [{
-    name: 'Tag #1',
+    id: 1,
+    name: 'РБ',
   },
   {
-    name: 'Tag #2',
+    id: 2,
+    name: 'ТН',
   },
   ], {}),
 
