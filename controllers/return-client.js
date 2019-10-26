@@ -112,6 +112,7 @@ export default {
                   quantity: item.returnQuantity,
                   discount: item.discount,
                   commissionPrice: item.commissionPrice,
+                  commissionPriceUsd: item.commissionPriceUsd,
                 })
                   .then(() => resolve())
                   .catch(error => reject(error));

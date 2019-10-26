@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER,
     discount: DataTypes.DOUBLE,
     commissionPrice: DataTypes.DOUBLE,
+    commissionPriceUsd: DataTypes.DOUBLE,
   }, {});
   ReturnItem.associate = (models) => {
     ReturnItem.belongsTo(models.Price, { as: 'price' });
