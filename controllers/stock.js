@@ -83,6 +83,9 @@ function getSelector(query) {
   if (query.defected) {
     where[[Op.and]].push({ defected: query.defected });
   }
+  if (query.productId) {
+    where.productId = Number(query.productId);
+  }
   return where;
 }
 

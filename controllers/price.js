@@ -45,9 +45,12 @@ export default {
 
   createMultiple(req, res) {
     if (req.prices.length) {
-      models.sequelize
-        .getQueryInterface()
-        .bulkInsert('Prices', req.prices)
+      Promise.all([
+        models.Stock.increment('quantity', { by: req.quantity, where: { productId: req.productId } }),
+        models.sequelize
+          .getQueryInterface()
+          .bulkInsert('Prices', req.prices),
+      ])
         .then(() => res.sendStatus(201))
         .catch(error => res.status(502).json(error));
     } else {

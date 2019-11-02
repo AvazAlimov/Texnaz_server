@@ -7,7 +7,13 @@ export function validate(req, res, next) {
       errors: errors.array(),
     });
   } else {
-    req.prices = req.body.prices;
+    const [price] = req.body.prices;
+    req.productId = price.productId;
+    req.quantity = price.quantity || 0;
+    if (price.quantity) {
+      delete price.quantity;
+    }
+    req.prices = [price];
     next();
   }
 }
