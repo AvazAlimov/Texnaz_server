@@ -10,10 +10,11 @@ export function validate(req, res, next) {
     const [price] = req.body.prices;
     req.productId = price.productId;
     req.quantity = price.quantity || 0;
-    if (price.quantity) {
-      delete price.quantity;
-    }
+    req.userId = price.userId;
+    delete price.quantity;
+    delete price.userId;
     req.prices = [price];
+    req.price = price;
     next();
   }
 }

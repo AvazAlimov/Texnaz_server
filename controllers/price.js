@@ -15,6 +15,17 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
+function createLog([price, stock], quantity, userId, res) {
+  models.PriceLog.create({
+    priceId: price.id,
+    productId: price.productId,
+    userId,
+    quantityBefore: stock.quantity - quantity,
+    quantityAfter: stock.quantity,
+  })
+    .then(() => res.sendStatus(201));
+}
+
 export default {
   getAll(_, res) {
     find(null, res, (items) => {
@@ -46,12 +57,16 @@ export default {
   createMultiple(req, res) {
     if (req.prices.length) {
       Promise.all([
+        models.Price.create(req.price),
+        models.Stock.find({ attributes: ['quantity'], where: { productId: req.productId } }),
         models.Stock.increment('quantity', { by: req.quantity, where: { productId: req.productId } }),
-        models.sequelize
+        /* models.sequelize
           .getQueryInterface()
-          .bulkInsert('Prices', req.prices),
+          .bulkInsert('Prices', req.prices), */
       ])
-        .then(() => res.sendStatus(201))
+        .then((result) => {
+          createLog(result, req.quantity, req.userId, res);
+        })
         .catch(error => res.status(502).json(error));
     } else {
       res.sendStatus(200);
