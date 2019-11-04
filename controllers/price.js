@@ -15,10 +15,12 @@ function find(where, res, next) {
     .catch(error => res.status(502).json(error));
 }
 
-function createLog([price, stock], quantity, userId, res) {
+function createLog([price, stock, exchangeRate, officialRate], quantity, userId, res) {
   models.PriceLog.create({
     priceId: price.id,
     productId: price.productId,
+    exchangeRate: exchangeRate.value,
+    officialRate: officialRate.value,
     userId,
     quantityBefore: stock.quantity - quantity,
     quantityAfter: stock.quantity,
@@ -31,6 +33,33 @@ export default {
     find(null, res, (items) => {
       res.status(200).json(items);
     });
+  },
+
+  getAllLogs(_, res) {
+    models.PriceLog.findAll({
+      include: [
+        {
+          model: models.Price,
+          as: 'price',
+          attributes: ['firstPrice', 'mixPriceNonCash', 'mixPriceCash', 'secondPrice'],
+        },
+        {
+          model: models.Product,
+          as: 'product',
+          include: [
+            {
+              model: models.Brand,
+            },
+          ],
+        },
+        {
+          model: models.User,
+          as: 'user',
+          attributes: ['name'],
+        },
+      ],
+    }).then(data => res.status(200).json(data))
+      .catch(error => res.status(501).json(error));
   },
 
   get(req, res) {
@@ -59,6 +88,8 @@ export default {
       Promise.all([
         models.Price.create(req.price),
         models.Stock.find({ attributes: ['quantity'], where: { productId: req.productId } }),
+        models.Configuration.find({ where: { id: 4 } }),
+        models.Configuration.find({ where: { id: 5 } }),
         models.Stock.increment('quantity', { by: req.quantity, where: { productId: req.productId } }),
         /* models.sequelize
           .getQueryInterface()

@@ -23,6 +23,12 @@ module.exports = {
     quantityAfter: {
       type: Sequelize.INTEGER,
     },
+    exchangeRate: {
+      type: Sequelize.STRING,
+    },
+    officialRate: {
+      type: Sequelize.STRING,
+    },
     createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
