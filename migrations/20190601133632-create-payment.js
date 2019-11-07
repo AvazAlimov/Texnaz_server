@@ -14,6 +14,9 @@ module.exports = {
       type: Sequelize.BOOLEAN,
       defaultValue: false,
     },
+    currentClientBalance: {
+      type: Sequelize.DOUBLE,
+    },
     ratio: {
       type: Sequelize.DOUBLE,
     },

@@ -12,6 +12,9 @@ export const check = checkSchema({
   form: {
     isInt: true,
   },
+  currentClientBalance: {
+    isDecimal: true,
+  },
   days: {
     isInt: true,
   },
@@ -75,6 +78,7 @@ export function validate(req, res, next) {
       clientId: req.body.clientId,
       managerId: req.body.managerId,
       userId: req.body.userId,
+      currentClientBalance: req.body.currentClientBalance,
       warehouseId: req.body.warehouseId,
       exchangeRate: req.body.exchangeRate,
       officialRate: req.body.officialRate,

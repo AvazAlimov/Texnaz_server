@@ -21,6 +21,9 @@ export const check = checkSchema({
   number: {
     isString: true,
   },
+  currentClientBalance: {
+    isDecimal: true,
+  },
   ratio: {
     isFloat: true,
   },
@@ -54,6 +57,7 @@ export function validate(req, res, next) {
       currency: req.body.currency,
       ratio: req.body.ratio,
       userId: req.body.userId,
+      currentClientBalance: req.body.currentClientBalance,
       provinceId: req.body.provinceId,
       managerId: req.body.managerId,
       clientId: req.body.clientId,

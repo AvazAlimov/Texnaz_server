@@ -14,6 +14,9 @@ module.exports = {
     number: {
       type: Sequelize.STRING,
     },
+    currentClientBalance: {
+      type: Sequelize.DOUBLE,
+    },
     type: {
       type: Sequelize.INTEGER,
     },

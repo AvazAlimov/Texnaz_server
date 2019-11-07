@@ -4,6 +4,7 @@ export default (sequelize, DataTypes) => {
     approved: DataTypes.BOOLEAN,
     userId: DataTypes.INTEGER,
     ratio: DataTypes.DOUBLE,
+    currentClientBalance: DataTypes.DOUBLE,
     managerId: DataTypes.INTEGER,
     clientId: DataTypes.INTEGER,
     brandId: DataTypes.INTEGER,

@@ -12,6 +12,7 @@ export default (sequelize, DataTypes) => {
     accepted: DataTypes.BOOLEAN,
     shipped: DataTypes.INTEGER,
     days: DataTypes.INTEGER,
+    currentClientBalance: DataTypes.DOUBLE,
     provinceId: DataTypes.INTEGER,
     officialRate: DataTypes.STRING,
     exchangeRate: DataTypes.STRING,

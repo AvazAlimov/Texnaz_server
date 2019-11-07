@@ -21,6 +21,9 @@ module.exports = {
     type: {
       type: Sequelize.INTEGER,
     },
+    currentClientBalance: {
+      type: Sequelize.DOUBLE,
+    },
     form: {
       type: Sequelize.INTEGER,
     },
