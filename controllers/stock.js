@@ -92,7 +92,7 @@ function getSelector(query) {
 export default {
   getAll(req, res) {
     let where = null;
-    if (Object.keys(req.query).length) where = getSelector(req.query);
+    if (Object.keys(req.query).length) { where = getSelector(req.query); }
     find(where, res, (stocks) => {
       res.status(200).json(stocks);
     });
@@ -103,6 +103,13 @@ export default {
       id: req.params.id,
     }, res, ([stock]) => {
       if (stock) res.status(200).json(stock);
+      else res.sendStatus(404);
+    });
+  },
+
+  getByProduct(req, res) {
+    find({ productId: req.params.id }, res, (product) => {
+      if (product) res.status(200).json(product);
       else res.sendStatus(404);
     });
   },
