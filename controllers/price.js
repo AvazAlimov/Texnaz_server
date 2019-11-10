@@ -90,13 +90,18 @@ export default {
         models.Stock.find({ attributes: ['quantity'], where: { productId: req.productId } }),
         models.Configuration.find({ where: { id: 4 } }),
         models.Configuration.find({ where: { id: 5 } }),
-        models.Stock.increment('quantity', { by: req.quantity, where: { productId: req.productId } }),
+        req.stock ? models.Stock.create(req.stock)
+          : models.Stock.increment('quantity', { by: req.quantity, where: { productId: req.productId } }),
         /* models.sequelize
           .getQueryInterface()
           .bulkInsert('Prices', req.prices), */
       ])
         .then((result) => {
-          createLog(result, req.quantity, req.userId, res);
+          if (!req.stock) {
+            createLog(result, req.quantity, req.userId, res);
+          } else {
+            res.send(201);
+          }
         })
         .catch(error => res.status(502).json(error));
     } else {
