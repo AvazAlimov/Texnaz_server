@@ -5065,14 +5065,14 @@ module.exports = {
       {
         ProductId: '756',
         secondPrice: '1.11',
-        mixPriceNonCash: '15826',
+        mixPriceNonCash: '3638',
         mixPriceCash: '0.73',
         firstPrice: '12200',
       },
       {
         ProductId: '758',
         secondPrice: '1.11',
-        mixPriceNonCash: '15826',
+        mixPriceNonCash: '3638',
         mixPriceCash: '0.73',
         firstPrice: '12200',
       },
