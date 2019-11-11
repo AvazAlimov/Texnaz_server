@@ -7445,7 +7445,7 @@ module.exports = {
         "id": "607",
         "name": "ГФ-95 лак (18кг)",
         "unit": "2",
-        "packing": "18",
+        "packing": "1",
         "excise": "0",
         "tax": "0",
         "vat": "0",
