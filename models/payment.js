@@ -1,6 +1,7 @@
 export default (sequelize, DataTypes) => {
   const Payment = sequelize.define('Payment', {
     number: DataTypes.STRING,
+    comment: DataTypes.STRING,
     approved: DataTypes.BOOLEAN,
     userId: DataTypes.INTEGER,
     ratio: DataTypes.DOUBLE,

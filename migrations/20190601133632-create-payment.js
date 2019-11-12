@@ -10,6 +10,9 @@ module.exports = {
       type: Sequelize.STRING,
       unique: true,
     },
+    comment: {
+      type: Sequelize.STRING,
+    },
     approved: {
       type: Sequelize.BOOLEAN,
       defaultValue: false,

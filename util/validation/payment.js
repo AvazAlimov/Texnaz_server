@@ -59,6 +59,7 @@ export function validate(req, res, next) {
       userId: req.body.userId,
       currentClientBalance: req.body.currentClientBalance,
       provinceId: req.body.provinceId,
+      comment: req.body.comment,
       managerId: req.body.managerId,
       clientId: req.body.clientId,
       exchangeRate: req.body.exchangeRate,
