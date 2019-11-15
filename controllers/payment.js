@@ -73,6 +73,18 @@ export default {
     });
   },
 
+  updateCurrentBalance(req, res) {
+    find({ id: req.params.id }, res, ([item]) => {
+      if (item) {
+        models.Payment.update({
+          currentClientBalance: item.client.balance + Number(req.query.value),
+        }, { where: { id: item.id } })
+          .then(() => res.sendStatus(200))
+          .catch(error => res.status(502).json(error));
+      } else res.sendStatus(404);
+    });
+  },
+
   delete(req, res) {
     models.Payment.destroy({
       where: {
