@@ -1,9 +1,9 @@
 module.exports = {
   up: queryInterface => queryInterface.bulkInsert('Stocks',
-    [
-      {
+  [
+    {
         "productId": "1",
-        "quantity": "5",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -11,7 +11,7 @@ module.exports = {
     },
     {
         "productId": "2",
-        "quantity": "1",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -19,7 +19,7 @@ module.exports = {
     },
     {
         "productId": "3",
-        "quantity": "3",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -27,7 +27,31 @@ module.exports = {
     },
     {
         "productId": "4",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "5",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "6",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "7",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -35,7 +59,7 @@ module.exports = {
     },
     {
         "productId": "8",
-        "quantity": "48",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -43,7 +67,15 @@ module.exports = {
     },
     {
         "productId": "9",
-        "quantity": "8",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "10",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -51,7 +83,7 @@ module.exports = {
     },
     {
         "productId": "11",
-        "quantity": "4",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -59,7 +91,7 @@ module.exports = {
     },
     {
         "productId": "12",
-        "quantity": "7",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -67,7 +99,7 @@ module.exports = {
     },
     {
         "productId": "13",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -75,7 +107,7 @@ module.exports = {
     },
     {
         "productId": "14",
-        "quantity": "71",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -83,7 +115,15 @@ module.exports = {
     },
     {
         "productId": "15",
-        "quantity": "4",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "16",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -91,7 +131,7 @@ module.exports = {
     },
     {
         "productId": "17",
-        "quantity": "87",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -99,7 +139,15 @@ module.exports = {
     },
     {
         "productId": "18",
-        "quantity": "33",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "19",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -107,7 +155,7 @@ module.exports = {
     },
     {
         "productId": "20",
-        "quantity": "1",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -115,7 +163,7 @@ module.exports = {
     },
     {
         "productId": "21",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -123,7 +171,7 @@ module.exports = {
     },
     {
         "productId": "22",
-        "quantity": "550",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -131,7 +179,7 @@ module.exports = {
     },
     {
         "productId": "23",
-        "quantity": "60",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -139,7 +187,7 @@ module.exports = {
     },
     {
         "productId": "24",
-        "quantity": "80",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -147,7 +195,7 @@ module.exports = {
     },
     {
         "productId": "25",
-        "quantity": "75",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -155,7 +203,7 @@ module.exports = {
     },
     {
         "productId": "26",
-        "quantity": "60",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -163,7 +211,7 @@ module.exports = {
     },
     {
         "productId": "27",
-        "quantity": "30",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -171,7 +219,7 @@ module.exports = {
     },
     {
         "productId": "28",
-        "quantity": "112",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -179,7 +227,7 @@ module.exports = {
     },
     {
         "productId": "29",
-        "quantity": "45",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -187,7 +235,7 @@ module.exports = {
     },
     {
         "productId": "30",
-        "quantity": "25",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -195,7 +243,7 @@ module.exports = {
     },
     {
         "productId": "31",
-        "quantity": "18",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -203,7 +251,23 @@ module.exports = {
     },
     {
         "productId": "32",
-        "quantity": "100",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "33",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "34",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -211,7 +275,47 @@ module.exports = {
     },
     {
         "productId": "35",
-        "quantity": "90",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "36",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "37",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "38",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "39",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "40",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -219,7 +323,23 @@ module.exports = {
     },
     {
         "productId": "41",
-        "quantity": "10",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "42",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "43",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -227,7 +347,31 @@ module.exports = {
     },
     {
         "productId": "44",
-        "quantity": "70",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "45",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "46",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "47",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -235,7 +379,15 @@ module.exports = {
     },
     {
         "productId": "48",
-        "quantity": "127",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "49",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -243,7 +395,7 @@ module.exports = {
     },
     {
         "productId": "50",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -251,7 +403,7 @@ module.exports = {
     },
     {
         "productId": "51",
-        "quantity": "4",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -259,7 +411,7 @@ module.exports = {
     },
     {
         "productId": "52",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -267,7 +419,15 @@ module.exports = {
     },
     {
         "productId": "53",
-        "quantity": "485",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "54",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -275,7 +435,39 @@ module.exports = {
     },
     {
         "productId": "55",
-        "quantity": "154",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "56",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "57",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "58",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "59",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -283,7 +475,23 @@ module.exports = {
     },
     {
         "productId": "60",
-        "quantity": "17",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "61",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "62",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -291,7 +499,15 @@ module.exports = {
     },
     {
         "productId": "63",
-        "quantity": "100",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "64",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -299,7 +515,23 @@ module.exports = {
     },
     {
         "productId": "65",
-        "quantity": "106",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "66",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "67",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -307,7 +539,15 @@ module.exports = {
     },
     {
         "productId": "68",
-        "quantity": "64",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "69",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -315,7 +555,15 @@ module.exports = {
     },
     {
         "productId": "70",
-        "quantity": "114",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "71",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -323,7 +571,31 @@ module.exports = {
     },
     {
         "productId": "72",
-        "quantity": "145",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "73",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "74",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "75",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -331,7 +603,7 @@ module.exports = {
     },
     {
         "productId": "76",
-        "quantity": "82",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -339,7 +611,7 @@ module.exports = {
     },
     {
         "productId": "77",
-        "quantity": "119",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -347,7 +619,71 @@ module.exports = {
     },
     {
         "productId": "78",
-        "quantity": "99",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "79",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "80",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "81",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "82",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "83",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "84",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "85",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "86",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -355,7 +691,47 @@ module.exports = {
     },
     {
         "productId": "87",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "88",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "89",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "90",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "91",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "92",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -363,7 +739,7 @@ module.exports = {
     },
     {
         "productId": "93",
-        "quantity": "22",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -371,7 +747,15 @@ module.exports = {
     },
     {
         "productId": "94",
-        "quantity": "4",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "95",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -379,7 +763,15 @@ module.exports = {
     },
     {
         "productId": "96",
-        "quantity": "8",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "97",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -387,7 +779,47 @@ module.exports = {
     },
     {
         "productId": "98",
-        "quantity": "8",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "99",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "100",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "101",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "102",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "103",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -395,7 +827,47 @@ module.exports = {
     },
     {
         "productId": "104",
-        "quantity": "38",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "105",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "106",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "107",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "108",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "109",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -403,7 +875,7 @@ module.exports = {
     },
     {
         "productId": "110",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -411,7 +883,15 @@ module.exports = {
     },
     {
         "productId": "111",
-        "quantity": "49",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "112",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -419,7 +899,79 @@ module.exports = {
     },
     {
         "productId": "113",
-        "quantity": "49",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "114",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "115",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "116",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "117",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "118",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "119",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "120",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "121",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "122",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -427,7 +979,23 @@ module.exports = {
     },
     {
         "productId": "123",
-        "quantity": "293",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "124",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "125",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -435,7 +1003,15 @@ module.exports = {
     },
     {
         "productId": "126",
-        "quantity": "485",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "127",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -443,7 +1019,23 @@ module.exports = {
     },
     {
         "productId": "128",
-        "quantity": "622",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "129",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "130",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -451,7 +1043,15 @@ module.exports = {
     },
     {
         "productId": "131",
-        "quantity": "1157",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "132",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -459,7 +1059,23 @@ module.exports = {
     },
     {
         "productId": "133",
-        "quantity": "3360",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "134",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "135",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -467,7 +1083,15 @@ module.exports = {
     },
     {
         "productId": "136",
-        "quantity": "3370",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "137",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -475,7 +1099,23 @@ module.exports = {
     },
     {
         "productId": "138",
-        "quantity": "6089",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "139",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "140",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -483,7 +1123,15 @@ module.exports = {
     },
     {
         "productId": "141",
-        "quantity": "9481",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "142",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -491,7 +1139,15 @@ module.exports = {
     },
     {
         "productId": "143",
-        "quantity": "9387",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "144",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -499,7 +1155,23 @@ module.exports = {
     },
     {
         "productId": "145",
-        "quantity": "677",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "146",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "147",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -507,7 +1179,15 @@ module.exports = {
     },
     {
         "productId": "148",
-        "quantity": "2996",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "149",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -515,7 +1195,15 @@ module.exports = {
     },
     {
         "productId": "150",
-        "quantity": "5972",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "151",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -523,7 +1211,15 @@ module.exports = {
     },
     {
         "productId": "152",
-        "quantity": "2694",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "153",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -531,7 +1227,15 @@ module.exports = {
     },
     {
         "productId": "154",
-        "quantity": "2337",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "155",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -539,7 +1243,15 @@ module.exports = {
     },
     {
         "productId": "156",
-        "quantity": "791",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "157",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -547,7 +1259,23 @@ module.exports = {
     },
     {
         "productId": "158",
-        "quantity": "1279",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "159",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "160",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -555,7 +1283,15 @@ module.exports = {
     },
     {
         "productId": "161",
-        "quantity": "4800",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "162",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -563,7 +1299,15 @@ module.exports = {
     },
     {
         "productId": "163",
-        "quantity": "2863",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "164",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -571,7 +1315,15 @@ module.exports = {
     },
     {
         "productId": "165",
-        "quantity": "1865",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "166",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -579,7 +1331,23 @@ module.exports = {
     },
     {
         "productId": "167",
-        "quantity": "5061",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "168",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "169",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -587,7 +1355,31 @@ module.exports = {
     },
     {
         "productId": "170",
-        "quantity": "4639",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "171",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "172",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "173",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -595,7 +1387,7 @@ module.exports = {
     },
     {
         "productId": "174",
-        "quantity": "3",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -603,7 +1395,15 @@ module.exports = {
     },
     {
         "productId": "175",
-        "quantity": "2",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "176",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -611,7 +1411,7 @@ module.exports = {
     },
     {
         "productId": "177",
-        "quantity": "4",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -619,7 +1419,39 @@ module.exports = {
     },
     {
         "productId": "178",
-        "quantity": "4",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "179",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "180",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "181",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "182",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -627,7 +1459,7 @@ module.exports = {
     },
     {
         "productId": "183",
-        "quantity": "10",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -635,7 +1467,7 @@ module.exports = {
     },
     {
         "productId": "184",
-        "quantity": "36",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -643,7 +1475,7 @@ module.exports = {
     },
     {
         "productId": "185",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -651,7 +1483,55 @@ module.exports = {
     },
     {
         "productId": "186",
-        "quantity": "15",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "187",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "188",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "189",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "190",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "191",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "192",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -659,7 +1539,63 @@ module.exports = {
     },
     {
         "productId": "193",
-        "quantity": "26",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "194",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "195",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "196",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "197",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "198",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "199",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "200",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -667,7 +1603,63 @@ module.exports = {
     },
     {
         "productId": "201",
-        "quantity": "1052",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "202",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "203",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "204",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "205",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "206",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "207",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "208",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -675,7 +1667,23 @@ module.exports = {
     },
     {
         "productId": "209",
-        "quantity": "396",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "210",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "211",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -683,7 +1691,15 @@ module.exports = {
     },
     {
         "productId": "212",
-        "quantity": "125",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "213",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -691,7 +1707,23 @@ module.exports = {
     },
     {
         "productId": "214",
-        "quantity": "403",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "215",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "216",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -699,7 +1731,15 @@ module.exports = {
     },
     {
         "productId": "217",
-        "quantity": "53",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "218",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -707,7 +1747,15 @@ module.exports = {
     },
     {
         "productId": "219",
-        "quantity": "680",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "220",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -715,7 +1763,15 @@ module.exports = {
     },
     {
         "productId": "221",
-        "quantity": "511",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "222",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -723,7 +1779,39 @@ module.exports = {
     },
     {
         "productId": "223",
-        "quantity": "3",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "224",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "225",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "226",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "227",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -731,7 +1819,39 @@ module.exports = {
     },
     {
         "productId": "228",
-        "quantity": "394",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "229",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "230",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "231",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "232",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -739,7 +1859,15 @@ module.exports = {
     },
     {
         "productId": "233",
-        "quantity": "548",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "234",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -747,7 +1875,23 @@ module.exports = {
     },
     {
         "productId": "235",
-        "quantity": "109",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "236",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "237",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -755,7 +1899,15 @@ module.exports = {
     },
     {
         "productId": "238",
-        "quantity": "559",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "239",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -763,7 +1915,23 @@ module.exports = {
     },
     {
         "productId": "240",
-        "quantity": "120",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "241",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "242",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -771,7 +1939,23 @@ module.exports = {
     },
     {
         "productId": "243",
-        "quantity": "300",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "244",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "245",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -779,7 +1963,63 @@ module.exports = {
     },
     {
         "productId": "246",
-        "quantity": "5",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "247",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "248",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "249",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "250",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "251",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "252",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "253",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -787,7 +2027,15 @@ module.exports = {
     },
     {
         "productId": "254",
-        "quantity": "321",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "255",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -795,7 +2043,127 @@ module.exports = {
     },
     {
         "productId": "256",
-        "quantity": "96",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "257",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "258",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "259",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "260",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "261",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "262",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "263",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "264",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "265",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "266",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "267",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "268",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "269",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "270",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "271",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -803,7 +2171,23 @@ module.exports = {
     },
     {
         "productId": "272",
-        "quantity": "58",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "273",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "274",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -811,7 +2195,7 @@ module.exports = {
     },
     {
         "productId": "275",
-        "quantity": "19",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -819,7 +2203,23 @@ module.exports = {
     },
     {
         "productId": "276",
-        "quantity": "162",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "277",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "278",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -827,7 +2227,15 @@ module.exports = {
     },
     {
         "productId": "279",
-        "quantity": "107",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "280",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -835,7 +2243,31 @@ module.exports = {
     },
     {
         "productId": "281",
-        "quantity": "79",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "282",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "283",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "284",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -843,7 +2275,23 @@ module.exports = {
     },
     {
         "productId": "285",
-        "quantity": "80",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "286",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "287",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -851,7 +2299,15 @@ module.exports = {
     },
     {
         "productId": "288",
-        "quantity": "136",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "289",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -859,7 +2315,23 @@ module.exports = {
     },
     {
         "productId": "290",
-        "quantity": "120",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "291",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "292",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -867,7 +2339,23 @@ module.exports = {
     },
     {
         "productId": "293",
-        "quantity": "174",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "294",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "295",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -875,7 +2363,7 @@ module.exports = {
     },
     {
         "productId": "296",
-        "quantity": "34",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -883,7 +2371,7 @@ module.exports = {
     },
     {
         "productId": "297",
-        "quantity": "126",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -891,7 +2379,7 @@ module.exports = {
     },
     {
         "productId": "298",
-        "quantity": "74",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -899,7 +2387,15 @@ module.exports = {
     },
     {
         "productId": "299",
-        "quantity": "117",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "300",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -907,7 +2403,7 @@ module.exports = {
     },
     {
         "productId": "301",
-        "quantity": "108",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -915,7 +2411,71 @@ module.exports = {
     },
     {
         "productId": "302",
-        "quantity": "38",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "303",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "304",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "305",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "306",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "307",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "308",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "309",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "310",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -923,7 +2483,15 @@ module.exports = {
     },
     {
         "productId": "311",
-        "quantity": "106",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "312",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -931,7 +2499,15 @@ module.exports = {
     },
     {
         "productId": "313",
-        "quantity": "156",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "314",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -939,7 +2515,31 @@ module.exports = {
     },
     {
         "productId": "315",
-        "quantity": "87",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "316",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "317",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "318",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -947,7 +2547,15 @@ module.exports = {
     },
     {
         "productId": "319",
-        "quantity": "96",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "320",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -955,7 +2563,15 @@ module.exports = {
     },
     {
         "productId": "321",
-        "quantity": "70",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "322",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -963,7 +2579,15 @@ module.exports = {
     },
     {
         "productId": "323",
-        "quantity": "46",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "324",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -971,7 +2595,15 @@ module.exports = {
     },
     {
         "productId": "325",
-        "quantity": "11",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "326",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -979,7 +2611,15 @@ module.exports = {
     },
     {
         "productId": "327",
-        "quantity": "42",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "328",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -987,7 +2627,15 @@ module.exports = {
     },
     {
         "productId": "329",
-        "quantity": "28",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "330",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -995,7 +2643,15 @@ module.exports = {
     },
     {
         "productId": "331",
-        "quantity": "84",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "332",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1003,7 +2659,15 @@ module.exports = {
     },
     {
         "productId": "333",
-        "quantity": "94",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "334",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1011,7 +2675,15 @@ module.exports = {
     },
     {
         "productId": "335",
-        "quantity": "42",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "336",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1019,7 +2691,15 @@ module.exports = {
     },
     {
         "productId": "337",
-        "quantity": "26",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "338",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1027,7 +2707,7 @@ module.exports = {
     },
     {
         "productId": "339",
-        "quantity": "20",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1035,7 +2715,15 @@ module.exports = {
     },
     {
         "productId": "340",
-        "quantity": "27",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "341",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1043,7 +2731,15 @@ module.exports = {
     },
     {
         "productId": "342",
-        "quantity": "48",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "343",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1051,7 +2747,7 @@ module.exports = {
     },
     {
         "productId": "344",
-        "quantity": "2",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1059,7 +2755,31 @@ module.exports = {
     },
     {
         "productId": "345",
-        "quantity": "2",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "346",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "347",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "348",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1067,7 +2787,7 @@ module.exports = {
     },
     {
         "productId": "349",
-        "quantity": "15",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1075,7 +2795,7 @@ module.exports = {
     },
     {
         "productId": "350",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1083,7 +2803,15 @@ module.exports = {
     },
     {
         "productId": "351",
-        "quantity": "106",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "352",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1091,7 +2819,7 @@ module.exports = {
     },
     {
         "productId": "353",
-        "quantity": "327",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1099,7 +2827,39 @@ module.exports = {
     },
     {
         "productId": "354",
-        "quantity": "3",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "355",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "356",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "357",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "358",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1107,7 +2867,15 @@ module.exports = {
     },
     {
         "productId": "359",
-        "quantity": "76",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "360",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1115,7 +2883,31 @@ module.exports = {
     },
     {
         "productId": "361",
-        "quantity": "225",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "362",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "363",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "364",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1123,7 +2915,7 @@ module.exports = {
     },
     {
         "productId": "365",
-        "quantity": "12",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1131,7 +2923,55 @@ module.exports = {
     },
     {
         "productId": "366",
-        "quantity": "5",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "367",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "368",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "369",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "370",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "371",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "372",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1139,7 +2979,7 @@ module.exports = {
     },
     {
         "productId": "373",
-        "quantity": "12",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1147,7 +2987,7 @@ module.exports = {
     },
     {
         "productId": "374",
-        "quantity": "3",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1155,7 +2995,7 @@ module.exports = {
     },
     {
         "productId": "375",
-        "quantity": "6",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1163,7 +3003,23 @@ module.exports = {
     },
     {
         "productId": "376",
-        "quantity": "88",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "377",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "378",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1171,7 +3027,15 @@ module.exports = {
     },
     {
         "productId": "379",
-        "quantity": "51",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "380",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1179,7 +3043,7 @@ module.exports = {
     },
     {
         "productId": "381",
-        "quantity": "53",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1187,7 +3051,15 @@ module.exports = {
     },
     {
         "productId": "382",
-        "quantity": "13",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "383",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1195,7 +3067,15 @@ module.exports = {
     },
     {
         "productId": "384",
-        "quantity": "26",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "385",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1203,7 +3083,7 @@ module.exports = {
     },
     {
         "productId": "386",
-        "quantity": "40",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1211,7 +3091,7 @@ module.exports = {
     },
     {
         "productId": "387",
-        "quantity": "22",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1219,7 +3099,15 @@ module.exports = {
     },
     {
         "productId": "388",
-        "quantity": "54",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "389",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1227,7 +3115,31 @@ module.exports = {
     },
     {
         "productId": "390",
-        "quantity": "56",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "391",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "392",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "393",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1235,7 +3147,7 @@ module.exports = {
     },
     {
         "productId": "394",
-        "quantity": "4",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1243,7 +3155,15 @@ module.exports = {
     },
     {
         "productId": "395",
-        "quantity": "56",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "396",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1251,7 +3171,7 @@ module.exports = {
     },
     {
         "productId": "397",
-        "quantity": "204",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1259,7 +3179,7 @@ module.exports = {
     },
     {
         "productId": "398",
-        "quantity": "2",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1267,7 +3187,15 @@ module.exports = {
     },
     {
         "productId": "399",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "400",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1275,7 +3203,15 @@ module.exports = {
     },
     {
         "productId": "401",
-        "quantity": "138",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "402",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1283,7 +3219,47 @@ module.exports = {
     },
     {
         "productId": "403",
-        "quantity": "210",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "404",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "405",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "406",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "407",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "408",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1291,7 +3267,23 @@ module.exports = {
     },
     {
         "productId": "409",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "410",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "411",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1299,7 +3291,15 @@ module.exports = {
     },
     {
         "productId": "412",
-        "quantity": "4",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "413",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1307,7 +3307,7 @@ module.exports = {
     },
     {
         "productId": "414",
-        "quantity": "1",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1315,7 +3315,7 @@ module.exports = {
     },
     {
         "productId": "415",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1323,7 +3323,7 @@ module.exports = {
     },
     {
         "productId": "416",
-        "quantity": "73",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1331,7 +3331,23 @@ module.exports = {
     },
     {
         "productId": "417",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "418",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "419",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1339,7 +3355,7 @@ module.exports = {
     },
     {
         "productId": "420",
-        "quantity": "23",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1347,7 +3363,23 @@ module.exports = {
     },
     {
         "productId": "421",
-        "quantity": "50",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "422",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "423",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1355,7 +3387,23 @@ module.exports = {
     },
     {
         "productId": "424",
-        "quantity": "80",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "425",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "426",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1363,7 +3411,7 @@ module.exports = {
     },
     {
         "productId": "427",
-        "quantity": "13",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1371,7 +3419,15 @@ module.exports = {
     },
     {
         "productId": "428",
-        "quantity": "21",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "429",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1379,7 +3435,31 @@ module.exports = {
     },
     {
         "productId": "430",
-        "quantity": "366",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "431",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "432",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "433",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1387,7 +3467,31 @@ module.exports = {
     },
     {
         "productId": "434",
-        "quantity": "41",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "435",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "436",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "437",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1395,7 +3499,7 @@ module.exports = {
     },
     {
         "productId": "438",
-        "quantity": "9",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1403,7 +3507,7 @@ module.exports = {
     },
     {
         "productId": "439",
-        "quantity": "2",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1411,7 +3515,7 @@ module.exports = {
     },
     {
         "productId": "440",
-        "quantity": "138",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1419,7 +3523,7 @@ module.exports = {
     },
     {
         "productId": "441",
-        "quantity": "43",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1427,7 +3531,7 @@ module.exports = {
     },
     {
         "productId": "442",
-        "quantity": "6",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1435,7 +3539,7 @@ module.exports = {
     },
     {
         "productId": "443",
-        "quantity": "1",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1443,7 +3547,7 @@ module.exports = {
     },
     {
         "productId": "444",
-        "quantity": "105",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1451,7 +3555,31 @@ module.exports = {
     },
     {
         "productId": "445",
-        "quantity": "161",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "446",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "447",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "448",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1459,7 +3587,7 @@ module.exports = {
     },
     {
         "productId": "449",
-        "quantity": "50",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1467,7 +3595,23 @@ module.exports = {
     },
     {
         "productId": "450",
-        "quantity": "148",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "451",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "452",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1475,7 +3619,7 @@ module.exports = {
     },
     {
         "productId": "453",
-        "quantity": "11",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1483,7 +3627,7 @@ module.exports = {
     },
     {
         "productId": "454",
-        "quantity": "15",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1491,7 +3635,7 @@ module.exports = {
     },
     {
         "productId": "455",
-        "quantity": "16",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1499,7 +3643,7 @@ module.exports = {
     },
     {
         "productId": "456",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1507,7 +3651,7 @@ module.exports = {
     },
     {
         "productId": "457",
-        "quantity": "129",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1515,7 +3659,7 @@ module.exports = {
     },
     {
         "productId": "458",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1523,7 +3667,7 @@ module.exports = {
     },
     {
         "productId": "459",
-        "quantity": "24",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1531,7 +3675,7 @@ module.exports = {
     },
     {
         "productId": "460",
-        "quantity": "60",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1539,7 +3683,31 @@ module.exports = {
     },
     {
         "productId": "461",
-        "quantity": "5",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "462",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "463",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "464",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1547,7 +3715,47 @@ module.exports = {
     },
     {
         "productId": "465",
-        "quantity": "81",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "466",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "467",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "468",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "469",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "470",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1555,7 +3763,7 @@ module.exports = {
     },
     {
         "productId": "471",
-        "quantity": "19",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1563,7 +3771,7 @@ module.exports = {
     },
     {
         "productId": "472",
-        "quantity": "48",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1571,7 +3779,15 @@ module.exports = {
     },
     {
         "productId": "473",
-        "quantity": "12",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "474",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1579,7 +3795,15 @@ module.exports = {
     },
     {
         "productId": "475",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "476",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1587,7 +3811,7 @@ module.exports = {
     },
     {
         "productId": "477",
-        "quantity": "33",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1595,7 +3819,7 @@ module.exports = {
     },
     {
         "productId": "478",
-        "quantity": "52",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1603,7 +3827,15 @@ module.exports = {
     },
     {
         "productId": "479",
-        "quantity": "46",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "480",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1611,7 +3843,15 @@ module.exports = {
     },
     {
         "productId": "481",
-        "quantity": "24",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "482",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1619,7 +3859,31 @@ module.exports = {
     },
     {
         "productId": "483",
-        "quantity": "145",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "484",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "485",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "486",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1627,7 +3891,47 @@ module.exports = {
     },
     {
         "productId": "487",
-        "quantity": "1",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "488",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "489",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "490",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "491",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "492",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1635,7 +3939,47 @@ module.exports = {
     },
     {
         "productId": "493",
-        "quantity": "23",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "494",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "495",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "496",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "497",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "498",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1643,7 +3987,7 @@ module.exports = {
     },
     {
         "productId": "499",
-        "quantity": "64",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1651,7 +3995,63 @@ module.exports = {
     },
     {
         "productId": "500",
-        "quantity": "31",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "501",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "502",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "503",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "504",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "505",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "506",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "507",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1659,7 +4059,23 @@ module.exports = {
     },
     {
         "productId": "508",
-        "quantity": "16",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "509",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "510",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1667,7 +4083,7 @@ module.exports = {
     },
     {
         "productId": "511",
-        "quantity": "52",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1675,7 +4091,7 @@ module.exports = {
     },
     {
         "productId": "512",
-        "quantity": "132",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1683,7 +4099,7 @@ module.exports = {
     },
     {
         "productId": "513",
-        "quantity": "131",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1691,7 +4107,47 @@ module.exports = {
     },
     {
         "productId": "514",
-        "quantity": "124",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "515",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "516",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "517",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "518",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "519",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1699,7 +4155,7 @@ module.exports = {
     },
     {
         "productId": "520",
-        "quantity": "85",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1707,7 +4163,7 @@ module.exports = {
     },
     {
         "productId": "521",
-        "quantity": "52",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1715,7 +4171,15 @@ module.exports = {
     },
     {
         "productId": "522",
-        "quantity": "37",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "523",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1723,7 +4187,47 @@ module.exports = {
     },
     {
         "productId": "524",
-        "quantity": "16",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "525",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "526",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "527",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "528",
+        "quantity": "0",
+        "arrival_date": "2019-01-01",
+        "expiry_date": "2021-10-10",
+        "defected": "0",
+        "warehouseid": "1"
+    },
+    {
+        "productId": "529",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
@@ -1731,1516 +4235,44 @@ module.exports = {
     },
     {
         "productId": "530",
-        "quantity": "8",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
         "warehouseid": "1"
     },
     {
-        "productId": "539",
-        "quantity": "45",
+        "productId": "531",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
         "warehouseid": "1"
     },
     {
-        "productId": "540",
-        "quantity": "27",
+        "productId": "532",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
         "warehouseid": "1"
     },
     {
-        "productId": "542",
-        "quantity": "7",
+        "productId": "533",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
         "warehouseid": "1"
     },
     {
-        "productId": "543",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "544",
-        "quantity": "16",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "547",
-        "quantity": "17",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "548",
-        "quantity": "15",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "549",
-        "quantity": "13",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "550",
-        "quantity": "12",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "552",
-        "quantity": "43",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "553",
-        "quantity": "93",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "554",
-        "quantity": "12",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "555",
-        "quantity": "12",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "556",
-        "quantity": "51",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "557",
-        "quantity": "35",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "558",
-        "quantity": "12",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "559",
-        "quantity": "13",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "561",
-        "quantity": "23",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "562",
-        "quantity": "20",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "564",
-        "quantity": "29",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "565",
-        "quantity": "70",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "566",
-        "quantity": "30",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "567",
-        "quantity": "18",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "568",
-        "quantity": "49",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "569",
-        "quantity": "122",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "570",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "571",
-        "quantity": "59",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "572",
-        "quantity": "14",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "573",
-        "quantity": "15",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "575",
-        "quantity": "3",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "576",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "577",
-        "quantity": "5",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "578",
-        "quantity": "10",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "579",
-        "quantity": "26",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "580",
-        "quantity": "21",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "581",
-        "quantity": "6",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "582",
-        "quantity": "13",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "584",
-        "quantity": "33",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "585",
-        "quantity": "45",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "586",
-        "quantity": "5",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "587",
-        "quantity": "20",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "588",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "589",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "590",
-        "quantity": "10",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "592",
-        "quantity": "6",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "593",
-        "quantity": "600",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "594",
-        "quantity": "200",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "595",
-        "quantity": "75",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "596",
-        "quantity": "100",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "597",
-        "quantity": "68",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "598",
-        "quantity": "49",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "599",
-        "quantity": "75",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "600",
-        "quantity": "46",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "601",
-        "quantity": "57",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "602",
-        "quantity": "3700",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "603",
-        "quantity": "4800",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "604",
-        "quantity": "550",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "606",
-        "quantity": "39",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "607",
-        "quantity": "2538",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "608",
-        "quantity": "325",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "609",
-        "quantity": "125",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "611",
-        "quantity": "350",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "612",
-        "quantity": "580",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "617",
-        "quantity": "239",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "621",
-        "quantity": "375",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "622",
-        "quantity": "75",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "623",
-        "quantity": "540",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "629",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "632",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "633",
-        "quantity": "35",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "634",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "637",
-        "quantity": "3360",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "640",
-        "quantity": "2",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "646",
-        "quantity": "22",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "650",
-        "quantity": "44",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "651",
-        "quantity": "21",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "655",
-        "quantity": "44",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "665",
-        "quantity": "97",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "669",
-        "quantity": "54",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "670",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "671",
-        "quantity": "55",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "677",
-        "quantity": "13",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "678",
-        "quantity": "42",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "697",
-        "quantity": "24",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "703",
-        "quantity": "22",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "705",
-        "quantity": "3",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "707",
-        "quantity": "60",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "709",
-        "quantity": "98",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "710",
-        "quantity": "86",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "711",
-        "quantity": "3",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "713",
-        "quantity": "398",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "715",
-        "quantity": "66",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "719",
-        "quantity": "99",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "720",
-        "quantity": "17",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "723",
-        "quantity": "8",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "724",
-        "quantity": "8",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "731",
-        "quantity": "11",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "733",
-        "quantity": "150",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "748",
-        "quantity": "15",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "749",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "754",
-        "quantity": "10",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "756",
-        "quantity": "6414",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "758",
-        "quantity": "52797",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "759",
-        "quantity": "975",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "760",
-        "quantity": "150",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "761",
-        "quantity": "2",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "763",
-        "quantity": "243",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "768",
-        "quantity": "116",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "771",
-        "quantity": "20",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "772",
-        "quantity": "2",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "775",
-        "quantity": "16",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "776",
-        "quantity": "12",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "779",
-        "quantity": "225",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "780",
-        "quantity": "200",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "781",
-        "quantity": "2640",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "782",
-        "quantity": "800",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "783",
-        "quantity": "16",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "784",
-        "quantity": "725",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "785",
-        "quantity": "11",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "786",
-        "quantity": "240",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "787",
-        "quantity": "50",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "788",
-        "quantity": "225",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "789",
-        "quantity": "42",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "790",
-        "quantity": "1",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "791",
-        "quantity": "6",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "796",
-        "quantity": "200",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "803",
-        "quantity": "231",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "804",
-        "quantity": "200",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "806",
-        "quantity": "47",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "807",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "810",
-        "quantity": "173",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "811",
-        "quantity": "198",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "812",
-        "quantity": "17",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "813",
-        "quantity": "41",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "816",
-        "quantity": "248",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "817",
-        "quantity": "20",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "818",
-        "quantity": "36",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "819",
-        "quantity": "52",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "820",
-        "quantity": "29",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "821",
-        "quantity": "46",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "822",
-        "quantity": "100",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "823",
-        "quantity": "52",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "824",
-        "quantity": "49",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "825",
-        "quantity": "85",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "826",
-        "quantity": "34",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "827",
-        "quantity": "46",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "828",
-        "quantity": "96",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "829",
-        "quantity": "78",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "830",
-        "quantity": "32",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "831",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "832",
-        "quantity": "54",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "833",
-        "quantity": "61",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "834",
-        "quantity": "22",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "836",
-        "quantity": "550",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "841",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "843",
-        "quantity": "176",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "847",
-        "quantity": "242",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "851",
-        "quantity": "4000",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "852",
-        "quantity": "450",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "853",
-        "quantity": "900",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "854",
-        "quantity": "1000",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "857",
-        "quantity": "175",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "860",
-        "quantity": "31",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "861",
-        "quantity": "406",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "862",
-        "quantity": "79",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "863",
-        "quantity": "5514",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "864",
-        "quantity": "4050",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "865",
-        "quantity": "1323",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "866",
-        "quantity": "88",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "867",
-        "quantity": "2766",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "870",
-        "quantity": "5730",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "871",
-        "quantity": "1565",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "872",
-        "quantity": "5700",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "873",
-        "quantity": "2530",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "874",
-        "quantity": "6365",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "875",
-        "quantity": "48",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "877",
-        "quantity": "17626",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "878",
-        "quantity": "400",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "879",
-        "quantity": "5192",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "880",
-        "quantity": "10184",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "881",
-        "quantity": "3785",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "882",
-        "quantity": "22",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "888",
-        "quantity": "1700",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "897",
-        "quantity": "794",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "898",
-        "quantity": "4006",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "900",
-        "quantity": "2640",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "903",
-        "quantity": "1095",
-        "arrival_date": "2019-01-01",
-        "expiry_date": "2021-10-10",
-        "defected": "0",
-        "warehouseid": "1"
-    },
-    {
-        "productId": "904",
-        "quantity": "100",
+        "productId": "534",
+        "quantity": "0",
         "arrival_date": "2019-01-01",
         "expiry_date": "2021-10-10",
         "defected": "0",
         "warehouseid": "1"
     }
-    ], {}),
+], {}),
   down: queryInterface => queryInterface.bulkDelete('Stocks', null, {}),
 };
