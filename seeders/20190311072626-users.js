@@ -193,7 +193,7 @@ module.exports = {
         },
         {
           id: 37,
-          name: 'Хусан Аракулов',
+          name: 'Усаров Хусан',
           username: 'x.arakulov',
           password: bcrypt.hashSync('123', 10),
           territoryId: 1,
