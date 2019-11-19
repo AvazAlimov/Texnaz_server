@@ -1,10 +1,11 @@
 import models from '../models';
 
-function find(where, res, next) {
+function find(where, res, next, whereProduct = {}) {
   models.Price.findAll({
     where,
     include: [
       {
+        where: whereProduct,
         model: models.Product,
         include: [{ model: models.Brand }],
         as: 'product',
@@ -29,10 +30,16 @@ function createLog([price, stock, exchangeRate, officialRate], quantity, userId,
 }
 
 export default {
-  getAll(_, res) {
+  getAll(req, res) {
+    const where = {};
+    Object.keys(req.query).forEach((key) => {
+      if (req.query[key]) {
+        where[key] = req.query[key];
+      }
+    });
     find(null, res, (items) => {
       res.status(200).json(items);
-    });
+    }, where);
   },
 
   getAllLogs(_, res) {
