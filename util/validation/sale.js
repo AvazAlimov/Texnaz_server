@@ -16,7 +16,7 @@ export const check = checkSchema({
     isInt: true,
   },
   currentClientBalance: {
-    isDecimal: true,
+    isNumeric: true,
   },
   days: {
     isInt: true,
