@@ -113,7 +113,7 @@ function clientBalance({ id }, sum) {
 }
 
 function getSalePrice({ type, items }, officialRate) {
-  if (type === 1) {
+  if ((type === 1) || (type === 4)) {
     return items.map(({ debtPrice, paidPrice }) => (debtPrice === 0 ? paidPrice : debtPrice))
       .reduce((a, b) => a + (b / officialRate), 0);
   }
