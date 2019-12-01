@@ -67,7 +67,7 @@ export default {
   login(req, res) {
     findUser({ username: req.body.username }, res, (user) => {
       if (compareSync(req.body.password, user.password)) {
-        sign({ userId: user.id }, process.env.JWT_SECRET_KEY, {}, (error, token) => {
+        sign({ userId: user.id }, process.env.JWT_SECRET_KEY, { expiresIn: '0.5h' }, (error, token) => {
           if (error) res.status(502).json(error);
           res.status(200).json({ token });
         });
@@ -80,7 +80,9 @@ export default {
       const normalizedUser = user.toJSON();
       delete normalizedUser.password;
       normalizedUser.roles.forEach((role) => {
+        // eslint-disable-next-line no-param-reassign
         role.permissions.forEach(permission => delete permission.RolePermissions);
+        // eslint-disable-next-line no-param-reassign
         delete role.UserRoles;
       });
       res.status(200).json(normalizedUser);
