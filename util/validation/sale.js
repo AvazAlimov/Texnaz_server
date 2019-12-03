@@ -3,11 +3,15 @@ import {
   checkSchema,
 } from 'express-validator/check';
 import models from '../../models';
-import exists from '../check';
+import exists, { saleExists } from '../check';
 
 export const check = checkSchema({
   number: {
     isString: true,
+    custom: {
+      options: number => saleExists(models.Sale, number),
+      errorMessage: 'Sale number is not unique',
+    },
   },
   type: {
     isInt: true,
