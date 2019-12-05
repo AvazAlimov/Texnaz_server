@@ -96,6 +96,7 @@ function returnStock(items) {
   });
 }
 
+// Will be used at return clients logic
 function clientBalance({ id }, sum) {
   return new Promise((resolve, reject) => {
     models.Client.findByPk(id)
@@ -112,6 +113,7 @@ function clientBalance({ id }, sum) {
   });
 }
 
+// Will be used at return clients logic
 function getSalePrice({ type, items }, officialRate) {
   if ((type === 1) || (type === 4)) {
     return items.map(({ debtPrice, paidPrice }) => (debtPrice === 0 ? paidPrice : debtPrice))
@@ -281,13 +283,9 @@ export default {
         },
       }),
     ])
-      .then(([officialRate]) => {
+      .then(() => {
         find({ id: req.params.id }, res, ([sale]) => {
-          Promise.all([
-            returnStock(sale.items),
-            clientBalance(sale.client, getSalePrice(sale, Number.parseFloat(officialRate.value))),
-          ])
-            .then(() => res.sendStatus(200));
+          returnStock(sale.items).then(() => res.sendStatus(200));
         });
       })
       .catch(error => res.status(502).json(error));
@@ -313,7 +311,11 @@ export default {
         id: req.params.id,
       },
     }).then(() => {
-      res.sendStatus(200);
+      // To update client balance, after warehouse owner approved the shipment
+      // we need to send back the sale object with approved status
+      find({ id: req.params.id }, res, ([data]) => {
+        res.status(200).json(data);
+      });
     })
       .catch(error => res.status(502).json(error));
   },
@@ -331,13 +333,9 @@ export default {
         },
       }),
     ])
-      .then(([officialRate]) => {
+      .then(() => {
         find({ id: req.params.id }, res, ([sale]) => {
-          Promise.all([
-            returnStock(sale.items),
-            clientBalance(sale.client, getSalePrice(sale, Number.parseFloat(officialRate.value))),
-          ])
-            .then(() => res.sendStatus(200));
+          returnStock(sale.items).then(() => res.sendStatus(200));
         });
       })
       .catch(error => res.status(502).json(error));
