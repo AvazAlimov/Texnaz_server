@@ -303,22 +303,25 @@ export default {
   },
 
   approveShipment(req, res) {
-    models.Sale.update({
-      approved: 1,
-      shipped: 1,
-      userId: req.userId,
-    }, {
-      where: {
-        id: req.params.id,
-      },
-    }).then(() => {
-      // To update client balance, after warehouse owner approved the shipment
-      // we need to send back the sale object with approved status
-      find({ id: req.params.id }, res, ([data]) => {
-        res.status(200).json(data);
-      });
-    })
-      .catch(error => res.status(502).json(error));
+    find({ id: req.params.id }, res, ([sale]) => {
+      models.Sale.update({
+        approved: 1,
+        shipped: 1,
+        currentClientBalance: sale.client.balance,
+        userId: req.userId,
+      }, {
+        where: {
+          id: req.params.id,
+        },
+      }).then(() => {
+        // To update client balance, after warehouse owner approved the shipment
+        // we need to send back the sale object with approved status
+        find({ id: req.params.id }, res, ([data]) => {
+          res.status(200).json(data);
+        });
+      })
+        .catch(error => res.status(502).json(error));
+    });
   },
 
   rejectShipment(req, res) {
