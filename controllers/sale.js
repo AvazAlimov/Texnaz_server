@@ -206,6 +206,7 @@ export default {
       .catch(err => res.status(500).json(err));
   },
 
+  // if payment done for specific sale, this method changes isClosed to true
   checkIsClosed(req, res) {
     const tasks = [];
     find({ clientId: req.params.id }, res, (sales) => {
