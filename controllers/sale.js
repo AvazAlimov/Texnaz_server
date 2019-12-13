@@ -262,6 +262,7 @@ export default {
   accept(req, res) {
     models.Sale.update({
       accepted: true,
+      createdAt: new Date(),
     }, {
       where: {
         id: req.params.id,
@@ -309,6 +310,7 @@ export default {
         shipped: 1,
         currentClientBalance: sale.client.balance,
         userId: req.userId,
+        createdAt: new Date(),
       }, {
         where: {
           id: req.params.id,

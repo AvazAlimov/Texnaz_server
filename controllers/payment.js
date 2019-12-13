@@ -66,6 +66,7 @@ export default {
       if (item) {
         models.Payment.update({
           approved: true,
+          createdAt: new Date(),
         }, { where: { id: item.id } })
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
@@ -77,7 +78,7 @@ export default {
     find({ id: req.params.id }, res, ([item]) => {
       if (item) {
         models.Payment.update({
-          currentClientBalance: item.client.balance + Number(req.query.value),
+          currentClientBalance: item.client.balance,
         }, { where: { id: item.id } })
           .then(() => res.sendStatus(200))
           .catch(error => res.status(502).json(error));
