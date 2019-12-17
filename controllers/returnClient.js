@@ -38,6 +38,16 @@ function find(where, res, next) {
             model: models.Price,
             as: 'price',
           },
+          {
+            model: models.Stock,
+            as: 'stock',
+            include: [
+              {
+                model: models.Product,
+                as: 'product',
+              },
+            ],
+          },
         ],
       },
     ],
@@ -59,6 +69,11 @@ function returnToStock(item, resolved, rejected) {
 export default {
   getAll(req, res) {
     find(null, res, returns => res.status(201).json(returns));
+  },
+  get(req, res) {
+    find({ id: req.params.id }, res, ([data]) => {
+      res.status(200).json(data);
+    });
   },
   // Expected oject
   /*
