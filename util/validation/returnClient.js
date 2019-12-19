@@ -6,8 +6,14 @@ export const check = checkSchema({
   number: {
     isString: true,
   },
+  saleId: {
+    isInt: true,
+  },
   type: {
     isInt: true,
+  },
+  totalPrice: {
+    isFloat: true,
   },
   form: {
     isInt: true,
@@ -71,6 +77,8 @@ export function validate(req, res, next) {
       errors: errors.array(),
     });
   } else {
+    req.saleId = req.body.saleId;
+    req.totalPrice = req.body.totalPrice;
     req.return = {
       number: req.body.number,
       type: req.body.type,
