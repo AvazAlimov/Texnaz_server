@@ -145,90 +145,83 @@ export default {
     const quantitySubstructFromSale = [];
     const priceSubstructFromSale = [];
     const priceAddToClientBalance = [];
-
     const allReturnItems = [];
-    req.return.items.forEach((item) => {
-      /*
-      quantitySubstructFromStock.push(new Promise((resolve, reject) => {
-        new Promise((resolved, rejected) => returnToStock(item, resolved, rejected))
-          .then(() => resolve())
-          .catch(err => reject(err));
-      }));
-      quantitySubstructFromSale.push(new Promise((resolve, reject) => {
-        models.SaleItem.update({
-          quantity: Number.parseFloat(item.quantity) - Number.parseFloat(item.returnQuantity),
-        }, { where: { id: item.id } })
-          .then(() => resolve())
-          .catch(err => reject(err));
-      }));
-      priceSubstructFromSale.push(new Promise((resolve, reject) => {
-        models.SaleItem.findAll({
-          where: { id: item.id },
-          include: [
-            {
-              model: models.Price,
-              as: 'price',
-            },
-          ],
-        }).then(([itemSale]) => {
-          const [commissionPrice,
-            commissionPriceUsd] = substructBalance(req.return, item, itemSale);
-          models.SaleItem.update({
-            commissionPrice,
-            commissionPriceUsd,
-            debtPrice: itemSale.debtPrice === 0
-              ? 0 : getItemPrice(item, itemSale.price, req.return),
-          }, { where: { id: item.id } })
-            .then(() => resolve())
-            .catch(err => reject(err));
-        })
-          .catch(err => reject(err));
-      }));
-    });
-    priceAddToClientBalance.push(new Promise((resolve, reject) => {
-      models.Client.findByPk(req.return.clientId)
-        .then((client) => {
-          models.Client.update({
-            balance: Number.parseFloat(client.balance) + Number.parseFloat(req.totalPrice),
-          }, { where: { id: client.id } })
-            .then(() => resolve())
-            .catch(err => reject(err));
+    // Code above working fine. Database is not updated
+    // and created ReturnItem and modified ReturnClient
+    // Check these two modules and start editing here.
+    models.ReturnClient.create(req.return)
+      .then((returnItem) => {
+        req.return.items.forEach((item) => {
+          allReturnItems.push(new Promise((resolve, reject) => {
+            // eslint-disable-next-line no-param-reassign
+            models.ReturnItem.create({
+              returnClientId: returnItem.id,
+              stockId: item.stockId,
+              priceId: item.priceId,
+              quantity: item.returnQuantity,
+              discount: item.discount,
+              commissionPrice: item.commissionPrice || 0,
+              commissionPriceUsd: item.commissionPriceUsd || 0,
+            })
+              .then(() => resolve())
+              .catch(error => reject(error));
+          }));
+          quantitySubstructFromStock.push(new Promise((resolve, reject) => {
+            new Promise((resolved, rejected) => returnToStock(item, resolved, rejected))
+              .then(() => resolve())
+              .catch(err => reject(err));
+          }));
+          quantitySubstructFromSale.push(new Promise((resolve, reject) => {
+            models.SaleItem.update({
+              quantity: Number.parseFloat(item.quantity) - Number.parseFloat(item.returnQuantity),
+            }, { where: { id: item.id } })
+              .then(() => resolve())
+              .catch(err => reject(err));
+          }));
+          priceSubstructFromSale.push(new Promise((resolve, reject) => {
+            models.SaleItem.findAll({
+              where: { id: item.id },
+              include: [
+                {
+                  model: models.Price,
+                  as: 'price',
+                },
+              ],
+            }).then(([itemSale]) => {
+              const [commissionPrice,
+                commissionPriceUsd] = substructBalance(req.return, item, itemSale);
+              models.SaleItem.update({
+                commissionPrice,
+                commissionPriceUsd,
+                debtPrice: itemSale.debtPrice === 0
+                  ? 0 : getItemPrice(item, itemSale.price, req.return),
+              }, { where: { id: item.id } })
+                .then(() => resolve())
+                .catch(err => reject(err));
+            })
+              .catch(err => reject(err));
+          }));
         });
-    }));*/
-    Promise.all(
-      quantitySubstructFromStock
-        .concat(quantitySubstructFromSale)
-        .concat(priceSubstructFromSale)
-        .concat(priceAddToClientBalance),
-    )
-      .then(() => { cvy  b
-      // Code above working fine. Database is not updated
-      // and created ReturnItem and modified ReturnClient
-      // Check these two modules and start editing here.
-        models.ReturnClient.create(req.return)
-          .then((returnItem) => {
-            req.return.items.forEach((item) => {
-              allReturnItems.push(new Promise((resolve, reject) => {
-                // eslint-disable-next-line no-param-reassign
-                models.ReturnItem.create({
-                  returnClientId: returnItem.id,
-                  stockId: item.stockId,
-                  priceId: item.priceId,
-                  quantity: item.returnQuantity,
-                  discount: item.discount,
-                  commissionPrice: item.commissionPrice || 0,
-                  commissionPriceUsd: item.commissionPriceUsd || 0,
-                })
-                  .then(() => resolve())
-                  .catch(error => reject(error));
-              }));
+        priceAddToClientBalance.push(new Promise((resolve, reject) => {
+          models.Client.findByPk(req.return.clientId)
+            .then((client) => {
+              models.Client.update({
+                balance: Number.parseFloat(client.balance) + Number.parseFloat(req.totalPrice),
+              }, { where: { id: client.id } })
+                .then(() => resolve())
+                .catch(err => reject(err));
             });
-            Promise.all(allReturnItems)
-              .then(() => res.send(200))
-              .catch((error) => { res.status(502).json(error); });
-          }).catch(err => res.status(404).json({ err }));
-      })
-      .catch((error) => { res.status(502).json(error); });
+        }));
+        Promise.all(
+          allReturnItems,
+          // .concat(quantitySubstructFromStock)
+          // .concat(quantitySubstructFromSale)
+          // .concat(priceSubstructFromSale)
+          // .concat(priceAddToClientBalance),
+        )
+          .then(() => res.send(200))
+          .catch((error) => { res.status(509).json(error); });
+      }).catch(err => res.status(404).json({ err }));
   },
 
 };
