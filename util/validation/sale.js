@@ -90,6 +90,7 @@ export function validate(req, res, next) {
       items: req.body.items,
       days: req.body.days,
       accepted: false,
+      approved: req.userId === 1 ? 1 : 0,
     };
     next();
   }
