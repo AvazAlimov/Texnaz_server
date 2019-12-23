@@ -308,6 +308,8 @@ export default {
       models.Sale.update({
         approved: 1,
         shipped: 1,
+        officialRate: req.body.officialRate,
+        exchangeRate: req.body.exchangeRate,
         currentClientBalance: sale.client.balance,
         userId: req.userId,
         createdAt: new Date(),
