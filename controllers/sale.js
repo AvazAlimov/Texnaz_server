@@ -137,6 +137,33 @@ export default {
     });
   },
 
+  getAllItems(req, res) {
+    models.SaleItem.findAll({
+      order: [[{ model: models.Sale, as: 'sale' }, 'createdAt', 'DESC']],
+      include: [
+        {
+          model: models.Sale,
+          as: 'sale',
+        },
+        {
+          model: models.Stock,
+          as: 'stock',
+          include: [
+            {
+              model: models.Product,
+              as: 'product',
+              include: [
+                {
+                  model: models.Brand,
+                },
+              ],
+            },
+          ],
+        }],
+    }).then(data => res.status(200).json(data))
+      .catch(error => res.status(502).json(error));
+  },
+
   get(req, res) {
     find({ id: req.params.id }, res, ([item]) => {
       if (item) { res.status(200).json(item); } else res.sendStatus(404);
