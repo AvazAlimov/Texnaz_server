@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { hashSync } from 'bcrypt';
+import { hashSync } from 'bcryptjs';
 import models from '../models';
 
 // Function to find users by passing WHERE selector

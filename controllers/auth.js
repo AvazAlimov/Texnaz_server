@@ -1,5 +1,5 @@
 import { sign } from 'jsonwebtoken';
-import { compareSync } from 'bcrypt';
+import { compareSync } from 'bcryptjs';
 import models from '../models';
 
 function constructSelector(attributes) {
