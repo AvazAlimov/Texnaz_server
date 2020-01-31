@@ -16,8 +16,8 @@ export default (path, filename) => {
     html: '<p>Texnaz backup</p>',
     attachments: [
       {
-        filename,
-        path: `../backups/${filename}`,
+        filename: 'README.md',
+        path: './README.md',
       },
     ],
   };
