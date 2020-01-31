@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export default (path, filename) => {
+export default (filename) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -16,8 +16,8 @@ export default (path, filename) => {
     html: '<p>Texnaz backup</p>',
     attachments: [
       {
-        filename: 'README.md',
-        path: './README.md',
+        filename,
+        path: `./backups/${filename}`,
       },
     ],
   };
