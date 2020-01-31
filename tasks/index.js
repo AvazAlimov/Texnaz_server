@@ -2,6 +2,7 @@ import { CronJob } from 'cron';
 import moment from 'moment';
 import { exec } from 'child_process';
 import models from '../models';
+import sendBackup from './mailer';
 
 const job = new CronJob('0 0 */1 * * *', () => {
   models.Booking.destroy({
@@ -20,7 +21,11 @@ const backup = new CronJob(process.env.BACKUP_DELAY || '0 0 */1 * * *', () => {
   const filename = (new Date()).toISOString().substring(0, 16).replace(':', '');
   const folder = process.env.BACKUP_FOLDER || 'backup';
   const command = `cd ${folder} && mysqldump -u ${user} -p${password} ${database} > ${filename}.sql`;
-  exec(command);
+  exec(command, (error) => {
+    if (!error) {
+      sendBackup(`~/Texnaz/Texnaz_server/${folder}/${filename}.sql`, `${filename}.sql`);
+    }
+  });
 });
 
 job.start();
