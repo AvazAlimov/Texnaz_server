@@ -17,7 +17,7 @@ export default (path, filename) => {
     attachments: [
       {
         filename,
-        path,
+        path: `../backups/${filename}`,
       },
     ],
   };
