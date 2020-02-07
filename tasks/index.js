@@ -23,9 +23,7 @@ const backup = new CronJob(process.env.BACKUP_DELAY || '0 0 */1 * * *', () => {
   const command = `cd ${folder} && mysqldump -u ${user} -p${password} ${database} > ${filename}.sql`;
   exec(command, (error) => {
     if (!error) {
-      setTimeout(() => {
-        sendBackup(`${folder}/${filename}.sql`, `${filename}.sql`);
-      }, 500);
+      sendBackup(`${folder}/${filename}.sql`, `${filename}.sql`);
     }
   });
 });
