@@ -31,6 +31,10 @@ module.exports = {
     },
     provinceId: {
       type: Sequelize.INTEGER,
+      references: {
+        model: 'Provinces',
+        key: 'id',
+      },
     },
     userId: {
       type: Sequelize.INTEGER,

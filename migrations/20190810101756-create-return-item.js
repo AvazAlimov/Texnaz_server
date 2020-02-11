@@ -42,6 +42,11 @@ module.exports = {
       type: Sequelize.DOUBLE,
       defaultValue: 0,
     },
+    createdAt: {
+      allowNull: false,
+      type: Sequelize.DATE,
+      defaultValue: Sequelize.fn('now'),
+    },
   }),
-  down: (queryInterface, Sequelize) => queryInterface.dropTable('ReturnItems'),
+  down: queryInterface => queryInterface.dropTable('ReturnItems'),
 };
