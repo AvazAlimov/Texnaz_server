@@ -1,4 +1,5 @@
 import models from '../models';
+import clintDetails from '../handlers/client';
 
 function find(where, res, next) {
   models.Client.findAll({
@@ -46,7 +47,11 @@ export default {
       res.status(200).json(items);
     });
   },
-
+  getClientDetails(req, res) {
+    clintDetails(req.body)
+      .then(data => res.status(200).json(data))
+      .catch(err => res.status(502).json({ error: err }));
+  },
   get(req, res) {
     find(
       {
