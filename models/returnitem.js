@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     discount: DataTypes.DOUBLE,
     commissionPrice: DataTypes.DOUBLE,
     commissionPriceUsd: DataTypes.DOUBLE,
+    createdAt: DataTypes.DATE,
   }, {});
   ReturnItem.associate = (models) => {
     ReturnItem.belongsTo(models.Price, { as: 'price' });
