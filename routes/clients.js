@@ -5,7 +5,7 @@ import { check, validate } from '../util/validation/client';
 
 const router = Router();
 router.get('/', authMiddleware, client.getAll);
-router.get('/details', authMiddleware, client.getClientDetails);
+router.post('/details', authMiddleware, client.getClientDetails);
 router.get('/:id', authMiddleware, client.get);
 router.post('/', authMiddleware, check, validate, client.create);
 router.post('/:id', authMiddleware, check, validate, client.update);
