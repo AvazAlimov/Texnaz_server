@@ -144,6 +144,13 @@ export default {
         {
           model: models.Sale,
           as: 'sale',
+          include: [
+            {
+              model: models.Client,
+              attributes: ['id', 'name', 'icc'],
+              as: 'client',
+            },
+          ],
         },
         {
           model: models.Stock,
