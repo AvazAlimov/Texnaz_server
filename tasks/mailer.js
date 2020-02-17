@@ -1,17 +1,19 @@
 import nodemailer from 'nodemailer';
 
+require('dotenv').config();
+
 export default (path, filename) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'texnazbackup@gmail.com',
-      pass: 'sZrkF76Qce8CBJp',
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: 'texnazbackup@gmail.com',
-    to: 'texnazbackup@gmail.com',
+    from: process.env.EMAIL,
+    to: process.env.EMAIL_TO,
     subject: (new Date()).toString(),
     html: '<p>Texnaz backup</p>',
     attachments: [
