@@ -67,7 +67,7 @@ export default {
   login(req, res) {
     findUser({ username: req.body.username }, res, (user) => {
       if (compareSync(req.body.password, user.password)) {
-        sign({ userId: user.id }, process.env.JWT_SECRET_KEY, { expiresIn: '0.5h' }, (error, token) => {
+        sign({ userId: user.id }, process.env.JWT_SECRET_KEY, { expiresIn: process.env.JWT_EXPIRE }, (error, token) => {
           if (error) res.status(502).json(error);
           res.status(200).json({ token });
         });
