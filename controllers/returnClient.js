@@ -100,7 +100,7 @@ function getItemPrice({
 
 export default {
   getAll(req, res) {
-    find(null, res, returns => res.status(201).json(returns));
+    find(null, res, returns => res.status(200).json(returns));
   },
   get(req, res) {
     find({ id: req.params.id }, res, ([data]) => {

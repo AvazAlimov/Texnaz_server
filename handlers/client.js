@@ -144,16 +144,18 @@ function clintDetails({ icc, from, to }) {
         const sale = sales.find(({ date }) => compareDates(date, d));
         const payment = payments.find(({ date }) => compareDates(date, d));
         const aReturn = returns.find(({ date }) => compareDates(date, d));
-        result.push({
-          date: d.toString(),
-          clientName: client.name,
-          icc: client.icc,
-          managerName: client.manager.name,
-          territoryName: client.manager.territory.name,
-          salePrice: sale ? sale.price : 0,
-          paymentPrice: payment ? payment.price : 0,
-          returnPrice: aReturn ? aReturn.price : 0,
-        });
+        if (sale || payment || aReturn) {
+          result.push({
+            date: d.toString(),
+            clientName: client.name,
+            icc: client.icc,
+            managerName: client.manager.name,
+            territoryName: client.manager.territory.name,
+            salePrice: sale ? sale.price : 0,
+            paymentPrice: payment ? payment.price : 0,
+            returnPrice: aReturn ? aReturn.price : 0,
+          });
+        }
       }
 
       res(result);
