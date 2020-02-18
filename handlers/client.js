@@ -113,7 +113,7 @@ function getData(clientId) {
         ],
       });
 
-      const payments = await models.Payment.findAll({ where: { clientId }, order: [['createdAt', 'ASC']] });
+      const payments = await models.Payment.findAll({ where: { clientId, approved: true }, order: [['createdAt', 'ASC']] });
 
       resolve([saleCalculation(sales), paymentCalculation(payments), returnCalculation(returns)]);
     } catch (e) {
