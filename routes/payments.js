@@ -5,6 +5,7 @@ import { validate, check } from '../util/validation/payment';
 
 const router = Router();
 router.get('/', authMiddleware, payment.getAll);
+router.get('/paginate', authMiddleware, payment.getWithPagination);
 router.get('/:id', authMiddleware, payment.get);
 router.post('/:id', authMiddleware, payment.updateCurrentBalance);
 router.post('/', authMiddleware, check, validate, payment.create);
