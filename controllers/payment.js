@@ -1,7 +1,9 @@
 import models from '../models';
 
-function find(where, res, next) {
+function find(where, res, next, paginate = {}) {
   models.Payment.findAll({
+    offset: (paginate.page * paginate.pageSize) || null,
+    limit: Number.parseFloat(paginate.pageSize) || null,
     where,
     include: [
       {
@@ -47,7 +49,19 @@ export default {
       res.status(200).json(items);
     });
   },
-
+  getWithPagination(req, res) {
+    const paginate = {
+      page: 0,
+      pageSize: 5,
+      ...req.query,
+    };
+    find({ approved: req.query.approved }, res, async (items) => {
+      res.status(200).json({
+        total: await models.Payment.count({ where: { approved: req.query.approved } }),
+        data: items,
+      });
+    }, paginate);
+  },
   get(req, res) {
     find({ id: req.params.id }, res, (items) => {
       if (items.length) res.status(200).json(items[0]);
@@ -96,3 +110,11 @@ export default {
       .catch(error => res.status(502).json(error));
   },
 };
+
+/*
+
+find(null, res, (items) => {
+      res.status(200).json(req.query);
+    }, { page, pageSize });
+
+*/
