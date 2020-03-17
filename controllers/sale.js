@@ -1,8 +1,10 @@
 import models from '../models';
 
-function find(where, res, next) {
+function find(where, res, next, paginate = {}) {
   models.Sale.findAll({
     where,
+    offset: (paginate.page * paginate.pageSize) || null,
+    limit: Number.parseFloat(paginate.pageSize) || null,
     include: [
       {
         model: models.Province,
@@ -124,6 +126,29 @@ function getSalePrice({ type, items }, officialRate) {
 }
 
 export default {
+  getWithPagination(req, res) {
+    const where = {};
+    if (req.query.isClosed) {
+      where.isClosed = req.query.isClosed;
+    }
+    if (req.query.approved) {
+      where.approved = req.query.approved;
+    }
+    if (req.query.shipped) {
+      where.shipped = req.query.shipped;
+    }
+    const pagination = {
+      page: 0,
+      pageSize: 5,
+      ...req.query,
+    };
+    find(where, res, async (items) => {
+      res.status(200).json({
+        total: await models.Sale.count({ where }),
+        data: items,
+      });
+    }, pagination);
+  },
   getAll(req, res) {
     let where = null;
     if (Object.keys(req.query).length) {
